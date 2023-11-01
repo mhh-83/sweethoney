@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bif1t8hdv8ixq"]
+
+[ext_resource type="Script" path="res://script/icons.gd" id="1_w8yn3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfm7r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gatg6"]
+bg_color = Color(0.14902, 0.686275, 0.32549, 1)
+border_width_left = 20
+border_width_right = 20
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
+
+[node name="PopupPanel" type="PopupPanel"]
+transparent_bg = true
+initial_position = 3
+size = Vector2i(500, 600)
+current_screen = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yfm7r")
+
+[node name="icons" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gatg6")
+script = ExtResource("1_w8yn3")
+
+[node name="GridContainer" type="GridContainer" parent="icons"]
+layout_mode = 2
+theme_override_constants/h_separation = 90
+theme_override_constants/v_separation = 90
+columns = 5

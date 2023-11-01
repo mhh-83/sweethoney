@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://k6tgjei1v48q"]
+
+[ext_resource type="FontFile" uid="uid://blielc7ove88v" path="res://fonts/+ Badr_p30download.com.ttf" id="1_a0f1f"]
+
+[resource]
+font = ExtResource("1_a0f1f")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 1

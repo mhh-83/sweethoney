@@ -1,0 +1,269 @@
+[gd_scene load_steps=14 format=3 uid="uid://btxmu4sj6al70"]
+
+[ext_resource type="Texture2D" uid="uid://bstcgsitofo16" path="res://sprite/token.png" id="1_fx7fe"]
+[ext_resource type="Script" path="res://script/shop.gd" id="1_ko5lu"]
+[ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="2_gx2d2"]
+[ext_resource type="FontFile" uid="uid://b27pddqoondca" path="res://fonts/Aviny2-mfnbbn.ttf" id="2_l2s0d"]
+[ext_resource type="PackedScene" uid="uid://cdfreyppromea" path="res://scenes/buy_purchases.tscn" id="5_hbl6t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slo2x"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_he8mp"]
+font = ExtResource("2_l2s0d")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_8huyl"]
+font = ExtResource("2_l2s0d")
+font_size = 38
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5fh66"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_foqei"]
+viewport_path = NodePath("SubViewport3")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ik187"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t02ww"]
+bg_color = Color(0, 0.729412, 0.0117647, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.403922, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_fsfix"]
+font = ExtResource("2_gx2d2")
+font_color = Color(1, 0, 0, 1)
+
+[node name="PopupPanel" type="PopupPanel"]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(500, 700)
+theme_override_styles/panel = SubResource("StyleBoxFlat_slo2x")
+script = ExtResource("1_ko5lu")
+
+[node name="Shop" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Shop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Shop/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "فروشگاه"
+label_settings = SubResource("LabelSettings_he8mp")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "       لیگ"
+label_settings = SubResource("LabelSettings_8huyl")
+horizontal_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Shop/ScrollContainer/VBoxContainer/Label2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.0117647, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Shop/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("ViewportTexture_5fh66")
+texture_pressed = SubResource("ViewportTexture_foqei")
+texture_hover = SubResource("ViewportTexture_ik187")
+
+[node name="Label3" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "       کندوها"
+label_settings = SubResource("LabelSettings_8huyl")
+horizontal_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Shop/ScrollContainer/VBoxContainer/Label3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.0117647, 1, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Shop/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Button" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "کندو 1
+700"
+metadata/cost = 700
+
+[node name="Button2" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "کندو 2
+1000"
+metadata/cost = 1000
+
+[node name="Button3" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "کندو 3
+1250"
+metadata/cost = 1250
+
+[node name="Button4" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "کندو 4
+1500"
+metadata/cost = 1500
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(100, 150)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport"]
+offset_right = 100.0
+offset_bottom = 100.0
+texture = ExtResource("1_fx7fe")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="SubViewport"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_t02ww")
+
+[node name="Label" type="Label" parent="SubViewport/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "20000 تومان"
+label_settings = SubResource("LabelSettings_fsfix")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubViewport2" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(100, 150)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport2"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 95.0
+offset_bottom = 95.0
+texture = ExtResource("1_fx7fe")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="SubViewport2"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_t02ww")
+
+[node name="Label" type="Label" parent="SubViewport2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "20000 تومان"
+label_settings = SubResource("LabelSettings_fsfix")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubViewport3" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(100, 150)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport3"]
+modulate = Color(0.721569, 0.721569, 0.721569, 1)
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 95.0
+offset_bottom = 95.0
+texture = ExtResource("1_fx7fe")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="SubViewport3"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_t02ww")
+
+[node name="Label" type="Label" parent="SubViewport3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "20000 تومان"
+label_settings = SubResource("LabelSettings_fsfix")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PopupPanel" parent="." instance=ExtResource("5_hbl6t")]
+
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

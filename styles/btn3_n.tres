@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://3h3uid5ixy8m"]
+
+[ext_resource type="Texture2D" uid="uid://b32evagccsp3u" path="res://sprite/bach3.png" id="1_81g1x"]
+
+[resource]
+texture = ExtResource("1_81g1x")
+texture_margin_top = 20.0
+texture_margin_bottom = 10.0

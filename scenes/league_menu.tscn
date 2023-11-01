@@ -1,0 +1,472 @@
+[gd_scene load_steps=28 format=3 uid="uid://s8ojgtupqgkt"]
+
+[ext_resource type="Script" path="res://script/league_menu.gd" id="1_ho777"]
+[ext_resource type="Texture2D" uid="uid://bhoum3j8l20i0" path="res://sprite/1lig.png" id="2_2em74"]
+[ext_resource type="StyleBox" uid="uid://bgvbx6aeped6x" path="res://styles/my_positiontres.tres" id="2_500lh"]
+[ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="2_rf5gp"]
+[ext_resource type="PackedScene" uid="uid://bn0e7dp1w2sep" path="res://scenes/positions_paneltscn.tscn" id="2_vfst5"]
+[ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="5_jxwr5"]
+[ext_resource type="PackedScene" uid="uid://biiyvsk4wdpm1" path="res://scenes/timer.tscn" id="8_xyyxx"]
+[ext_resource type="FontFile" uid="uid://b27pddqoondca" path="res://fonts/Aviny2-mfnbbn.ttf" id="11_xf7h1"]
+[ext_resource type="Texture2D" uid="uid://cwe1r7w3jjfw4" path="res://sprite/asal1-kv-Tarh.ir-21-a.png" id="12_4ke7g"]
+[ext_resource type="Texture2D" uid="uid://cfdmms22i1grg" path="res://sprite/asal-kv-Tarh.ir-21-a.png" id="12_64hi0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoa24"]
+bg_color = Color(0.00784314, 0.278431, 0.117647, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_y0u4p"]
+font = ExtResource("11_xf7h1")
+font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfr2w"]
+bg_color = Color(0.937255, 0.886275, 0.235294, 1)
+border_color = Color(0.945098, 0.278431, 0.117647, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_oyvof"]
+font = ExtResource("5_jxwr5")
+font_size = 50
+font_color = Color(1, 0, 0, 1)
+outline_color = Color(0.478431, 0.705882, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_25ifc"]
+offsets = PackedFloat32Array(0, 0.368132, 0.791209)
+colors = PackedColorArray(1, 0.533333, 0, 1, 1, 0.898039, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iypk4"]
+gradient = SubResource("Gradient_25ifc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_aehd4"]
+_data = [Vector2(0, 0.463158), 0.0, 0.0, 0, 0, Vector2(0.0995475, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.347368), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_finu8"]
+offsets = PackedFloat32Array(0, 0.447368, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_v0al3"]
+viewport_path = NodePath("SubViewport3")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_e1n1c"]
+viewport_path = NodePath("SubViewport4")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8uerl"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jtsai"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fykt6"]
+font = ExtResource("2_rf5gp")
+font_size = 50
+font_color = Color(1, 0.211765, 0.0313726, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5s46l"]
+font = ExtResource("2_rf5gp")
+font_size = 50
+font_color = Color(0.356863, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_denls"]
+font = ExtResource("11_xf7h1")
+font_size = 50
+font_color = Color(0, 0.239216, 0.00784314, 1)
+outline_size = 5
+
+[sub_resource type="Curve" id="Curve_psgla"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, -360), 0.0, 0.0, 0, 0, Vector2(1, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_2r3a0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.378947), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="league_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ho777")
+need_score = 1000
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2em74")
+
+[node name="MarginContainer" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 73.0
+offset_right = 738.0
+offset_bottom = 558.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yoa24")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+anchor_left = 0.0141443
+anchor_top = 0.0206186
+anchor_right = 0.984441
+anchor_bottom = 0.812371
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "رده‌بندی"
+label_settings = SubResource("LabelSettings_y0u4p")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bfr2w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+
+[node name="Control" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control2" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control3" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control4" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control5" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control6" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control7" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control8" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control9" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control10" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control11" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="Control12" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_vfst5")]
+layout_mode = 2
+
+[node name="my_position" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/my_position"]
+layout_mode = 2
+offset_left = -11.0
+offset_top = 8.0
+offset_right = 696.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_500lh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/my_position/Panel"]
+layout_mode = 2
+anchor_left = 0.0141443
+anchor_top = 0.217391
+anchor_right = 0.98727
+anchor_bottom = 0.804348
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/my_position/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/my_position/Panel/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "500"
+label_settings = SubResource("LabelSettings_oyvof")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/my_position/Panel/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "امتیاز : "
+label_settings = SubResource("LabelSettings_oyvof")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/my_position/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/my_position/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "محمدحسین"
+label_settings = SubResource("LabelSettings_oyvof")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/my_position/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "-221"
+label_settings = SubResource("LabelSettings_oyvof")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(369, 1245)
+amount = 50
+texture = SubResource("GradientTexture2D_iypk4")
+emission_shape = 3
+emission_rect_extents = Vector2(376, 70)
+direction = Vector2(0.5, -1)
+spread = 67.88
+gravity = Vector2(0, 0)
+initial_velocity_max = 50.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+damping_max = 25.424
+scale_amount_min = 0.2
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_aehd4")
+color = Color(0.882353, 1, 0, 1)
+color_ramp = SubResource("Gradient_finu8")
+hue_variation_max = 1.0
+
+[node name="Button2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 590.0
+offset_right = 383.0
+offset_bottom = 752.0
+texture_normal = SubResource("ViewportTexture_v0al3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 590.0
+offset_right = 656.0
+offset_bottom = 752.0
+texture_normal = SubResource("ViewportTexture_e1n1c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 251.0
+offset_top = 1145.0
+offset_right = 517.0
+offset_bottom = 1307.0
+disabled = true
+texture_normal = SubResource("ViewportTexture_8uerl")
+texture_pressed = SubResource("ViewportTexture_8uerl")
+texture_hover = SubResource("ViewportTexture_8uerl")
+texture_disabled = SubResource("ViewportTexture_jtsai")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="timer" parent="." instance=ExtResource("8_xyyxx")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -99.0
+offset_right = 99.0
+offset_bottom = 73.0
+grow_vertical = 1
+text = "xx:xx:xx"
+label_settings = SubResource("LabelSettings_fykt6")
+mode = 0
+
+[node name="timer2" parent="." instance=ExtResource("8_xyyxx")]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -99.0
+offset_right = 99.0
+offset_bottom = 73.0
+grow_vertical = 1
+text = "xx:xx:xx"
+label_settings = SubResource("LabelSettings_fykt6")
+mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 573.0
+offset_right = 662.0
+offset_bottom = 627.0
+text = "5000 / 4000"
+label_settings = SubResource("LabelSettings_5s46l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(369, 1094)
+limit_left = 0
+limit_top = 0
+limit_right = 768
+limit_bottom = 1366
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(266, 162)
+render_target_update_mode = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 35.0
+nine_patch_stretch = true
+texture_under = ExtResource("12_64hi0")
+texture_progress = ExtResource("12_64hi0")
+tint_under = Color(1, 0, 0, 1)
+
+[node name="Label" type="Label" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "           شرکت کنید"
+label_settings = SubResource("LabelSettings_denls")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Asal1-kv-tarh_ir-21-a" type="Sprite2D" parent="SubViewport"]
+position = Vector2(218.28, 107.595)
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("12_4ke7g")
+
+[node name="SubViewport2" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(266, 162)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_64hi0")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="SubViewport2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "           شرکت کنید"
+label_settings = SubResource("LabelSettings_denls")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="SubViewport2"]
+position = Vector2(133, 48)
+amount = 100
+emission_shape = 3
+emission_rect_extents = Vector2(133, 48)
+gravity = Vector2(0, 0)
+angle_curve = SubResource("Curve_psgla")
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_2r3a0")
+color = Color(0.301961, 1, 0.152941, 1)
+hue_variation_min = 0.39
+hue_variation_max = 0.81
+
+[node name="SubViewport3" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(222, 162)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_64hi0")
+expand_mode = 1
+flip_h = true
+
+[node name="Label" type="Label" parent="SubViewport3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "منو شروع"
+label_settings = SubResource("LabelSettings_denls")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubViewport4" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(222, 162)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport4"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_64hi0")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="SubViewport4"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "مراحل"
+label_settings = SubResource("LabelSettings_denls")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="timer2" to="." method="_on_timer2_timeout"]

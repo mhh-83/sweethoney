@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqbpx8me4r6h0"]
+
+[ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="1_co33b"]
+[ext_resource type="Texture2D" uid="uid://c4qxdup3vnyap" path="res://sprite/Agahitarhim-P-Tarh.ir-232.png" id="2_0gpuw"]
+[ext_resource type="Script" path="res://script/scale.gd" id="3_nh8dl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iimjs"]
+texture = ExtResource("2_0gpuw")
+expand_margin_top = 6.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5w06x"]
+texture = ExtResource("2_0gpuw")
+expand_margin_top = 6.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_647xe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3dcul"]
+font = ExtResource("1_co33b")
+font_size = 30
+
+[node name="Button" type="Button" groups=["options"]]
+custom_minimum_size = Vector2(375, 136)
+offset_right = 375.0
+offset_bottom = 136.364
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.498039, 0, 0.690196, 1)
+theme_override_fonts/font = ExtResource("1_co33b")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_iimjs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iimjs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_iimjs")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5w06x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_647xe")
+script = ExtResource("3_nh8dl")
+metadata/num = 0
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(238, 61)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -30.182
+offset_right = 119.5
+offset_bottom = 30.818
+grow_horizontal = 2
+grow_vertical = 2
+text = "همه موارد"
+label_settings = SubResource("LabelSettings_3dcul")
+horizontal_alignment = 1
+vertical_alignment = 1

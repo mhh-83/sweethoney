@@ -1,0 +1,457 @@
+[gd_scene load_steps=42 format=3 uid="uid://dlsbedchbmded"]
+
+[ext_resource type="Script" path="res://script/league_levels.gd" id="1_neujr"]
+[ext_resource type="Texture2D" uid="uid://brg1rhmemfae2" path="res://sprite/لیگ.png" id="2_s3mm6"]
+[ext_resource type="Texture2D" uid="uid://df1lls6o4f5ra" path="res://sprite/league_levels.png" id="3_tfyyu"]
+[ext_resource type="StyleBox" uid="uid://wlma28beyem6" path="res://styles/btn.tres" id="4_e6jsu"]
+[ext_resource type="Texture2D" uid="uid://c6cehtrxjq85d" path="res://sprite/Polygon 3.png" id="4_skp1u"]
+[ext_resource type="Texture2D" uid="uid://bniypapx8cqi2" path="res://sprite/Polygon 4.png" id="5_ssdq6"]
+[ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="7_6iu7c"]
+[ext_resource type="Texture2D" uid="uid://b8al3w0qy0s0a" path="res://sprite/Polygon 7.png" id="8_7bjxh"]
+[ext_resource type="Texture2D" uid="uid://d2tw8s88xhih4" path="res://sprite/لیگ1.png" id="9_6n54h"]
+[ext_resource type="Texture2D" uid="uid://cjk4d24jcul6t" path="res://sprite/heat.png" id="10_7i3co"]
+[ext_resource type="Shader" path="res://shaders/top_water.gdshader" id="10_164rr"]
+[ext_resource type="Texture2D" uid="uid://dcfa3xrc004ul" path="res://sprite/لیگ2.png" id="10_scq2f"]
+[ext_resource type="Texture2D" uid="uid://d054vur54jdie" path="res://sprite/bg_word.png" id="11_wvaua"]
+[ext_resource type="Shader" path="res://shaders/water.gdshader" id="12_i3fxr"]
+[ext_resource type="Shader" path="res://shaders/kill.gdshader" id="15_oktnc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mjq0"]
+texture = ExtResource("3_tfyyu")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l5caa"]
+texture = ExtResource("4_skp1u")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0xwc"]
+texture = ExtResource("5_ssdq6")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_i0fed"]
+tile_shape = 3
+tile_layout = 1
+tile_offset_axis = 1
+tile_size = Vector2i(100, 100)
+sources/0 = SubResource("TileSetAtlasSource_3mjq0")
+sources/2 = SubResource("TileSetAtlasSource_l5caa")
+sources/4 = SubResource("TileSetAtlasSource_q0xwc")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eb0iw"]
+
+[sub_resource type="Animation" id="Animation_6rqvx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileMap:tile_set")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("TileSet_i0fed")]
+}
+
+[sub_resource type="Animation" id="Animation_o4ibt"]
+resource_name = "part_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileMap:tile_set")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("TileSet_i0fed")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pr05y"]
+_data = {
+"RESET": SubResource("Animation_6rqvx"),
+"part_1": SubResource("Animation_o4ibt")
+}
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rtwxd"]
+rough = true
+bounce = 0.26
+absorbent = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t6w2e"]
+shader = ExtResource("15_oktnc")
+shader_parameter/frame = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pbwdo"]
+texture = ExtResource("8_7bjxh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udjk2"]
+texture = ExtResource("8_7bjxh")
+modulate_color = Color(0.843137, 0.843137, 0.843137, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kpoaj"]
+texture = ExtResource("8_7bjxh")
+modulate_color = Color(0.686275, 0.686275, 0.686275, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7sufw"]
+
+[sub_resource type="Curve" id="Curve_etdme"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.536842), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_bitt2"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oxv3p"]
+shader = ExtResource("10_164rr")
+shader_parameter/transparency = 1.0
+shader_parameter/color0 = Color(0.996094, 0.6875, 0, 1)
+shader_parameter/color1 = Color(1, 1, 1, 1)
+shader_parameter/color2 = Color(1, 0.447059, 0.0117647, 1)
+shader_parameter/color3 = Color(1, 1, 0, 1)
+shader_parameter/Direction = Vector2(1, 1)
+shader_parameter/Speed = 20.0
+shader_parameter/thresholds = PackedFloat32Array(0.89, 0.705, 0.805)
+shader_parameter/OCTAVE = 7
+shader_parameter/pixel_size = 2000
+shader_parameter/dithering = 3.585
+
+[sub_resource type="Curve" id="Curve_dgfx8"]
+_data = [Vector2(0, 0.536842), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_je3wo"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.357895), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_0lrmm"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ayy3a"]
+shader = ExtResource("12_i3fxr")
+shader_parameter/color = Color(1, 0.690196, 0, 0.831373)
+shader_parameter/speed = 0.2
+shader_parameter/x = 50.0
+shader_parameter/y = 13.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkimu"]
+radius = 83.0
+height = 724.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fhptp"]
+font = ExtResource("7_6iu7c")
+font_size = 65
+font_color = Color(0, 0, 0, 1)
+outline_size = 6
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_hccb3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CPUParticles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ntf1w"]
+resource_name = "heat"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 0.94902), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect3:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 0.933333), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CPUParticles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jjfoo"]
+_data = {
+"RESET": SubResource("Animation_hccb3"),
+"heat": SubResource("Animation_ntf1w")
+}
+
+[node name="league_levels" type="Control" groups=["levels"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_neujr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s3mm6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource("TileSet_i0fed")
+format = 2
+layer_0/name = "background"
+layer_0/tile_data = PackedInt32Array(65535, 2, 0, 131071, 2, 0, 196607, 2, 0, 262143, 2, 0, 327679, 2, 0, 393215, 2, 0, 458751, 2, 0, 524287, 2, 0, 589823, 2, 0, 655359, 2, 0, 720895, 2, 0, 786431, 2, 0, 851967, 4, 0, 0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 262144, 2, 0, 327680, 2, 0, 393216, 2, 0, 458752, 2, 0, 524288, 2, 0, 589824, 2, 0, 655360, 2, 0, 720896, 2, 0, 786432, 2, 0, 1, 4, 0, 65537, 2, 0, 131073, 2, 0, 196609, 2, 0, 262145, 4, 0, 327681, 2, 0, 393217, 2, 0, 458753, 2, 0, 524289, 2, 0, 589825, 4, 0, 655361, 2, 0, 720897, 2, 0, 786433, 2, 0, 2, 2, 0, 65538, 2, 0, 131074, 4, 0, 196610, 2, 0, 262146, 2, 0, 327682, 2, 0, 393218, 2, 0, 458754, 2, 0, 524290, 4, 0, 589826, 2, 0, 655362, 2, 0, 720898, 4, 0, 786434, 2, 0, 3, 4, 0, 65539, 2, 0, 131075, 2, 0, 196611, 2, 0, 262147, 2, 0, 327683, 2, 0, 393219, 4, 0, 458755, 4, 0, 524291, 2, 0, 589827, 2, 0, 655363, 4, 0, 720899, 2, 0, 786435, 2, 0, 4, 2, 0, 65540, 2, 0, 131076, 2, 0, 196612, 2, 0, 262148, 2, 0, 327684, 2, 0, 393220, 2, 0, 458756, 2, 0, 524292, 2, 0, 589828, 2, 0, 655364, 2, 0, 720900, 2, 0, 786436, 2, 0, 5, 2, 0, 65541, 4, 0, 131077, 2, 0, 196613, 2, 0, 262149, 4, 0, 327685, 4, 0, 393221, 2, 0, 458757, 2, 0, 524293, 4, 0, 589829, 2, 0, 655365, 2, 0, 720901, 2, 0, 786437, 2, 0, 6, 2, 0, 65542, 2, 0, 131078, 2, 0, 196614, 2, 0, 262150, 2, 0, 327686, 2, 0, 393222, 2, 0, 458758, 2, 0, 524294, 2, 0, 589830, 4, 0, 655366, 2, 0, 720902, 2, 0, 786438, 2, 0, 7, 4, 0, 65543, 2, 0, 131079, 2, 0, 196615, 4, 0, 262151, 2, 0, 327687, 4, 0, 393223, 2, 0, 458759, 2, 0, 524295, 2, 0, 589831, 2, 0, 655367, 2, 0, 720903, 2, 0, 786439, 2, 0, 8, 2, 0, 65544, 2, 0, 131080, 2, 0, 196616, 2, 0, 262152, 2, 0, 327688, 2, 0, 393224, 4, 0, 458760, 2, 0, 524296, 2, 0, 589832, 4, 0, 655368, 2, 0, 720904, 4, 0, 786440, 2, 0, 9, 2, 0, 65545, 4, 0, 131081, 2, 0, 196617, 2, 0, 262153, 4, 0, 327689, 2, 0, 393225, 2, 0, 458761, 2, 0, 524297, 2, 0, 589833, 2, 0, 655369, 2, 0, 720905, 2, 0, 786441, 2, 0, 10, 2, 0, 65546, 2, 0, 131082, 2, 0, 196618, 2, 0, 262154, 2, 0, 327690, 2, 0, 393226, 2, 0, 458762, 2, 0, 524298, 2, 0, 589834, 2, 0, 655370, 2, 0, 720906, 2, 0, 786442, 2, 0, 917503, 2, 0, 851968, 2, 0, 851969, 2, 0, 851970, 2, 0, 851971, 2, 0, 851972, 2, 0, 851973, 2, 0, 851974, 2, 0, 851975, 2, 0, 851976, 2, 0, 851977, 2, 0, 851978, 2, 0, -65536, 2, 0, -65535, 2, 0, -65534, 2, 0, -65533, 2, 0, -65532, 2, 0, -65531, 2, 0, -65530, 2, 0, -65529, 2, 0, -65528, 2, 0, -65527, 2, 0, -65526, 2, 0, -1, 2, 0, -131072, 2, 0, -131070, 2, 0)
+layer_1/name = "foreground"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0, 0.729412, 0.729412, 1)
+theme_override_styles/normal = ExtResource("4_e6jsu")
+theme_override_styles/hover = ExtResource("4_e6jsu")
+theme_override_styles/pressed = ExtResource("4_e6jsu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eb0iw")
+text = "بازگشت"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pr05y")
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(26, -210)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(9, 583, 42, 642, 62, 654, 89, 663, 121, 669, 146, 677, 161, 693, 164, 725, 172, 753, 191, 771, 220, 775, 250, 753, 262, 727, 286, 716, 295, 722, 313, 750, 325, 828, 325, 922, 317, 993, 306, 1042, 314, 1082, 338, 1114, 377, 1115, 409, 1102, 427, 1051, 418, 990, 409, 951, 406, 826, 441, 764, 484, 742, 550, 727, 621, 690, 645, 649, 666, 618, 692, 594, 745, 555, 766, -57, 730, -61, 736, 505, 682, 487, 631, 539, 624, 562, 636, 621, 633, 634, 587, 681, 494, 666, 453, 716, 426, 717, 381, 708, 364, 695, 351, 628, 253, 601, 212, 650, 131, 636, 108, 552, 33, 544, 5, 457, -24, 449, -11, -22, -37, -102, -29, 537, 0, 569)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(-21, 1374, 765, 1364, 767, 520, 753, 535, 738, 1264, 399, 1338, 26, 1285, 9, 647, -21, 645)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PackedVector2Array(259, 1327, 181, 1270, 138, 1226, 91, 1149, 78, 1066, 78, 911, 94, 908, 91, 1029, 92, 1066, 105, 1143, 127, 1189, 156, 1228, 201, 1270, 261, 1318, 337, 1330, 434, 1329, 505, 1313, 564, 1277, 598, 1244, 644, 1180, 671, 1086, 673, 908, 686, 905, 683, 1080, 674, 1139, 640, 1214, 573, 1286, 512, 1320, 466, 1334, 376, 1348)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+visible = false
+rotation = -0.523598
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_rtwxd")
+sleeping = true
+freeze = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(-61.7917, -22.9737, -25.5334, -59.775, 24.0359, -49.6314, 41.409, 4.27754, 7.01669, 39.8468, -45.2846, 30.4353)
+
+[node name="Button" type="Button" parent="RigidBody2D"]
+material = SubResource("ShaderMaterial_t6w2e")
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(60, 60)
+theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_6iu7c")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxTexture_pbwdo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_udjk2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kpoaj")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_pbwdo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7sufw")
+text = "5"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="RigidBody2D/Button"]
+position = Vector2(67, 100)
+rotation = -0.261799
+emitting = false
+amount = 20
+lifetime = 0.3
+emission_shape = 3
+emission_rect_extents = Vector2(50, 1)
+direction = Vector2(0, -1)
+gravity = Vector2(0, 0)
+initial_velocity_min = 126.24
+initial_velocity_max = 151.67
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_etdme")
+color_ramp = SubResource("Gradient_bitt2")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D"]
+collision_layer = 16
+collision_mask = 32
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="RigidBody2D/Area2D"]
+polygon = PackedVector2Array(-61.7917, -22.9737, -25.5334, -59.775, 24.0359, -49.6314, 41.409, 4.27754, 7.01669, 39.8468, -45.2846, 30.4353)
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+clip_children = 2
+layout_mode = 0
+offset_left = 45.0
+offset_top = 937.0
+offset_right = 726.0
+offset_bottom = 1366.0
+texture = ExtResource("10_scq2f")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect3"]
+material = SubResource("ShaderMaterial_oxv3p")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 271.0
+offset_top = 161.0
+offset_right = -280.0
+offset_bottom = -228.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 1e-05)
+pivot_offset = Vector2(65, 20)
+texture = ExtResource("11_wvaua")
+expand_mode = 1
+
+[node name="levels" type="Node2D" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_repeat = 2
+position = Vector2(387, 1150)
+emitting = false
+amount = 50
+lifetime = 0.4
+one_shot = true
+texture = ExtResource("10_7i3co")
+emission_shape = 3
+emission_rect_extents = Vector2(250, 50)
+gravity = Vector2(0, -980)
+scale_amount_min = 0.05
+scale_amount_max = 0.1
+split_scale = true
+scale_curve_x = SubResource("Curve_dgfx8")
+scale_curve_y = SubResource("Curve_je3wo")
+color_ramp = SubResource("Gradient_0lrmm")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+clip_children = 2
+layout_mode = 0
+offset_left = 45.0
+offset_top = 937.0
+offset_right = 726.0
+offset_bottom = 1366.0
+texture = ExtResource("9_6n54h")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2"]
+material = SubResource("ShaderMaterial_ayy3a")
+layout_mode = 0
+offset_left = -19.0
+offset_top = 420.0
+offset_right = 289.0
+offset_bottom = 550.0
+scale = Vector2(2.63995, 2.93439)
+texture = ExtResource("9_6n54h")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="TextureRect2"]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect2/Area2D"]
+position = Vector2(353, 279)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_jkimu")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.388021
+anchor_top = 0.859444
+anchor_right = 0.622396
+anchor_bottom = 0.909956
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_fhptp")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jjfoo")
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

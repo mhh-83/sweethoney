@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://wwucuk1heet8"]
+
+[ext_resource type="Texture2D" uid="uid://c4qxdup3vnyap" path="res://sprite/Agahitarhim-P-Tarh.ir-232.png" id="1_jy15k"]
+
+[resource]
+texture = ExtResource("1_jy15k")
+expand_margin_top = 6.0
+expand_margin_bottom = 10.0
+modulate_color = Color(1, 0, 0, 1)

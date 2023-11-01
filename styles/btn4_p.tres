@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://d3y65msk65buv"]
+
+[ext_resource type="Texture2D" uid="uid://dpqyqmoj5kg42" path="res://sprite/asal-b-Tarh.ir-109.png" id="1_xk3u8"]
+
+[resource]
+texture = ExtResource("1_xk3u8")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 30.0
+expand_margin_bottom = 15.0
+modulate_color = Color(0.529412, 0.529412, 0.529412, 1)

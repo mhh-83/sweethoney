@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://qho5ecpeji4r"]
+
+[ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="1_uhcve"]
+[ext_resource type="Script" path="res://script/Label.gd" id="2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_74wjw"]
+font = ExtResource("1_uhcve")
+font_size = 40
+font_color = Color(0.847059, 0.113725, 0, 1)
+outline_size = 5
+
+[node name="Label" type="Label"]
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+label_settings = SubResource("LabelSettings_74wjw")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "fa_IR"
+script = ExtResource("2")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

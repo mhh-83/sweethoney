@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://2xfp5b2g0aib"]
+
+[ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="1_m1avu"]
+
+[resource]
+font = ExtResource("1_m1avu")
+font_size = 46
+font_color = Color(1, 0, 0.0352941, 1)
+outline_size = 4

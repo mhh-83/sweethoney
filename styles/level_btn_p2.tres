@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dk473o1snwp16"]
+
+[ext_resource type="Texture2D" uid="uid://cs5hwi4ghd0jh" path="res://sprite/iconmahale-.png" id="1_pp737"]
+
+[resource]
+texture = ExtResource("1_pp737")
+expand_margin_right = 80.0
+expand_margin_bottom = 80.0
+modulate_color = Color(1, 1, 0, 1)

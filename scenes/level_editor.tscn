@@ -1,0 +1,519 @@
+[gd_scene load_steps=19 format=3 uid="uid://cfdcs3ctteubd"]
+
+[ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="2_obfw0"]
+[ext_resource type="Script" path="res://script/level_editor.gd" id="3"]
+[ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="3_76kv7"]
+[ext_resource type="Texture2D" uid="uid://d054vur54jdie" path="res://sprite/bg_word.png" id="3_kgw67"]
+[ext_resource type="FontFile" uid="uid://52coka50g8od" path="res://fonts/B Traffic_0.ttf" id="5_qhmlv"]
+[ext_resource type="FontFile" uid="uid://ypl8tei5unmv" path="res://fonts/B Koodak Bold_0.ttf" id="6_utesv"]
+[ext_resource type="FontFile" uid="uid://crjjhakosg4i4" path="res://fonts/Digi Vorojak Bold.ttf" id="7_wjs6y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_voner"]
+font = ExtResource("2_obfw0")
+font_size = 60
+font_color = Color(0.87451, 0.87451, 0.87451, 1)
+outline_size = 3
+outline_color = Color(0.992157, 0.215686, 0.654902, 1)
+
+[sub_resource type="Theme" id="Theme_nc72l"]
+default_font_size = 44
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4ask"]
+bg_color = Color(0.360784, 0.352941, 0.34902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj5hy"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3paal"]
+bg_color = Color(0.160784, 0.176471, 0.231373, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10h5p"]
+bg_color = Color(0.105882, 0.137255, 0.2, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Animation" id="Animation_exe7g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:label_settings:font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r3guc"]
+resource_name = "erore"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [""]
+}
+
+[sub_resource type="Animation" id="Animation_6fuf0"]
+resource_name = "successfully"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [""]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_va3y1"]
+_data = {
+"RESET": SubResource("Animation_exe7g"),
+"erore": SubResource("Animation_r3guc"),
+"successfully": SubResource("Animation_6fuf0")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_pg5f0"]
+font = ExtResource("7_wjs6y")
+font_size = 80
+font_color = Color(0, 1, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
+metadata/col = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+text = ": منطقه"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_76kv7")
+theme_override_font_sizes/font_size = 40
+alignment = 1
+icon_alignment = 1
+language = "fa_IR"
+item_count = 5
+selected = 0
+popup/item_0/text = "منزل"
+popup/item_0/id = 0
+popup/item_1/text = "محله"
+popup/item_1/id = 1
+popup/item_2/text = "مدرسه"
+popup/item_2/id = 2
+popup/item_3/text = "مسجد"
+popup/item_3/id = 3
+popup/item_4/text = "لیگ"
+popup/item_4/id = 4
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer9"]
+visible = false
+layout_mode = 2
+text = ":زمان"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="time" type="SpinBox" parent="Panel/VBoxContainer/HBoxContainer9"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_nc72l")
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
+alignment = 1
+suffix = "ثانیه"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = ":مرحله"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="SpinBox" type="SpinBox" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_nc72l")
+min_value = 1.0
+value = 1.0
+alignment = 1
+
+[node name="LineEdit" type="TextEdit" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.976471, 0.945098, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.2, 0.2, 0.2, 0.654902)
+theme_override_colors/font_outline_color = Color(0.992157, 0, 0.882353, 1)
+theme_override_colors/selection_color = Color(0.12549, 0.729412, 0.117647, 1)
+theme_override_colors/caret_color = Color(0.898039, 0.211765, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_utesv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_k4ask")
+placeholder_text = "سوال خود را بنویسید"
+caret_blink = true
+caret_blink_interval = 0.48
+text_direction = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ": نوع بازی"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_76kv7")
+theme_override_font_sizes/font_size = 40
+alignment = 1
+icon_alignment = 1
+language = "fa_IR"
+item_count = 5
+selected = 0
+popup/item_0/text = "ترتیبی"
+popup/item_0/id = 0
+popup/item_1/text = "جدول"
+popup/item_1/id = 1
+popup/item_2/text = "تستی"
+popup/item_2/id = 2
+popup/item_2/disabled = true
+popup/item_3/text = "انتخاب گزینه"
+popup/item_3/id = 3
+popup/item_3/disabled = true
+popup/item_4/text = "وصل کردنی"
+popup/item_4/id = 4
+popup/item_4/disabled = true
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = ": تعداد پاسخ"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="SpinBox" type="SpinBox" parent="Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme = SubResource("Theme_nc72l")
+min_value = 1.0
+max_value = 21.0
+value = 1.0
+alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = ": تعداد ستون"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="SpinBox" type="SpinBox" parent="Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme = SubResource("Theme_nc72l")
+min_value = 1.0
+value = 1.0
+alignment = 1
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+text = ": گزینه صحیح"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="SpinBox" type="SpinBox" parent="Panel/VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+theme = SubResource("Theme_nc72l")
+min_value = 1.0
+max_value = 1.0
+value = 1.0
+alignment = 1
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+text = ": امتیاز"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="SpinBox" type="SpinBox" parent="Panel/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+theme = SubResource("Theme_nc72l")
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
+alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer8"]
+visible = false
+layout_mode = 2
+text = ": گروه"
+label_settings = SubResource("LabelSettings_voner")
+language = "fa_IR"
+
+[node name="SpinBox2" type="SpinBox" parent="Panel/VBoxContainer/HBoxContainer8"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_nc72l")
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
+alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.39
+theme_override_constants/separation = 50
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer7/Control"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+texture = ExtResource("3_kgw67")
+expand_mode = 1
+
+[node name="words" type="Node2D" parent="Panel/VBoxContainer/HBoxContainer7/Control/TextureRect"]
+position = Vector2(100, 100)
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_qhmlv")
+theme_override_font_sizes/font_size = 45
+placeholder_text = "حروف را وارد کنید"
+alignment = 1
+language = "fa_IR"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_utesv")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_oj5hy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3paal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_10h5p")
+text = "ثبت"
+icon_alignment = 1
+language = "fa_IR"
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_utesv")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_oj5hy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3paal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_10h5p")
+text = "دوباره"
+icon_alignment = 1
+language = "fa_IR"
+
+[node name="Button3" type="Button" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_utesv")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_oj5hy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3paal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_10h5p")
+text = "بارگذاری"
+icon_alignment = 1
+language = "fa_IR"
+
+[node name="Button4" type="Button" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_utesv")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_oj5hy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3paal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_10h5p")
+text = "خروج"
+icon_alignment = 1
+language = "fa_IR"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_va3y1")
+}
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+label_settings = SubResource("LabelSettings_pg5f0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="item_selected" from="Panel/VBoxContainer/HBoxContainer9/OptionButton" to="." method="_on_part_item_selected"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer2/SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="text_changed" from="Panel/VBoxContainer/HBoxContainer2/LineEdit" to="." method="_on_question_text_changed"]
+[connection signal="item_selected" from="Panel/VBoxContainer/HBoxContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer5/SpinBox" to="." method="_on_SpinBox_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer6/SpinBox" to="." method="_on_SpinBox_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer10/SpinBox" to="." method="correct_answer"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer8/SpinBox" to="." method="_on_Score_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer8/SpinBox2" to="." method="_on_spin_box_2_value_changed"]
+[connection signal="text_changed" from="Panel/VBoxContainer/HBoxContainer7/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer4/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer4/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer4/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer4/Button4" to="." method="_on_button_4_pressed"]

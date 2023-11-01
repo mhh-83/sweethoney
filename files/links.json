@@ -1,0 +1,67 @@
+[
+	["version", "1.3.6"],
+	
+	["link", "https://drive.google.com/file/d/18H3-3AH03SCc8ZU3gMJW2ItOVhVqsKad/view?usp=drive_link"],
+	
+	["begin", ["https://ik.imagekit.io/7pa8geku1/s1.jpg?updatedAt=1683810636945"]],
+	
+	["icons", ["https://ik.imagekit.io/7pa8geku1/icons/khanevade.png?updatedAt=1682877261935",
+	"https://ik.imagekit.io/7pa8geku1/icons/av580a5a09929566215001.png?updatedAt=1682877259495",
+	"https://ik.imagekit.io/7pa8geku1/icons/9.png?updatedAt=1682877258770",
+	"https://ik.imagekit.io/7pa8geku1/icons/8.png?updatedAt=1682877256459",
+	"https://ik.imagekit.io/7pa8geku1/icons/7.png?updatedAt=1682877254890",
+	"https://ik.imagekit.io/7pa8geku1/icons/1.png?updatedAt=1682877241360",
+	"https://ik.imagekit.io/7pa8geku1/icons/5.png?updatedAt=1682877252664",
+	"https://ik.imagekit.io/7pa8geku1/icons/4.png?updatedAt=1682877251375",
+	"https://ik.imagekit.io/7pa8geku1/icons/3.png?updatedAt=1682877250830",
+	"https://ik.imagekit.io/7pa8geku1/icons/2%D8%B3%D8%B1%D8%AF%D8%A7%D8%B11057.png?updatedAt=1682877249452",
+	"https://ik.imagekit.io/7pa8geku1/icons/2.png?updatedAt=1682877248702",
+	"https://ik.imagekit.io/7pa8geku1/icons/1%D8%B3%D8%B1%D8%AF%D8%A7%D8%B11057.png?updatedAt=1682877246742",
+	"https://ik.imagekit.io/7pa8geku1/icons/112.png?updatedAt=1682877245736",
+	"https://ik.imagekit.io/7pa8geku1/icons/10.png?updatedAt=1682877245506",
+	"https://ik.imagekit.io/7pa8geku1/icons/11.png?updatedAt=1682877245136",
+	"https://ik.imagekit.io/7pa8geku1/icons/113.png?updatedAt=1682877244056",
+	"https://ik.imagekit.io/7pa8geku1/icons/icon.png?updatedAt=1683446738042",
+	"https://ik.imagekit.io/7pa8geku1/icons/Bee_upgraphic-5.png?updatedAt=1683737077806",
+	"https://ik.imagekit.io/7pa8geku1/icons/bee1.png?updatedAt=1683736693550",
+	"https://ik.imagekit.io/7pa8geku1/icons/%DA%AF%D9%84.png?updatedAt=1683902058735"]],
+	
+	["levels_home", ["https://ik.imagekit.io/7pa8geku1/levels/home/level_1.json?updatedAt=1683879815449",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_2.json?updatedAt=1683879818881",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_3.json?updatedAt=1683879818865",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_4.json?updatedAt=1683879819885",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_5.json?updatedAt=1683879821553",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_6.json?updatedAt=1683879821698",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_7.json?updatedAt=1683879821731",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_8.json?updatedAt=1683879821859",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_9.json?updatedAt=1683879832117",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_10.json?updatedAt=1683879818315",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_11.json?updatedAt=1683879818881",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_12.json?updatedAt=1683879816061",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_13.json?updatedAt=1683879815322",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_14.json?updatedAt=1683879818771",
+	"https://ik.imagekit.io/7pa8geku1/levels/home/level_15.json?updatedAt=1683879818764"]],
+	
+	["levels_village", ["https://ik.imagekit.io/7pa8geku1/levels/village/level_1.json?updatedAt=1683879832989",
+	"https://ik.imagekit.io/7pa8geku1/levels/village/level_2.json?updatedAt=1683879833110",
+	"https://ik.imagekit.io/7pa8geku1/levels/village/level_3.json?updatedAt=1683883122904"]],
+	
+	["levels_school", ["https://ik.imagekit.io/7pa8geku1/levels/school/level_1.json?updatedAt=1683879832053"]],
+	
+	["levels_mosque", ["https://ik.imagekit.io/7pa8geku1/levels/mosque/level_1.json?updatedAt=1683879832109",
+	"https://ik.imagekit.io/7pa8geku1/levels/mosque/level_2.json?updatedAt=1683879832050"]],
+	
+	["levels_league_1", [["https://ik.imagekit.io/7pa8geku1/levels/league/part_1/level_1.json?updatedAt=1689138139413"]]],
+	
+	["levels_league_2", [["https://ik.imagekit.io/7pa8geku1/levels/league/part_2/level_1.json?updatedAt=1689138707366"]]],
+	
+	["levels_league_3", [["https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_1.json?updatedAt=1692283012813", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_2.json?updatedAt=1692282999575", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_3.json?updatedAt=1692283011979", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_4.json?updatedAt=1692283000046", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_5.json?updatedAt=1692283011811", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_6.json?updatedAt=1692283001062", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_7.json?updatedAt=1692283002035", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_8.json?updatedAt=1692282999013", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_9.json?updatedAt=1692283002035", "https://ik.imagekit.io/7pa8geku1/levels/league/part_3/level_10.json?updatedAt=1692283001177"]]],
+	
+	["levels_league_4", [["https://ik.imagekit.io/7pa8geku1/levels/league/part_4/level_1.json?updatedAt=1689138251618"]]],
+	
+	["levels_league_5", [["https://ik.imagekit.io/7pa8geku1/levels/league/part_5/level_1.json?updatedAt=1689138292067"]]],
+	
+	["daily_gift_time", ["https://ik.imagekit.io/7pa8geku1/files/daily_gift_time.json?updatedAt=1684130827217"]],
+	
+	["time_league", ["https://ik.imagekit.io/7pa8geku1/files/time_league.json?updatedAt=1690821651387"]]
+]

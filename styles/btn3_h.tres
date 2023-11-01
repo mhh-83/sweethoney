@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bp4f47ruh0nf7"]
+
+[ext_resource type="Texture2D" uid="uid://b32evagccsp3u" path="res://sprite/bach3.png" id="1_aexct"]
+
+[resource]
+texture = ExtResource("1_aexct")
+texture_margin_top = 20.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.831373, 0.831373, 0.831373, 1)

@@ -1,0 +1,253 @@
+[gd_scene load_steps=19 format=3 uid="uid://bv0qn3tqw3ck0"]
+
+[ext_resource type="Texture2D" uid="uid://dwp5hcq5xj3k" path="res://sprite/bacg11.png" id="2_luov0"]
+[ext_resource type="Script" path="res://script/win.gd" id="3"]
+[ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="4_201r0"]
+[ext_resource type="StyleBox" uid="uid://b4pb61atpj0e0" path="res://styles/btn4_n.tres" id="5_0b1v3"]
+[ext_resource type="StyleBox" uid="uid://dvru4pu8dnkqh" path="res://styles/btn4_h.tres" id="6_cksqw"]
+[ext_resource type="Texture2D" uid="uid://dpqyqmoj5kg42" path="res://sprite/asal-b-Tarh.ir-109.png" id="7_7a0pp"]
+[ext_resource type="StyleBox" uid="uid://d3y65msk65buv" path="res://styles/btn4_p.tres" id="7_ip80d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_awqcu"]
+font = ExtResource("4_201r0")
+font_size = 55
+font_color = Color(0.0352941, 0, 0.690196, 1)
+outline_size = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qk0jk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgokn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsbp2"]
+texture = ExtResource("7_7a0pp")
+texture_margin_left = 20.0
+expand_margin_left = 30.0
+expand_margin_top = 10.0
+expand_margin_right = 30.0
+expand_margin_bottom = 10.0
+modulate_color = Color(1, 0.137255, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nu6l4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hk5aj"]
+
+[sub_resource type="Animation" id="Animation_4s417"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_es217"]
+resource_name = "end_level"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.129412, 0.129412, 0.129412, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d0gkk"]
+_data = {
+"RESET": SubResource("Animation_4s417"),
+"end_level": SubResource("Animation_es217")
+}
+
+[sub_resource type="Gradient" id="Gradient_eo8bg"]
+offsets = PackedFloat32Array(0, 0.668421, 0.710526)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gxdsl"]
+gradient = SubResource("Gradient_eo8bg")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[node name="win" type="Control"]
+visibility_layer = 2
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 2
+visibility_layer = 2
+texture_repeat = 2
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_luov0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_direction = 2
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+light_mask = 3
+layout_mode = 2
+text = "امتیاز گرفته شده : "
+label_settings = SubResource("LabelSettings_awqcu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 2
+
+[node name="PersianButton4" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
+light_mask = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_201r0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("5_0b1v3")
+theme_override_styles/hover = ExtResource("6_cksqw")
+theme_override_styles/pressed = ExtResource("7_ip80d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qk0jk")
+text = "   دوباره   "
+
+[node name="PersianButton5" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("5_0b1v3")
+theme_override_styles/hover = ExtResource("6_cksqw")
+theme_override_styles/pressed = ExtResource("7_ip80d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xgokn")
+text = "منطقه بعد"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+visible = false
+light_mask = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_dsbp2")
+text = "پایان مراحل"
+
+[node name="PersianButton3" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
+light_mask = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_201r0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("5_0b1v3")
+theme_override_styles/hover = ExtResource("6_cksqw")
+theme_override_styles/pressed = ExtResource("7_ip80d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xgokn")
+text = "مرحله بعد"
+
+[node name="PersianButton7" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
+light_mask = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_201r0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("5_0b1v3")
+theme_override_styles/hover = ExtResource("6_cksqw")
+theme_override_styles/pressed = ExtResource("7_ip80d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nu6l4")
+text = "مراحل"
+
+[node name="PersianButton8" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
+light_mask = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_201r0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("5_0b1v3")
+theme_override_styles/hover = ExtResource("6_cksqw")
+theme_override_styles/pressed = ExtResource("7_ip80d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nu6l4")
+text = "منو شروع"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="PersianButton6" type="Button" parent="VBoxContainer/HBoxContainer2"]
+light_mask = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_201r0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("5_0b1v3")
+theme_override_styles/hover = ExtResource("6_cksqw")
+theme_override_styles/pressed = ExtResource("7_ip80d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hk5aj")
+text = "خروج"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d0gkk")
+}
+
+[node name="lights" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="lights"]
+position = Vector2(-223, -266)
+scale = Vector2(7.07813, 8.60938)
+color = Color(0.243137, 0.129412, 1, 1)
+range_item_cull_mask = 2
+shadow_color = Color(0, 0, 0, 0.788235)
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_gxdsl")
+
+[node name="PointLight2D2" type="PointLight2D" parent="lights"]
+position = Vector2(1015, -279)
+scale = Vector2(7.07813, 8.60938)
+color = Color(1, 0.129412, 0, 1)
+range_item_cull_mask = 2
+shadow_color = Color(0, 0, 0, 0.788235)
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_gxdsl")
+
+[node name="PointLight2D3" type="PointLight2D" parent="lights"]
+position = Vector2(-239, 1461)
+scale = Vector2(7.07813, 8.60938)
+range_item_cull_mask = 2
+shadow_color = Color(0, 0, 0, 0.788235)
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_gxdsl")
+
+[node name="PointLight2D4" type="PointLight2D" parent="lights"]
+position = Vector2(1006, 1483)
+scale = Vector2(7.07813, 8.60938)
+color = Color(0.172549, 1, 0.243137, 1)
+range_item_cull_mask = 2
+shadow_color = Color(0, 0, 0, 0.788235)
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_gxdsl")
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer/PersianButton4" to="." method="_on_PersianButton4_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer/PersianButton5" to="." method="_on_PersianButton5_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer/PersianButton3" to="." method="_on_PersianButton3_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer/PersianButton7" to="." method="_on_PersianButton2_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer/PersianButton8" to="." method="_on_persian_button_8_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/PersianButton6" to="." method="_on_PersianButton_pressed"]

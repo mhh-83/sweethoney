@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://be5wdbvp01p1o"]
+
+[ext_resource type="PackedScene" uid="uid://bv5iovcvbaon5" path="res://addons/HTTPManager/progress/progress.tscn" id="1_fwffo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdmmo"]
+bg_color = Color(0.247059, 0, 0.286275, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Progress" instance=ExtResource("1_fwffo")]
+position = Vector2i(150, 450)
+size = Vector2i(500, 250)
+
+[node name="Control" parent="." index="0"]
+anchors_preset = -1
+
+[node name="Panel" parent="Control" index="0"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_jdmmo")
+
+[node name="bytes" parent="Control/Panel/MarginContainer/VBoxContainer" index="2"]
+visible = true
+
+[node name="progress_jobs" parent="Control/Panel/MarginContainer/VBoxContainer" index="3"]
+visible = true
