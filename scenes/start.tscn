@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://mhki0xn8kl1e"]
+[gd_scene load_steps=115 format=3 uid="uid://mhki0xn8kl1e"]
 
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_cwr6q"]
 [ext_resource type="Texture2D" uid="uid://d1svtgreq1u0f" path="res://sprite/user_img.png" id="3_ae4nf"]
@@ -31,6 +31,7 @@
 [ext_resource type="FontFile" uid="uid://52coka50g8od" path="res://fonts/B Traffic_0.ttf" id="29_nt8b8"]
 [ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="30_jt8g3"]
 [ext_resource type="PackedScene" uid="uid://btxmu4sj6al70" path="res://scenes/shop.tscn" id="31_itr38"]
+[ext_resource type="PackedScene" uid="uid://wjcq1xqc82j5" path="res://scenes/quit.tscn" id="32_jiq46"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xhceu"]
 
@@ -859,7 +860,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("VBoxContainer/HBoxContainer5/PersianButton3:disabled")
+tracks/7/path = NodePath("VBoxContainer/HBoxContainer5/quit:disabled")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1424,7 +1425,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("VBoxContainer/HBoxContainer5/PersianButton3:disabled")
+tracks/4/path = NodePath("VBoxContainer/HBoxContainer5/quit:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1631,7 +1632,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("VBoxContainer/HBoxContainer5/PersianButton3:disabled")
+tracks/4/path = NodePath("VBoxContainer/HBoxContainer5/quit:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -5222,7 +5223,7 @@ text = "کندوها"
 alignment = 0
 language = "fa_IR"
 
-[node name="PersianButton3" type="Button" parent="VBoxContainer/HBoxContainer5"]
+[node name="quit" type="Button" parent="VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.67451, 0, 0.0980392, 1)
 theme_override_colors/font_pressed_color = Color(0.886275, 0, 0, 1)
@@ -5570,7 +5571,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="head" type="Bone2D" parent="bee/Skeleton2D/body"]
 position = Vector2(19, -48)
-scale = Vector2(0.999985, 0.999985)
+scale = Vector2(0.999984, 0.999984)
 rest = Transform2D(1, 0, 0, 1, 19, -48)
 editor_settings/show_bone_gizmo = false
 
@@ -5632,7 +5633,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999888, 0.999888)
+scale = Vector2(0.999887, 0.999887)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5836,8 +5837,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 364.0
 offset_top = 663.0
-offset_right = 404.0
-offset_bottom = 703.0
+offset_right = -364.0
+offset_bottom = -663.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 6.28319
@@ -5845,6 +5846,9 @@ pivot_offset = Vector2(384, 683)
 texture = ExtResource("19_x5kk1")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="PopupPanel2" parent="." instance=ExtResource("32_jiq46")]
+visible = false
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="text_submitted" from="VBoxContainer/HBoxContainer4/Control/Panel/Label" to="." method="_on_label_text_submitted"]
@@ -5857,10 +5861,14 @@ stretch_mode = 5
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/PersianButton3" to="." method="_on_guid_league_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/PersianButton" to="." method="_on_PersianButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer5/hives" to="." method="_on_hives_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer5/PersianButton3" to="." method="_on_PersianButton3_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer5/quit" to="." method="_on_quit_pressed"]
 [connection signal="file_sellected" from="file_dialog" to="." method="_on_file_dialog_file_sellected"]
 [connection signal="pressed" from="gift/Realistic-gold-gift-boxBody" to="." method="_on_realisticgoldgiftbox_body_pressed"]
 [connection signal="timeout" from="gift/timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="PersianButton4" to="." method="_on_guid_button_pressed"]
 [connection signal="timeout" from="timer" to="." method="_on_timer_begin_league_timeout"]
 [connection signal="timeout" from="timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="pressed" from="PopupPanel2/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PopupPanel2/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="_on_PersianButton3_pressed"]
+
+[editable path="PopupPanel2"]

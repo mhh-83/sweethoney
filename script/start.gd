@@ -164,13 +164,14 @@ func _on_edit_name_pressed():
 
 
 func _on_PersianButton3_pressed():
+	$PopupPanel2.hide()
 	$AnimationPlayer2.play("change_scene")
 	save("last_time_gift", $gift/timer.current_time)
 	await $AnimationPlayer2.animation_finished
 	get_tree().quit()
 func _notification(what):
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
-		_on_PersianButton3_pressed()
+		_on_quit_pressed()
 
 func _on_turn_texture_pressed():
 	save("rotate_img", load_game("rotate_img", 0) + 90)
@@ -310,3 +311,11 @@ func _on_league_button_pressed():
 	save("last_time_gift", $gift/timer.current_time)
 	queue_free()
 	get_tree().change_scene_to_file("res://scenes/league_menu.tscn")
+
+
+func _on_button_pressed():
+	$PopupPanel2.hide()
+
+
+func _on_quit_pressed():
+	$PopupPanel2.popup_centered()
