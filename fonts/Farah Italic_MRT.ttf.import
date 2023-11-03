@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://b1gp7u8rbtihy"
+path="res://.godot/imported/Farah Italic_MRT.ttf-9b8492cec00e8e63ab05ae2a4b6ae049.fontdata"
+
+[deps]
+
+source_file="res://fonts/Farah Italic_MRT.ttf"
+dest_files=["res://.godot/imported/Farah Italic_MRT.ttf-9b8492cec00e8e63ab05ae2a4b6ae049.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

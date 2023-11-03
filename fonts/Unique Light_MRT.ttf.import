@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bqhd0066meh55"
+path="res://.godot/imported/Unique Light_MRT.ttf-13ba1d1b27cd6e50cde22d5afe1a2883.fontdata"
+
+[deps]
+
+source_file="res://fonts/Unique Light_MRT.ttf"
+dest_files=["res://.godot/imported/Unique Light_MRT.ttf-13ba1d1b27cd6e50cde22d5afe1a2883.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

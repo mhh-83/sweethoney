@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bdfoaq31l8u5l"
+path="res://.godot/imported/Diwani Decor_MRT.ttf-b8958d5e540bb2868cdde8077905ee0e.fontdata"
+
+[deps]
+
+source_file="res://fonts/Diwani Decor_MRT.ttf"
+dest_files=["res://.godot/imported/Diwani Decor_MRT.ttf-b8958d5e540bb2868cdde8077905ee0e.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

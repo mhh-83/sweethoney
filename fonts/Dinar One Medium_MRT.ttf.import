@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://wq3n27vbb0o6"
+path="res://.godot/imported/Dinar One Medium_MRT.ttf-f10af5013de8f56bb600a650f4d6cc83.fontdata"
+
+[deps]
+
+source_file="res://fonts/Dinar One Medium_MRT.ttf"
+dest_files=["res://.godot/imported/Dinar One Medium_MRT.ttf-f10af5013de8f56bb600a650f4d6cc83.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

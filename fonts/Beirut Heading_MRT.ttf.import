@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bd0wg0ahqaepl"
+path="res://.godot/imported/Beirut Heading_MRT.ttf-6703491a1aa0bad95286183a3f1047af.fontdata"
+
+[deps]
+
+source_file="res://fonts/Beirut Heading_MRT.ttf"
+dest_files=["res://.godot/imported/Beirut Heading_MRT.ttf-6703491a1aa0bad95286183a3f1047af.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

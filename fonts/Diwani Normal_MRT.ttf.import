@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://d2e1dyicw5b82"
+path="res://.godot/imported/Diwani Normal_MRT.ttf-a0f9301a9aa25623fb46d7a45f2d5ee2.fontdata"
+
+[deps]
+
+source_file="res://fonts/Diwani Normal_MRT.ttf"
+dest_files=["res://.godot/imported/Diwani Normal_MRT.ttf-a0f9301a9aa25623fb46d7a45f2d5ee2.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

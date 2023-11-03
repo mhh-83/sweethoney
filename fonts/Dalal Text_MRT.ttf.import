@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://clp3vf02mcl4q"
+path="res://.godot/imported/Dalal Text_MRT.ttf-69f497556f4b6dd9b0f24fd695d3b1ed.fontdata"
+
+[deps]
+
+source_file="res://fonts/Dalal Text_MRT.ttf"
+dest_files=["res://.godot/imported/Dalal Text_MRT.ttf-69f497556f4b6dd9b0f24fd695d3b1ed.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

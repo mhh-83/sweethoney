@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://brwr0k8l8gw8d"
+path="res://.godot/imported/Thameen Light_MRT.ttf-958fc27704bfd25205c1e2dd92c5e9d0.fontdata"
+
+[deps]
+
+source_file="res://fonts/Thameen Light_MRT.ttf"
+dest_files=["res://.godot/imported/Thameen Light_MRT.ttf-958fc27704bfd25205c1e2dd92c5e9d0.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

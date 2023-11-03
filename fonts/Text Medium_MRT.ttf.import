@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://b22nnp8imjxf7"
+path="res://.godot/imported/Text Medium_MRT.ttf-1ee91f5e8faf0e4ed792413251a0a987.fontdata"
+
+[deps]
+
+source_file="res://fonts/Text Medium_MRT.ttf"
+dest_files=["res://.godot/imported/Text Medium_MRT.ttf-1ee91f5e8faf0e4ed792413251a0a987.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
