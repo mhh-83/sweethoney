@@ -53,6 +53,7 @@ func request_complated(result, response_code, header, body):
 	http.request(list["1"])
 
 func request_complated2(result, response_code, header, body):
+	print(body.get_string_from_utf8())
 	if response_code == 0:
 		no_internet()
 		return
