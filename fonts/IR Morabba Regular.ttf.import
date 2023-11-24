@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bo36fo64tpc01"
+path="res://.godot/imported/IR Morabba Regular.ttf-2768b7dc4e21f9496383aca82e72f1c1.fontdata"
+
+[deps]
+
+source_file="res://fonts/IR Morabba Regular.ttf"
+dest_files=["res://.godot/imported/IR Morabba Regular.ttf-2768b7dc4e21f9496383aca82e72f1c1.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
