@@ -62,6 +62,10 @@ func _ready():
 	match part:
 		0:
 			max_level = load_game("max_level_h", 1)
+			
+			
+			
+			
 			unlock_level = load_game("unlock_level_h", 1)
 		1:
 			max_level = load_game("max_level_v", 1)
