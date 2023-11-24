@@ -90,8 +90,8 @@ func _ready():
 		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = tex
 	else:
 		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = load("res://sprite/user_img.png")
-	$VBoxContainer/HBoxContainer4/Control/Panel/Label2.text = "امتیاز : "+ str(load_game("score", 0))
-	$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect2.value = load_game("score", 0) * 100 / 5000
+	#$VBoxContainer/HBoxContainer4/Control/Panel/Label2.text = "امتیاز : "+ str(load_game("score", 0))
+	#$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect2.value = load_game("score", 0) * 100 / 5000
 	var daily_gift_time = load_game2("daily_gift_time", [])
 	if daily_gift_time.size() > 0:
 		var file = FileAccess.open("user://daily_gift_time/"+ daily_gift_time[0], FileAccess.READ)
