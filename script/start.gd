@@ -8,6 +8,7 @@ var save_path = "user://data.cfg"
 var part = 0
 var teach = true
 var guid
+var reset_guid = true
 @export var gift_score = 30
 @export_subgroup("guids")
 @export_multiline var guid_league = ""
@@ -40,8 +41,8 @@ func _ready():
 	if FileAccess.file_exists(save_path):
 		level = load_game("level", 1)
 		teach = load_game("teach", true)
-		$VBoxContainer/HBoxContainer4/Control/Panel/Label.text = load_game('name', "")
-		$VBoxContainer/HBoxContainer4/Control/Panel/Label.editable = false
+		#$VBoxContainer/HBoxContainer4/Control/Panel/Label.text = load_game('name', "")
+		#$VBoxContainer/HBoxContainer4/Control/Panel/Label.editable = false
 		var part_list = [["levels_home", "h"], ["levels_village", "v"], ["levels_school", "s"], ["levels_mosque", "m"]]
 		for x in range(part_list.size()):
 			save("max_level_"+part_list[x][1], len(load_game2(part_list[x][0], [])))
@@ -81,21 +82,21 @@ func _ready():
 		level = max_level
 		save("level", level)
 	
-	if load_game("img", "") != "":
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.show()
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/Label.hide()
-		var tex = load("res://sprite/user_img.png")
-		if FileAccess.file_exists("user://icons/" + load_game("img")):
-			var image = Image.load_from_file("user://icons/" + load_game("img"))
-			tex = ImageTexture.create_from_image(image)
-		else:
-			save("img", "")
-			$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.hide()
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = tex
-	else:
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = load("res://sprite/user_img.png")
-	$VBoxContainer/HBoxContainer4/Control/Panel/Label2.text = "امتیاز : "+ str(load_game("score", 0))
-	$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect2.value = load_game("score", 0) * 100 / 5000
+#	if load_game("img", "") != "":
+#		$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.show()
+#		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/Label.hide()
+#		var tex = load("res://sprite/user_img.png")
+#		if FileAccess.file_exists("user://icons/" + load_game("img")):
+#			var image = Image.load_from_file("user://icons/" + load_game("img"))
+#			tex = ImageTexture.create_from_image(image)
+#		else:
+#			save("img", "")
+#			$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.hide()
+#		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = tex
+#	else:
+#		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = load("res://sprite/user_img.png")
+	#$VBoxContainer/HBoxContainer4/Control/Panel/Label2.text = "امتیاز : "+ str(load_game("score", 0))
+	#$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect2.value = load_game("score", 0) * 100 / 5000
 	var daily_gift_time = load_game2("daily_gift_time", [])
 	if daily_gift_time.size() > 0:
 		var file = FileAccess.open("user://daily_gift_time/"+ daily_gift_time[0], FileAccess.READ)
@@ -110,12 +111,14 @@ func _on_PersianButton_pressed():
 		queue_free()
 		get_tree().change_scene_to_file("res://scenes/normal_menu.tscn")
 	else:
-		$AnimationPlayer.play("light_off")
-		await $AnimationPlayer.animation_finished
-		$AnimationPlayer.play("guid")
-		guid_text_list = guid_normal_levels.split("\n")
-		page = 0
-		$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
+		if reset_guid:
+			$AnimationPlayer.play("light_off")
+			await $AnimationPlayer.animation_finished
+			$AnimationPlayer.play("guid")
+			guid_text_list = guid_normal_levels.split("\n")
+			page = 0
+			reset_guid = false
+			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 
 
 
@@ -184,14 +187,14 @@ func _on_turn_texture_pressed():
 	
 func _on_gui_input(event):
 	if event is InputEventScreenTouch:
-		var t = $VBoxContainer/HBoxContainer4/Control/Panel/Label.text.split(" ")
-		var text = ""
-		for x in t:
-			if x != "":
-				text += x
-		if text != "" and $VBoxContainer/HBoxContainer4/Control/Panel/Label.text != "":
-			save("name", $VBoxContainer/HBoxContainer4/Control/Panel/Label.text)
-			$VBoxContainer/HBoxContainer4/Control/Panel/Label.editable = false
+#		var t = $VBoxContainer/HBoxContainer4/Control/Panel/Label.text.split(" ")
+#		var text = ""
+#		for x in t:
+#			if x != "":
+#				text += x
+#		if text != "" and $VBoxContainer/HBoxContainer4/Control/Panel/Label.text != "":
+#			save("name", $VBoxContainer/HBoxContainer4/Control/Panel/Label.text)
+#			$VBoxContainer/HBoxContainer4/Control/Panel/Label.editable = false
 		if guid and $PanelQ.scale.x > 1:
 			if page < guid_text_list.size() - 1:
 				page += 1
@@ -199,6 +202,7 @@ func _on_gui_input(event):
 			else:
 				$AnimationPlayer.play("close")
 				guid = false
+				reset_guid = true
 			
 				
 func _on_file_dialog_file_sellected(path):
@@ -219,12 +223,14 @@ func _process(delta):
 		if $gift/AnimationPlayer.current_animation != "gift":
 			$gift/AnimationPlayer.play("rotate_door")
 	if load_game("begin_league"):
-		$VBoxContainer/HBoxContainer2/PersianButton2.disabled = false
-		$VBoxContainer/HBoxContainer2/PersianButton2/Lock.hide()
+		$VBoxContainer/PersianButton2.disabled = false
+		$VBoxContainer/PersianButton2/Lock.hide()
+		$VBoxContainer/PersianButton2/Lock2.hide()
 
 	if load_game("close_league"):
-		$VBoxContainer/HBoxContainer2/PersianButton2.disabled = true
-		$VBoxContainer/HBoxContainer2/PersianButton2/Lock.show()
+		$VBoxContainer/PersianButton2.disabled = true
+		$VBoxContainer/PersianButton2/Lock.show()
+		$VBoxContainer/PersianButton2/Lock2.show()
 	if $icons.visible or $PopupPanel.visible:
 		modulate = Color("4f4f4f")
 	else:
@@ -240,7 +246,6 @@ func _on_realisticgoldgiftbox_body_pressed():
 		save("gift", false)
 		save("last_time_gift", $gift/timer.current_time)
 		save("score", load_game("score", 0) + gift_score)
-		$VBoxContainer/HBoxContainer4/Control/Panel/Label2.text = "امتیاز : "+ str(load_game("score", 0))
 		$gift/Label.text = "+" + str(gift_score)
 		$gift/AnimationPlayer.play("gift")
 		await $gift/AnimationPlayer.animation_finished
@@ -253,12 +258,14 @@ func _on_hives_pressed():
 		var m = preload("res://scenes/hive_scene.tscn").instantiate()
 		get_tree().get_root().add_child(m)
 	else:
-		$AnimationPlayer.play("light_off")
-		await $AnimationPlayer.animation_finished
-		$AnimationPlayer.play("guid")
-		guid_text_list = guid_hive.split("\n")
-		page = 0
-		$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
+		if reset_guid:
+			$AnimationPlayer.play("light_off")
+			await $AnimationPlayer.animation_finished
+			$AnimationPlayer.play("guid")
+			guid_text_list = guid_hive.split("\n")
+			page = 0
+			reset_guid = false
+			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 func _on_guid_button_pressed():
 	guid = true
 	$AnimationPlayer.play("light_on")
@@ -267,29 +274,35 @@ func _on_guid_button_pressed():
 
 
 func _on_guid_league_button_pressed():
+	if reset_guid:
 		$AnimationPlayer.play("light_off")
 		await $AnimationPlayer.animation_finished
 		$AnimationPlayer.play("guid")
 		guid_text_list = guid_league.split("\n")
 		page = 0
+		reset_guid = false
 		$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 
 
 func _on_timer_2_timeout():
 	save('close_league', true)
-	$VBoxContainer/HBoxContainer2/PersianButton2.disabled = true
-	$VBoxContainer/HBoxContainer2/PersianButton2/Lock.show()
+	$VBoxContainer/PersianButton2.disabled = true
+	$VBoxContainer/PersianButton2/Lock.show()
+	$VBoxContainer/PersianButton2/Lock2.show()
 	$timer2.queue_free()
 
 func _on_gift_button_pressed():
 	if guid:
-		$AnimationPlayer.play("light_off")
-		await $AnimationPlayer.animation_finished
-		$AnimationPlayer.play("guid")
-		guid_text_list = guid_gift.split("\n")
-		page = 0
-		$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
-
+		if reset_guid:
+			$AnimationPlayer.play("light_off")
+			await $AnimationPlayer.animation_finished
+			$AnimationPlayer.play("guid")
+			guid_text_list = guid_gift.split("\n")
+			page = 0
+			reset_guid = false
+			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
+	else:
+		get_tree().change_scene_to_file("res://scenes/gifts.tscn")
 
 
 func _on_timer_begin_league_timeout():
@@ -301,12 +314,14 @@ func _on_timer_begin_league_timeout():
 
 func _on_shop_button_pressed():
 	if guid:
-		$AnimationPlayer.play("light_off")
-		await $AnimationPlayer.animation_finished
-		$AnimationPlayer.play("guid")
-		guid_text_list = guid_shop.split("\n")
-		page = 0
-		$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
+		if reset_guid:
+			$AnimationPlayer.play("light_off")
+			await $AnimationPlayer.animation_finished
+			$AnimationPlayer.play("guid")
+			guid_text_list = guid_shop.split("\n")
+			page = 0
+			reset_guid = false
+			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 	else:
 		$PopupPanel.popup_centered()
 

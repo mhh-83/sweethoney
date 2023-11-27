@@ -1,30 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcosxm1mqni32"]
 
-[sub_resource type="Gradient" id="Gradient_cpoti"]
-offsets = PackedFloat32Array(0, 0.283505, 0.762887)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 0, 0.00392157, 0.992157, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_rcup1"]
-noise_type = 2
-fractal_type = 2
-fractal_octaves = 10
-fractal_gain = 0.8
-fractal_weighted_strength = 1.0
-domain_warp_enabled = true
-domain_warp_type = 1
-domain_warp_amplitude = 200.0
-domain_warp_frequency = 0.02
-domain_warp_fractal_type = 2
-domain_warp_fractal_octaves = 10
-domain_warp_fractal_lacunarity = 1.0
-domain_warp_fractal_gain = 0.0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gsiv6"]
-color_ramp = SubResource("Gradient_cpoti")
-noise = SubResource("FastNoiseLite_rcup1")
+[ext_resource type="Texture2D" uid="uid://ci7pv38ssm6tk" path="res://sprite/gift.jpg" id="1_xcbri"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_dcjfv"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Curve" id="Curve_1pjfy"]
+_data = [Vector2(0.0180995, 0.0210526), 0.0, 0.0, 0, 0, Vector2(0.0769231, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_goflj"]
+offsets = PackedFloat32Array(0, 0.352632, 0.468421, 0.721053, 0.794737)
+colors = PackedColorArray(1, 1, 0, 1, 1, 0.569729, 0.216523, 1, 1, 0.392157, 0.305882, 1, 0, 0, 0, 1, 1, 1, 1, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -41,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("NoiseTexture2D_gsiv6")
+texture = ExtResource("1_xcbri")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -64,3 +51,21 @@ polygon = PackedVector2Array(61, 35, 14, 35, 14, 48, 0, 28, 15, 12, 15, 24, 61, 
 position = Vector2(0, -12)
 color = Color(0, 0.87451, 0.686275, 1)
 polygon = PackedVector2Array(59, 33, 13, 33, 13, 44, 4, 29, 14, 16, 14, 27, 59, 27)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(359, 479)
+amount = 100
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 10.76
+direction = Vector2(0, -1)
+spread = 41.95
+gravity = Vector2(0, -200)
+initial_velocity_min = 186.45
+initial_velocity_max = 271.2
+angle_min = 42.0
+angle_max = 57.5
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_1pjfy")
+color_ramp = SubResource("Gradient_goflj")
