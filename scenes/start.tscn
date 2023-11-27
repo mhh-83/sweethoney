@@ -2,12 +2,25 @@
 
 [ext_resource type="FontFile" uid="uid://dtq6hsy4v3tft" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_i3efk"]
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_cwr6q"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://jqphyjsyt0o0" path="res://sprite/asl1.png" id="2_o7yth"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="4_ek24b"]
 [ext_resource type="Script" path="res://script/start.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://bbat7dydd7o0h" path="res://sprite/honey_drop.png" id="8_rs1bi"]
 [ext_resource type="PackedScene" uid="uid://bif1t8hdv8ixq" path="res://scenes/icons.tscn" id="9_vw75p"]
 [ext_resource type="Texture2D" uid="uid://380isc3ske2i" path="res://sprite/lock.png" id="11_x7kbd"]
+=======
+[ext_resource type="PackedScene" uid="uid://c8jpxywvatsal" path="res://scenes/settings.tscn" id="3_3xxmb"]
+[ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="4_ek24b"]
+[ext_resource type="Script" path="res://script/start.gd" id="6"]
+[ext_resource type="FontFile" uid="uid://b27pddqoondca" path="res://fonts/Aviny2-mfnbbn.ttf" id="9_1nbhl"]
+[ext_resource type="PackedScene" uid="uid://bif1t8hdv8ixq" path="res://scenes/icons.tscn" id="9_vw75p"]
+[ext_resource type="Texture2D" uid="uid://oxb7bnl4o38b" path="res://sprite/ف.png" id="10_fugac"]
+[ext_resource type="StyleBox" uid="uid://bfw5kt2y7be7k" path="res://styles/btn_start_n.tres" id="11_jk0px"]
+[ext_resource type="Texture2D" uid="uid://380isc3ske2i" path="res://sprite/lock.png" id="11_x7kbd"]
+[ext_resource type="Texture2D" uid="uid://beehvxvrajlh0" path="res://sprite/btn.png" id="12_jvthr"]
+[ext_resource type="Texture2D" uid="uid://bbat7dydd7o0h" path="res://sprite/honey_drop.png" id="13_bdgw5"]
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 [ext_resource type="PackedScene" uid="uid://di6raeb4a5fbe" path="res://scenes/file_dialog.tscn" id="13_ejy2l"]
 [ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="16_ad2pe"]
 [ext_resource type="Texture2D" uid="uid://dfgyauf0d6da" path="res://sprite/Untitled-31.png" id="17_1midj"]
@@ -30,11 +43,19 @@
 [ext_resource type="PackedScene" uid="uid://btxmu4sj6al70" path="res://scenes/shop.tscn" id="31_itr38"]
 [ext_resource type="PackedScene" uid="uid://wjcq1xqc82j5" path="res://scenes/quit.tscn" id="32_jiq46"]
 
+<<<<<<< HEAD
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0461u"]
 texture = ExtResource("2_o7yth")
 texture_margin_left = 50.0
 texture_margin_top = 30.0
 texture_margin_right = 140.0
+=======
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqdla"]
+texture = ExtResource("10_fugac")
+texture_margin_left = 10.0
+texture_margin_top = 21.0
+texture_margin_right = 110.0
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 texture_margin_bottom = 30.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghfuk"]
@@ -300,6 +321,39 @@ _data = {
 "change_scene": SubResource("Animation_w1sgt")
 }
 
+<<<<<<< HEAD
+=======
+[sub_resource type="Gradient" id="Gradient_75q5a"]
+offsets = PackedFloat32Array(0, 0.6)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7ej6w"]
+gradient = SubResource("Gradient_75q5a")
+
+[sub_resource type="Curve" id="Curve_a4wg0"]
+_data = [Vector2(0, 0.263158), 0.0, 0.0, 0, 0, Vector2(0.204819, 1), 0.0, 0.0, 0, 0, Vector2(0.373494, 0.189474), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_rxk8n"]
+curve = SubResource("Curve_a4wg0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_viu73"]
+emission_shape = 3
+emission_box_extents = Vector3(768, 1, 1)
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.2
+scale_max = 0.36
+scale_curve = SubResource("CurveTexture_rxk8n")
+color_ramp = SubResource("GradientTexture1D_7ej6w")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4meya"]
+atlas = ExtResource("13_bdgw5")
+region = Rect2(252.646, 24.473, 170.714, 227.082)
+
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 [sub_resource type="Curve" id="Curve_5epoe"]
 min_value = -1024.0
 _data = [Vector2(0, -45.5909), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -4807,10 +4861,57 @@ grow_vertical = 2
 theme_override_constants/separation = -10
 alignment = 1
 
+<<<<<<< HEAD
 [node name="PersianButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "بازی پنج میم"
+=======
+[node name="HBoxContainer4" parent="VBoxContainer" instance=ExtResource("3_3xxmb")]
+visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PersianButton2" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.67451, 0, 0.0980392, 1)
+theme_override_colors/font_pressed_color = Color(0.886275, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.886275, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.67451, 0, 0.0980392, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.972549, 0.972549, 0.972549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_1nbhl")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_gqdla")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uc3rr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ej31a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_gqdla")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uxytq")
+text = "            فروشگاه"
+language = "fa_IR"
+
+[node name="PersianButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.67451, 0, 0.0980392, 1)
+theme_override_colors/font_pressed_color = Color(0.886275, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.886275, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.67451, 0, 0.0980392, 1)
+theme_override_colors/font_outline_color = Color(0.972549, 0.972549, 0.972549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_1nbhl")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_a3464")
+theme_override_styles/hover = SubResource("StyleBoxTexture_txcpy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ooa8r")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a3464")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uxytq")
+text = "                                       جایزه 
+"
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 alignment = 0
 language = "fa_IR"
 
@@ -4879,6 +4980,17 @@ libraries = {
 "": SubResource("AnimationLibrary_4uag8")
 }
 
+<<<<<<< HEAD
+=======
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(384, 0)
+amount = 17
+process_material = SubResource("ParticleProcessMaterial_viu73")
+texture = SubResource("AtlasTexture_4meya")
+lifetime = 9.0
+visibility_rect = Rect2(-384, -100, 768, 200)
+
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
 position = Vector2(384, 0)
 amount = 2
@@ -5193,7 +5305,11 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D3"]
 position = Vector2(13, -14)
 rotation = -0.180625
+<<<<<<< HEAD
 scale = Vector2(0.999982, 0.999982)
+=======
+scale = Vector2(0.999983, 0.999983)
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 15, -12)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5208,7 +5324,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D4"]
 position = Vector2(16.792, -15.4282)
 rotation = -0.180625
-scale = Vector2(0.999986, 0.999986)
+scale = Vector2(0.999985, 0.999985)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 17.0103, -17.6536)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5243,7 +5359,11 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
+<<<<<<< HEAD
 scale = Vector2(0.999882, 0.999882)
+=======
+scale = Vector2(0.999885, 0.999885)
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5418,7 +5538,6 @@ texture = ExtResource("24_m3ekd")
 flip_h = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelQ"]
-modulate = Color(1, 1, 1, 0)
 offset_left = -84.0
 offset_top = -77.0
 offset_right = 84.0
@@ -5438,6 +5557,7 @@ scroll_active = false
 [node name="icons" parent="." instance=ExtResource("9_vw75p")]
 
 [node name="PopupPanel" parent="." instance=ExtResource("31_itr38")]
+visible = false
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 visible = false
@@ -5464,6 +5584,7 @@ visible = false
 offset_right = -25.0
 offset_bottom = -25.0
 
+<<<<<<< HEAD
 [node name="Button" type="Button" parent="."]
 material = SubResource("ShaderMaterial_5l3ar")
 layout_mode = 0
@@ -5545,6 +5666,16 @@ text = "تنظیمات"
 [connection signal="pressed" from="VBoxContainer/PersianButton3" to="." method="_on_guid_league_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/hives" to="." method="_on_hives_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+=======
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/PersianButton2" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/PersianButton" to="." method="_on_gift_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/PersianButton2" to="." method="_on_league_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/PersianButton3" to="." method="_on_guid_league_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/PersianButton" to="." method="_on_PersianButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer5/hives" to="." method="_on_hives_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer5/quit" to="." method="_on_quit_pressed"]
+>>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 [connection signal="file_sellected" from="file_dialog" to="." method="_on_file_dialog_file_sellected"]
 [connection signal="pressed" from="gift/Realistic-gold-gift-boxBody" to="." method="_on_realisticgoldgiftbox_body_pressed"]
 [connection signal="timeout" from="gift/timer" to="." method="_on_timer_timeout"]

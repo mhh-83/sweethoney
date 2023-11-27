@@ -2,17 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-<<<<<<< HEAD
-uid="uid://dtq6hsy4v3tft"
-=======
-uid="uid://bok5dtka0afuw"
->>>>>>> f500258fc17c02b5db36906398acb590bd58db17
-path="res://.godot/imported/Mj_Unique Bold_0.ttf-8726ca68019c20fc76a4e16b6d08b971.fontdata"
+uid="uid://cv10rtr0jxxa8"
+path="res://.godot/imported/EpicCapsule-Heavy.ttf-069bfb5aee17c69dc46e2df53afbbff9.fontdata"
 
 [deps]
 
-source_file="res://fonts/Mj_Unique Bold_0.ttf"
-dest_files=["res://.godot/imported/Mj_Unique Bold_0.ttf-8726ca68019c20fc76a4e16b6d08b971.fontdata"]
+source_file="res://fonts/EpicCapsule-Heavy.ttf"
+dest_files=["res://.godot/imported/EpicCapsule-Heavy.ttf-069bfb5aee17c69dc46e2df53afbbff9.fontdata"]
 
 [params]
 

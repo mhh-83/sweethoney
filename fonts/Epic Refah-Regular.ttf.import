@@ -2,17 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-<<<<<<< HEAD
-uid="uid://dtq6hsy4v3tft"
-=======
-uid="uid://bok5dtka0afuw"
->>>>>>> f500258fc17c02b5db36906398acb590bd58db17
-path="res://.godot/imported/Mj_Unique Bold_0.ttf-8726ca68019c20fc76a4e16b6d08b971.fontdata"
+uid="uid://dp7aid0endhxg"
+path="res://.godot/imported/Epic Refah-Regular.ttf-ae559348310807c35dc66177371a4ef2.fontdata"
 
 [deps]
 
-source_file="res://fonts/Mj_Unique Bold_0.ttf"
-dest_files=["res://.godot/imported/Mj_Unique Bold_0.ttf-8726ca68019c20fc76a4e16b6d08b971.fontdata"]
+source_file="res://fonts/Epic Refah-Regular.ttf"
+dest_files=["res://.godot/imported/Epic Refah-Regular.ttf-ae559348310807c35dc66177371a4ef2.fontdata"]
 
 [params]
 

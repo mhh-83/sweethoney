@@ -2,17 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-<<<<<<< HEAD
-uid="uid://dtq6hsy4v3tft"
-=======
-uid="uid://bok5dtka0afuw"
->>>>>>> f500258fc17c02b5db36906398acb590bd58db17
-path="res://.godot/imported/Mj_Unique Bold_0.ttf-8726ca68019c20fc76a4e16b6d08b971.fontdata"
+uid="uid://bo36fo64tpc01"
+path="res://.godot/imported/IR Morabba Regular.ttf-2768b7dc4e21f9496383aca82e72f1c1.fontdata"
 
 [deps]
 
-source_file="res://fonts/Mj_Unique Bold_0.ttf"
-dest_files=["res://.godot/imported/Mj_Unique Bold_0.ttf-8726ca68019c20fc76a4e16b6d08b971.fontdata"]
+source_file="res://fonts/IR Morabba Regular.ttf"
+dest_files=["res://.godot/imported/IR Morabba Regular.ttf-2768b7dc4e21f9496383aca82e72f1c1.fontdata"]
 
 [params]
 
