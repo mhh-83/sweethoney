@@ -1,8 +1,8 @@
 [gd_scene load_steps=100 format=3 uid="uid://mhki0xn8kl1e"]
 
-[ext_resource type="FontFile" uid="uid://dtq6hsy4v3tft" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_i3efk"]
+[ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_i3efk"]
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_cwr6q"]
-[ext_resource type="Texture2D" uid="uid://jqphyjsyt0o0" path="res://sprite/asl1.png" id="2_o7yth"]
+[ext_resource type="Texture2D" uid="uid://bqkyqvmuladmg" path="res://sprite/asl1.png" id="2_o7yth"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="4_ek24b"]
 [ext_resource type="Script" path="res://script/start.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://bbat7dydd7o0h" path="res://sprite/honey_drop.png" id="8_rs1bi"]
@@ -29,7 +29,6 @@
 [ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="30_jt8g3"]
 [ext_resource type="PackedScene" uid="uid://btxmu4sj6al70" path="res://scenes/shop.tscn" id="31_itr38"]
 [ext_resource type="PackedScene" uid="uid://wjcq1xqc82j5" path="res://scenes/quit.tscn" id="32_jiq46"]
-
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0461u"]
 texture = ExtResource("2_o7yth")

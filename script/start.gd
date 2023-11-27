@@ -82,7 +82,7 @@ func _ready():
 		level = max_level
 		save("level", level)
 	
-<<<<<<< HEAD
+
 #	if load_game("img", "") != "":
 #		$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.show()
 #		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/Label.hide()
@@ -96,21 +96,6 @@ func _ready():
 #		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = tex
 #	else:
 #		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = load("res://sprite/user_img.png")
-=======
-	if load_game("img", "") != "":
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.show()
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/Label.hide()
-		var tex = load("res://sprite/user_img.png")
-		if FileAccess.file_exists("user://icons/" + load_game("img")):
-			var image = Image.load_from_file("user://icons/" + load_game("img"))
-			tex = ImageTexture.create_from_image(image)
-		else:
-			save("img", "")
-			$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.hide()
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = tex
-	else:
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = load("res://sprite/user_img.png")
->>>>>>> f500258fc17c02b5db36906398acb590bd58db17
 	#$VBoxContainer/HBoxContainer4/Control/Panel/Label2.text = "امتیاز : "+ str(load_game("score", 0))
 	#$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect2.value = load_game("score", 0) * 100 / 5000
 	var daily_gift_time = load_game2("daily_gift_time", [])
