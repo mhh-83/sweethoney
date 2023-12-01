@@ -5137,7 +5137,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="head" type="Bone2D" parent="bee/Skeleton2D/body"]
 position = Vector2(19, -48)
-scale = Vector2(0.999983, 0.999983)
+scale = Vector2(0.999981, 0.999981)
 rest = Transform2D(1, 0, 0, 1, 19, -48)
 editor_settings/show_bone_gizmo = false
 
@@ -5149,7 +5149,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D3"]
 position = Vector2(13, -14)
 rotation = -0.180625
-scale = Vector2(0.999982, 0.999982)
+scale = Vector2(0.99998, 0.99998)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 15, -12)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5164,7 +5164,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D4"]
 position = Vector2(16.792, -15.4282)
 rotation = -0.180625
-scale = Vector2(0.999985, 0.999985)
+scale = Vector2(0.999983, 0.999983)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 17.0103, -17.6536)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5199,7 +5199,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999881, 0.999881)
+scale = Vector2(0.99988, 0.99988)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0

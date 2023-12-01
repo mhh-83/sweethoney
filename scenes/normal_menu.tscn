@@ -1,14 +1,18 @@
-[gd_scene load_steps=64 format=3 uid="uid://djnv8ue4qcy8o"]
+[gd_scene load_steps=73 format=3 uid="uid://djnv8ue4qcy8o"]
 
-[ext_resource type="Theme" uid="uid://dipts678cwhk6" path="res://start.tres" id="1_o1c15"]
+[ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_sgl03"]
 [ext_resource type="Script" path="res://script/normal_menu.gd" id="1_t0enb"]
+[ext_resource type="Texture2D" uid="uid://bqkyqvmuladmg" path="res://sprite/asl1.png" id="2_82r7f"]
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_a74we"]
+[ext_resource type="Texture2D" uid="uid://dhdd1dcjue1kh" path="res://sprite/gozine.png" id="3_7uspq"]
 [ext_resource type="Texture2D" uid="uid://bwylog0tjvnpt" path="res://sprite/honey_wood.png" id="3_nqc4s"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="4_dvmwn"]
 [ext_resource type="Texture2D" uid="uid://d1svtgreq1u0f" path="res://sprite/user_img.png" id="5_0hhh7"]
-[ext_resource type="Texture2D" uid="uid://x5ixvbs26pb8" path="res://sprite/default.png" id="6_j80ar"]
 [ext_resource type="Texture2D" uid="uid://cwasm6w2gibnw" path="res://sprite/empty_honey.png" id="7_nihqv"]
+[ext_resource type="Shader" path="res://shaders/bg.gdshader" id="8_hxcpn"]
 [ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="8_njgn1"]
+[ext_resource type="Texture2D" uid="uid://cc0ynpqrmcrxt" path="res://sprite/Polygon 1.png" id="9_11leg"]
+[ext_resource type="FontFile" uid="uid://b27pddqoondca" path="res://fonts/Aviny2-mfnbbn.ttf" id="11_sq4bp"]
 [ext_resource type="Texture2D" uid="uid://xiyod2ph08oc" path="res://sprite/flower.png" id="11_wccmh"]
 [ext_resource type="Texture2D" uid="uid://cuduuiyh54dhw" path="res://sprite/flower2.png" id="12_sulv0"]
 [ext_resource type="Texture2D" uid="uid://bomhto3gfkdy0" path="res://sprite/flower3.png" id="13_x3okl"]
@@ -16,6 +20,56 @@
 [ext_resource type="Texture2D" uid="uid://68414nyahlqs" path="res://sprite/bee_sheet.png" id="15_g15sx"]
 [ext_resource type="Texture2D" uid="uid://d31viegy6kwip" path="res://sprite/mouth.png" id="16_d4m0d"]
 [ext_resource type="PackedScene" uid="uid://bif1t8hdv8ixq" path="res://scenes/icons.tscn" id="17_83rsc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2mkpt"]
+texture = ExtResource("2_82r7f")
+texture_margin_left = 50.0
+texture_margin_top = 30.0
+texture_margin_right = 140.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b55ya"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r8lfh"]
+texture = ExtResource("3_7uspq")
+texture_margin_left = 50.0
+texture_margin_top = 30.0
+texture_margin_right = 140.0
+texture_margin_bottom = 40.0
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+modulate_color = Color(0.862745, 0.862745, 0.862745, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0saou"]
+texture = ExtResource("3_7uspq")
+texture_margin_left = 50.0
+texture_margin_top = 65.0
+texture_margin_right = 140.0
+texture_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m7j66"]
+texture = ExtResource("3_7uspq")
+texture_margin_left = 50.0
+texture_margin_top = 32.0
+texture_margin_right = 142.0
+texture_margin_bottom = 40.0
+modulate_color = Color(0.94902, 0.94902, 0.94902, 1)
+
+[sub_resource type="Theme" id="Theme_leury"]
+Button/colors/font_color = Color(0.0156863, 0.541176, 0.427451, 1)
+Button/colors/font_focus_color = Color(0.0156863, 0.541176, 0.427451, 1)
+Button/colors/font_hover_color = Color(0.0156863, 0.541176, 0.427451, 1)
+Button/colors/font_hover_pressed_color = Color(0.0156863, 0.541176, 0.427451, 1)
+Button/colors/font_pressed_color = Color(0.0156863, 0.541176, 0.427451, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_sgl03")
+Button/styles/disabled = SubResource("StyleBoxTexture_2mkpt")
+Button/styles/focus = SubResource("StyleBoxEmpty_b55ya")
+Button/styles/hover = SubResource("StyleBoxTexture_r8lfh")
+Button/styles/normal = SubResource("StyleBoxTexture_0saou")
+Button/styles/pressed = SubResource("StyleBoxTexture_m7j66")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xhceu"]
 
@@ -42,22 +96,24 @@ corner_radius_bottom_right = 50
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jb6ga"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upmq0"]
-bg_color = Color(1, 0.658824, 0.129412, 1)
+bg_color = Color(0.752941, 0.227451, 0, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(1, 0.984314, 0.0352941, 1)
-corner_radius_top_left = 50
-corner_radius_bottom_right = 50
+border_color = Color(1, 1, 0.286275, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u56a"]
-bg_color = Color(0.992157, 0.6, 0.117647, 1)
+bg_color = Color(0.752941, 0.227451, 0, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(1, 0.964706, 0.0352941, 1)
+border_color = Color(0.901961, 1, 0.0352941, 1)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
@@ -66,23 +122,22 @@ corner_radius_bottom_left = 30
 [sub_resource type="LabelSettings" id="LabelSettings_x62s0"]
 font = ExtResource("4_dvmwn")
 font_size = 30
-font_color = Color(0.960784, 0.0196078, 0.109804, 1)
+font_color = Color(1, 0.776471, 0.74902, 1)
 outline_size = 5
+outline_color = Color(0, 0.258824, 0.231373, 1)
+shadow_size = 10
+shadow_color = Color(0, 0.219608, 0.152941, 1)
+shadow_offset = Vector2(1, 3)
 
-[sub_resource type="Gradient" id="Gradient_ddm6w"]
-offsets = PackedFloat32Array(0, 0.678947, 0.736842, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.0620721, 0.0677154, 0.146768, 1, 1, 1, 1, 0, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_gy0v6"]
-gradient = SubResource("Gradient_ddm6w")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0, 0)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1pnqx"]
+shader = ExtResource("8_hxcpn")
+shader_parameter/color = Color(1, 1, 0.286275, 1)
+shader_parameter/color2 = Color(0.752941, 0.227451, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ntyr0"]
-font = ExtResource("4_dvmwn")
-font_size = 24
-font_color = Color(1, 0, 0, 1)
+font = ExtResource("11_sq4bp")
+font_size = 27
+font_color = Color(0.137255, 0.407843, 0.384314, 1)
 
 [sub_resource type="Animation" id="Animation_byyux"]
 length = 0.001
@@ -3339,8 +3394,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_o1c15")
+theme = SubResource("Theme_leury")
 script = ExtResource("1_t0enb")
+metadata/_edit_horizontal_guides_ = [149.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_repeat = 2
@@ -3363,13 +3419,13 @@ anchor_bottom = 1.0
 offset_top = 106.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 54
 alignment = 1
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
-visible = false
 layout_direction = 2
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 0
 size_flags_stretch_ratio = 0.0
 
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer4"]
@@ -3386,14 +3442,8 @@ mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_xhceu")
 
 [node name="PointLight2D" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
-position = Vector2(445, 90)
-scale = Vector2(0.496224, 1)
-range_item_cull_mask = 2
-texture = SubResource("GradientTexture2D_5a5uo")
-
-[node name="PointLight2D2" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
-position = Vector2(501, 223)
-scale = Vector2(0.484, 1)
+position = Vector2(465, 107)
+scale = Vector2(0.588, 1.28125)
 range_item_cull_mask = 2
 texture = SubResource("GradientTexture2D_5a5uo")
 
@@ -3403,10 +3453,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -351.0
-offset_top = 165.0
-offset_right = -5.0
-offset_bottom = 269.0
+offset_left = -709.0
+offset_top = 220.0
+offset_right = -454.0
+offset_bottom = 295.0
 grow_horizontal = 0
 mouse_filter = 1
 theme_override_colors/font_color = Color(0.188235, 0.0431373, 0.603922, 1)
@@ -3418,12 +3468,15 @@ theme_override_colors/selection_color = Color(0, 0.87451, 0.976471, 1)
 theme_override_colors/clear_button_color = Color(0.992157, 0, 0, 1)
 theme_override_colors/clear_button_color_pressed = Color(0.933333, 0, 0, 1)
 theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("11_sq4bp")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_cnda2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jb6ga")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_upmq0")
-placeholder_text = "نام خود را بنویسید"
+placeholder_text = "نام خود را وارد کنید"
 alignment = 1
+editable = false
+metadata/_edit_group_ = true
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer4/Control/Panel/Label"]
 layout_mode = 1
@@ -3438,16 +3491,22 @@ ignore_texture_size = true
 stretch_mode = 0
 flip_h = true
 
+[node name="PointLight2D2" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel/Label"]
+position = Vector2(127, 39)
+scale = Vector2(0.484, 1)
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_5a5uo")
+
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4/Control/Panel" groups=["score"]]
 light_mask = 2
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -345.0
-offset_top = 36.0
-offset_right = -127.0
-offset_bottom = 143.0
+offset_left = -378.0
+offset_top = 51.0
+offset_right = -56.0
+offset_bottom = 169.0
 grow_horizontal = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_8u56a")
 text = "امتیاز : 150000"
@@ -3458,77 +3517,63 @@ autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
 clip_children = 2
+material = SubResource("ShaderMaterial_1pnqx")
 layout_mode = 1
-offset_left = 22.0
-offset_top = 27.0
-offset_right = 272.0
-offset_bottom = 277.0
-texture = SubResource("GradientTexture2D_gy0v6")
+anchors_preset = -1
+anchor_left = -0.04
+anchor_right = 0.325
+anchor_bottom = 0.797
+offset_left = 0.200003
+offset_top = 3.0
+offset_right = -1.52588e-05
+offset_bottom = -0.100021
+texture = ExtResource("9_11leg")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect"]
+[node name="TextureRect2" type="TextureButton" parent="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect"]
 clip_children = 2
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.097
+anchor_top = 0.169
+anchor_right = 0.887
+anchor_bottom = 0.771
+offset_left = -0.0559998
+offset_top = 0.115997
+offset_right = -2.97601
+offset_bottom = -0.956009
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(125, 125)
 size_flags_horizontal = 3
-texture = ExtResource("5_0hhh7")
-expand_mode = 1
+texture_normal = ExtResource("5_0hhh7")
+ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -73.0
-offset_top = -20.0
-offset_right = 73.0
-offset_bottom = 20.0
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.551
+anchor_right = 0.935
+anchor_bottom = 0.75
+offset_left = 0.112
+offset_top = -0.0359955
+offset_right = 0.11998
+offset_bottom = -1.52588e-05
 grow_horizontal = 2
 grow_vertical = 2
-text = "تصویر خود را انتخاب کنید"
+text = "انتخاب تصویر"
 label_settings = SubResource("LabelSettings_ntyr0")
-
-[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
-visible = false
-layout_mode = 1
-offset_left = 22.224
-offset_top = 27.458
-offset_right = 62.224
-offset_bottom = 67.458
-texture_normal = ExtResource("6_j80ar")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
-visibility_layer = 3
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -114.0
-offset_top = 25.0
-offset_right = -74.0
-offset_bottom = 65.0
-grow_horizontal = 2
-texture_normal = ExtResource("3_nqc4s")
-ignore_texture_size = true
-stretch_mode = 5
-flip_h = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect2" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
 layout_mode = 0
-offset_left = 582.0
-offset_top = 33.0
-offset_right = 677.0
-offset_bottom = 152.0
+offset_left = 558.0
+offset_top = 36.0
+offset_right = 675.0
+offset_bottom = 171.0
 step = 0.01
 value = 25.09
 fill_mode = 3
@@ -3537,29 +3582,26 @@ texture_under = ExtResource("7_nihqv")
 texture_progress = ExtResource("8_njgn1")
 tint_progress = Color(1, 0.882353, 0.117647, 1)
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = -49
 alignment = 1
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="levels" type="Button" parent="VBoxContainer"]
+[node name="levels" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "        مراحل         "
+text = "    مراحل             "
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "   منو شروع       "
 
-[node name="continue" type="Button" parent="VBoxContainer"]
+[node name="continue" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "      ادامه              "
+text = "     ادامه                "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(72, 1262)
@@ -3815,7 +3857,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="head" type="Bone2D" parent="bee/Skeleton2D/body"]
 position = Vector2(19, -48)
-scale = Vector2(0.999995, 0.999995)
+scale = Vector2(0.999993, 0.999993)
 rest = Transform2D(1, 0, 0, 1, 19, -48)
 editor_settings/show_bone_gizmo = false
 
@@ -3827,7 +3869,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D3"]
 position = Vector2(13, -14)
 rotation = -0.180625
-scale = Vector2(0.999991, 0.999991)
+scale = Vector2(0.999987, 0.999987)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 15, -12)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3842,7 +3884,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D4"]
 position = Vector2(16.792, -15.4282)
 rotation = -0.180625
-scale = Vector2(0.999993, 0.999993)
+scale = Vector2(0.999991, 0.999991)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 17.0103, -17.6536)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3877,7 +3919,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999938, 0.999938)
+scale = Vector2(0.99993, 0.99993)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3925,14 +3967,14 @@ rest = Transform2D(-0.463622, -0.886033, 0.886033, -0.463622, 17, 3)
 [node name="Bone2D2" type="Bone2D" parent="bee/Skeleton2D/body/lag_r"]
 position = Vector2(-33.8238, 15.0317)
 rotation = 0.261799
-scale = Vector2(0.999993, 0.999993)
+scale = Vector2(0.999991, 0.999991)
 rest = Transform2D(0.48746, 0.873145, -0.873145, 0.48746, -33.8238, 15.0317)
 editor_settings/show_bone_gizmo = false
 
 [node name="Bone2D3" type="Bone2D" parent="bee/Skeleton2D/body/lag_r/Bone2D2"]
 position = Vector2(-14.5376, 14.6171)
 rotation = -0.261799
-scale = Vector2(0.999997, 0.999997)
+scale = Vector2(0.999996, 0.999996)
 rest = Transform2D(0.991342, 0.131302, -0.131302, 0.991342, -22.3022, 13.4019)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3968,12 +4010,12 @@ parameters/OneShot/internal_active = false
 parameters/OneShot/request = 0
 
 [node name="icons" parent="." instance=ExtResource("17_83rsc")]
+visible = false
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input" flags=18]
 [connection signal="text_submitted" from="VBoxContainer/HBoxContainer4/Control/Panel/Label" to="." method="_on_label_text_submitted" flags=18]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/Label/TextureButton" to="." method="_on_edit_name_pressed" flags=18]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2" to="." method="_on_texture_button_2_pressed" flags=18]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureButton" to="." method="_on_texture_button_pressed" flags=18]
-[connection signal="pressed" from="VBoxContainer/levels" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_persian_button_3_pressed"]
-[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_persian_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Button" to="." method="_on_persian_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/continue" to="." method="_on_persian_button_pressed"]

@@ -51,7 +51,7 @@ func _ready():
 		save("level", level)
 	
 	if load_game("img", "") != "":
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.show()
+
 		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/Label.hide()
 		var tex = load("res://sprite/user_img.png")
 		if FileAccess.file_exists("user://icons/" + load_game("img")):
@@ -60,9 +60,9 @@ func _ready():
 		else:
 			save("img", "")
 			$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.hide()
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = tex
+		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture_normal = tex
 	else:
-		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = load("res://sprite/user_img.png")
+		$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture_normal = load("res://sprite/user_img.png")
 	$VBoxContainer/HBoxContainer4/Control/Panel/Label2.text = "امتیاز : "+ str(load_game("score", 0))
 	$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect2.value = load_game("score", 0) * 100 / 5000
 	$icons/icons.button_pressed.connect(_on_icons_button_pressed)
@@ -97,10 +97,10 @@ func _on_icons_button_pressed(img):
 	save("rotate_img", 0)
 	var image = Image.load_from_file("user://icons/" + load_game("img"))
 	var tex = ImageTexture.create_from_image(image)
-	$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture = tex
+	$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2.texture_normal = tex
 	$icons.hide()
 	$VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/Label.hide()
-	$VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2.show()
+
 
 func _notification(what):
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST and not get_tree().has_group("menu_levels"):
