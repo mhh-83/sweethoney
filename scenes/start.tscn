@@ -1,11 +1,10 @@
-[gd_scene load_steps=94 format=3 uid="uid://mhki0xn8kl1e"]
+[gd_scene load_steps=93 format=3 uid="uid://mhki0xn8kl1e"]
 
 [ext_resource type="Theme" uid="uid://dipts678cwhk6" path="res://start.tres" id="1_sh1ro"]
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_cwr6q"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="4_ek24b"]
 [ext_resource type="Script" path="res://script/start.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://bbat7dydd7o0h" path="res://sprite/honey_drop.png" id="8_rs1bi"]
-[ext_resource type="PackedScene" uid="uid://bif1t8hdv8ixq" path="res://scenes/icons.tscn" id="9_vw75p"]
 [ext_resource type="Texture2D" uid="uid://380isc3ske2i" path="res://sprite/lock.png" id="11_x7kbd"]
 [ext_resource type="PackedScene" uid="uid://di6raeb4a5fbe" path="res://scenes/file_dialog.tscn" id="13_ejy2l"]
 [ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="16_ad2pe"]
@@ -5137,7 +5136,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="head" type="Bone2D" parent="bee/Skeleton2D/body"]
 position = Vector2(19, -48)
-scale = Vector2(0.999981, 0.999981)
+scale = Vector2(0.999982, 0.999982)
 rest = Transform2D(1, 0, 0, 1, 19, -48)
 editor_settings/show_bone_gizmo = false
 
@@ -5149,7 +5148,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D3"]
 position = Vector2(13, -14)
 rotation = -0.180625
-scale = Vector2(0.99998, 0.99998)
+scale = Vector2(0.999981, 0.999981)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 15, -12)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5164,7 +5163,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D4"]
 position = Vector2(16.792, -15.4282)
 rotation = -0.180625
-scale = Vector2(0.999983, 0.999983)
+scale = Vector2(0.999985, 0.999985)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 17.0103, -17.6536)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5199,7 +5198,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.99988, 0.99988)
+scale = Vector2(0.999881, 0.999881)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5389,8 +5388,6 @@ text = "[right] تلتاتاتاتا
 [/right][i][u][b] بزن روی صفحه"
 fit_content = true
 scroll_active = false
-
-[node name="icons" parent="." instance=ExtResource("9_vw75p")]
 
 [node name="PopupPanel" parent="." instance=ExtResource("31_itr38")]
 visible = false

@@ -104,7 +104,7 @@ func _ready():
 		var time2 = JSON.parse_string(file.get_line())
 		file.close()
 		$gift/timer.start("gift", time2)
-	$icons/icons.button_pressed.connect(_on_icons_button_pressed)
+
 func _on_PersianButton_pressed():
 #	add_child(preload("res://scenes/particles.tscn").instantiate())
 	if !guid:
@@ -232,10 +232,7 @@ func _process(delta):
 		$VBoxContainer/PersianButton2.disabled = true
 		$VBoxContainer/PersianButton2/Lock.show()
 		$VBoxContainer/PersianButton2/Lock2.show()
-	if $icons.visible or $PopupPanel.visible:
-		modulate = Color("4f4f4f")
-	else:
-		modulate = Color.WHITE
+
 func _on_timer_timeout():
 	save("gift", true)
 	save("last_time_gift", $gift/timer.current_time)

@@ -90,8 +90,10 @@ border_width_top = 20
 border_width_right = 20
 border_width_bottom = 20
 border_blend = true
-corner_radius_top_left = 50
-corner_radius_bottom_right = 50
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jb6ga"]
 
@@ -3454,28 +3456,27 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -709.0
-offset_top = 220.0
+offset_top = 222.0
 offset_right = -454.0
-offset_bottom = 295.0
+offset_bottom = 310.0
 grow_horizontal = 0
 mouse_filter = 1
-theme_override_colors/font_color = Color(0.188235, 0.0431373, 0.603922, 1)
-theme_override_colors/font_selected_color = Color(0, 1, 0, 1)
-theme_override_colors/font_uneditable_color = Color(0.905882, 0.282353, 0, 1)
+theme_override_colors/font_color = Color(0.00784314, 0.254902, 0.192157, 1)
+theme_override_colors/font_selected_color = Color(0.0431373, 0.501961, 0.392157, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.533333)
-theme_override_colors/font_outline_color = Color(0.992157, 0.992157, 0.992157, 1)
-theme_override_colors/selection_color = Color(0, 0.87451, 0.976471, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.52549, 0.52549, 0.52549, 1)
 theme_override_colors/clear_button_color = Color(0.992157, 0, 0, 1)
 theme_override_colors/clear_button_color_pressed = Color(0.933333, 0, 0, 1)
-theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("11_sq4bp")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_cnda2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jb6ga")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_upmq0")
 placeholder_text = "نام خود را وارد کنید"
 alignment = 1
-editable = false
 metadata/_edit_group_ = true
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer4/Control/Panel/Label"]
@@ -3492,8 +3493,8 @@ stretch_mode = 0
 flip_h = true
 
 [node name="PointLight2D2" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel/Label"]
-position = Vector2(127, 39)
-scale = Vector2(0.484, 1)
+position = Vector2(126.5, 43.5)
+scale = Vector2(0.526, 0.984375)
 range_item_cull_mask = 2
 texture = SubResource("GradientTexture2D_5a5uo")
 
@@ -3587,21 +3588,21 @@ layout_mode = 2
 theme_override_constants/separation = -49
 alignment = 1
 
+[node name="continue" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "         ادامه            "
+
 [node name="levels" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "    مراحل             "
+text = "        مراحل          "
 
 [node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "   منو شروع       "
-
-[node name="continue" type="Button" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "     ادامه                "
+text = "    منو شروع       "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(72, 1262)
@@ -3857,7 +3858,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="head" type="Bone2D" parent="bee/Skeleton2D/body"]
 position = Vector2(19, -48)
-scale = Vector2(0.999993, 0.999993)
+scale = Vector2(0.999992, 0.999992)
 rest = Transform2D(1, 0, 0, 1, 19, -48)
 editor_settings/show_bone_gizmo = false
 
@@ -3869,7 +3870,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D3"]
 position = Vector2(13, -14)
 rotation = -0.180625
-scale = Vector2(0.999987, 0.999987)
+scale = Vector2(0.999986, 0.999986)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 15, -12)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3884,7 +3885,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Bone2D4" type="Bone2D" parent="bee/Skeleton2D/body/head/Bone2D4"]
 position = Vector2(16.792, -15.4282)
 rotation = -0.180625
-scale = Vector2(0.999991, 0.999991)
+scale = Vector2(0.99999, 0.99999)
 rest = Transform2D(0.983732, -0.179645, 0.179645, 0.983732, 17.0103, -17.6536)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3919,7 +3920,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.99993, 0.99993)
+scale = Vector2(0.999927, 0.999927)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -3967,7 +3968,7 @@ rest = Transform2D(-0.463622, -0.886033, 0.886033, -0.463622, 17, 3)
 [node name="Bone2D2" type="Bone2D" parent="bee/Skeleton2D/body/lag_r"]
 position = Vector2(-33.8238, 15.0317)
 rotation = 0.261799
-scale = Vector2(0.999991, 0.999991)
+scale = Vector2(0.99999, 0.99999)
 rest = Transform2D(0.48746, 0.873145, -0.873145, 0.48746, -33.8238, 15.0317)
 editor_settings/show_bone_gizmo = false
 
@@ -4016,6 +4017,6 @@ visible = false
 [connection signal="text_submitted" from="VBoxContainer/HBoxContainer4/Control/Panel/Label" to="." method="_on_label_text_submitted" flags=18]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/Label/TextureButton" to="." method="_on_edit_name_pressed" flags=18]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/continue" to="." method="_on_persian_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/Button" to="." method="_on_persian_button_3_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/continue" to="." method="_on_persian_button_pressed"]
