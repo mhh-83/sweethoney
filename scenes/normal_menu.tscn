@@ -1,5 +1,6 @@
-[gd_scene load_steps=70 format=3 uid="uid://djnv8ue4qcy8o"]
+[gd_scene load_steps=64 format=3 uid="uid://djnv8ue4qcy8o"]
 
+[ext_resource type="Theme" uid="uid://dipts678cwhk6" path="res://start.tres" id="1_o1c15"]
 [ext_resource type="Script" path="res://script/normal_menu.gd" id="1_t0enb"]
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_a74we"]
 [ext_resource type="Texture2D" uid="uid://bwylog0tjvnpt" path="res://sprite/honey_wood.png" id="3_nqc4s"]
@@ -8,11 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://x5ixvbs26pb8" path="res://sprite/default.png" id="6_j80ar"]
 [ext_resource type="Texture2D" uid="uid://cwasm6w2gibnw" path="res://sprite/empty_honey.png" id="7_nihqv"]
 [ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="8_njgn1"]
-[ext_resource type="FontFile" uid="uid://d24un63ewu5g6" path="res://fonts/AbdoMaster-Outline_p30download.com.otf" id="9_j5rrg"]
-[ext_resource type="StyleBox" uid="uid://bfw5kt2y7be7k" path="res://styles/btn_start_n.tres" id="9_vt27e"]
-[ext_resource type="Texture2D" uid="uid://beehvxvrajlh0" path="res://sprite/btn.png" id="10_bi235"]
 [ext_resource type="Texture2D" uid="uid://xiyod2ph08oc" path="res://sprite/flower.png" id="11_wccmh"]
-[ext_resource type="FontFile" uid="uid://dsv23jvyysw05" path="res://fonts/Shahr Font.otf" id="12_2aije"]
 [ext_resource type="Texture2D" uid="uid://cuduuiyh54dhw" path="res://sprite/flower2.png" id="12_sulv0"]
 [ext_resource type="Texture2D" uid="uid://bomhto3gfkdy0" path="res://sprite/flower3.png" id="13_x3okl"]
 [ext_resource type="PackedScene" uid="uid://bgl5r7tkfldvy" path="res://scenes/internet.tscn" id="14_ed0sc"]
@@ -86,24 +83,6 @@ fill_to = Vector2(0, 0)
 font = ExtResource("4_dvmwn")
 font_size = 24
 font_color = Color(1, 0, 0, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ha5uj"]
-texture = ExtResource("10_bi235")
-texture_margin_left = 20.0
-texture_margin_top = 25.0
-texture_margin_right = 160.0
-texture_margin_bottom = 30.0
-modulate_color = Color(0.803922, 0.803922, 0.803922, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svmnv"]
-texture = ExtResource("10_bi235")
-texture_margin_left = 20.0
-texture_margin_top = 25.0
-texture_margin_right = 160.0
-texture_margin_bottom = 30.0
-modulate_color = Color(0.533333, 0.533333, 0.533333, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sody"]
 
 [sub_resource type="Animation" id="Animation_byyux"]
 length = 0.001
@@ -3360,6 +3339,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_o1c15")
 script = ExtResource("1_t0enb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -3383,10 +3363,10 @@ anchor_bottom = 1.0
 offset_top = 106.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 70
 alignment = 1
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
 layout_direction = 2
 layout_mode = 2
 size_flags_vertical = 3
@@ -3561,57 +3541,25 @@ tint_progress = Color(1, 0.882353, 0.117647, 1)
 layout_mode = 2
 alignment = 1
 
-[node name="levels" type="Button" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.67451, 0, 0.0980392, 1)
-theme_override_colors/font_pressed_color = Color(0.854902, 0, 0.137255, 1)
-theme_override_colors/font_hover_color = Color(0.588235, 0, 0.0784314, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.811765, 0, 0.12549, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("9_j5rrg")
-theme_override_font_sizes/font_size = 95
-theme_override_styles/normal = ExtResource("9_vt27e")
-theme_override_styles/hover = SubResource("StyleBoxTexture_ha5uj")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_svmnv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6sody")
-text = "مراحل"
-
-[node name="continue" type="Button" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.67451, 0, 0.0980392, 1)
-theme_override_colors/font_pressed_color = Color(0.854902, 0, 0.137255, 1)
-theme_override_colors/font_hover_color = Color(0.588235, 0, 0.0784314, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.811765, 0, 0.12549, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("12_2aije")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = ExtResource("9_vt27e")
-theme_override_styles/hover = SubResource("StyleBoxTexture_ha5uj")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_svmnv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6sody")
-text = "ادامه"
-
 [node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer5"]
+[node name="levels" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.67451, 0, 0.0980392, 1)
-theme_override_colors/font_pressed_color = Color(0.854902, 0, 0.137255, 1)
-theme_override_colors/font_hover_color = Color(0.588235, 0, 0.0784314, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.811765, 0, 0.12549, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("12_2aije")
-theme_override_font_sizes/font_size = 70
-theme_override_styles/normal = ExtResource("9_vt27e")
-theme_override_styles/hover = SubResource("StyleBoxTexture_ha5uj")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_svmnv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6sody")
-text = "منو شروع"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "        مراحل         "
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "   منو شروع       "
+
+[node name="continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "      ادامه              "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(72, 1262)
@@ -3625,8 +3573,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 364.0
 offset_top = 663.0
-offset_right = 404.0
-offset_bottom = 703.0
+offset_right = -364.0
+offset_bottom = -663.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 6.28319
@@ -4026,6 +3974,6 @@ parameters/OneShot/request = 0
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/Label/TextureButton" to="." method="_on_edit_name_pressed" flags=18]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureButton2" to="." method="_on_texture_button_2_pressed" flags=18]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureButton" to="." method="_on_texture_button_pressed" flags=18]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/levels" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/continue" to="." method="_on_persian_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer5/Button" to="." method="_on_persian_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_persian_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_persian_button_pressed"]

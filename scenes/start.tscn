@@ -1,8 +1,7 @@
-[gd_scene load_steps=100 format=3 uid="uid://mhki0xn8kl1e"]
+[gd_scene load_steps=94 format=3 uid="uid://mhki0xn8kl1e"]
 
-[ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_i3efk"]
+[ext_resource type="Theme" uid="uid://dipts678cwhk6" path="res://start.tres" id="1_sh1ro"]
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_cwr6q"]
-[ext_resource type="Texture2D" uid="uid://bqkyqvmuladmg" path="res://sprite/asl1.png" id="2_o7yth"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="4_ek24b"]
 [ext_resource type="Script" path="res://script/start.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://bbat7dydd7o0h" path="res://sprite/honey_drop.png" id="8_rs1bi"]
@@ -29,49 +28,6 @@
 [ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="30_jt8g3"]
 [ext_resource type="PackedScene" uid="uid://btxmu4sj6al70" path="res://scenes/shop.tscn" id="31_itr38"]
 [ext_resource type="PackedScene" uid="uid://wjcq1xqc82j5" path="res://scenes/quit.tscn" id="32_jiq46"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0461u"]
-texture = ExtResource("2_o7yth")
-texture_margin_left = 50.0
-texture_margin_top = 30.0
-texture_margin_right = 140.0
-texture_margin_bottom = 30.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghfuk"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uwwkg"]
-texture = ExtResource("2_o7yth")
-texture_margin_left = 50.0
-texture_margin_top = 30.0
-texture_margin_right = 140.0
-texture_margin_bottom = 30.0
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-modulate_color = Color(0.862745, 0.862745, 0.862745, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3chhb"]
-texture = ExtResource("2_o7yth")
-texture_margin_left = 52.0
-texture_margin_top = 32.0
-texture_margin_right = 142.0
-texture_margin_bottom = 32.0
-modulate_color = Color(0.94902, 0.94902, 0.94902, 1)
-
-[sub_resource type="Theme" id="Theme_rvkwo"]
-Button/colors/font_color = Color(0.921569, 0.909804, 0, 1)
-Button/colors/font_focus_color = Color(0.921569, 0.909804, 0, 1)
-Button/colors/font_hover_color = Color(0.866667, 0.854902, 0, 1)
-Button/colors/font_hover_pressed_color = Color(0.921569, 0.909804, 0, 1)
-Button/colors/font_pressed_color = Color(0.960784, 0.94902, 0, 1)
-Button/font_sizes/font_size = 50
-Button/fonts/font = ExtResource("1_i3efk")
-Button/styles/disabled = SubResource("StyleBoxTexture_0461u")
-Button/styles/focus = SubResource("StyleBoxEmpty_ghfuk")
-Button/styles/hover = SubResource("StyleBoxTexture_uwwkg")
-Button/styles/normal = SubResource("StyleBoxTexture_0461u")
-Button/styles/pressed = SubResource("StyleBoxTexture_3chhb")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_esjlx"]
 atlas = ExtResource("8_rs1bi")
@@ -4737,7 +4693,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_rvkwo")
+theme = ExtResource("1_sh1ro")
 script = ExtResource("6")
 gift_score = 35
 guid_league = "در این قسمت شما با سایر بازیکن ها به رقابت می‌پردازید تا با جمع کردن امتیاز بیشتر جوایز واقعی بهتری
@@ -5243,7 +5199,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999882, 0.999882)
+scale = Vector2(0.999881, 0.999881)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5447,8 +5403,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 364.0
 offset_top = 663.0
-offset_right = -364.0
-offset_bottom = -663.0
+offset_right = 404.0
+offset_bottom = 703.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 6.28319
@@ -5459,10 +5415,6 @@ stretch_mode = 5
 
 [node name="PopupPanel2" parent="." instance=ExtResource("32_jiq46")]
 visible = false
-
-[node name="MarginContainer" parent="PopupPanel2" index="1"]
-offset_right = -25.0
-offset_bottom = -25.0
 
 [node name="Button" type="Button" parent="."]
 material = SubResource("ShaderMaterial_5l3ar")
