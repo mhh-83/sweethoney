@@ -1,14 +1,15 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dipts678cwhk6"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dipts678cwhk6"]
 
 [ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_fsevw"]
 [ext_resource type="Texture2D" uid="uid://bqkyqvmuladmg" path="res://sprite/asl1.png" id="2_qaxkk"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0461u"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_krqil"]
 texture = ExtResource("2_qaxkk")
 texture_margin_left = 50.0
 texture_margin_top = 30.0
 texture_margin_right = 140.0
 texture_margin_bottom = 30.0
+modulate_color = Color(0.0862745, 0.0862745, 0.0862745, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghfuk"]
 
@@ -23,6 +24,13 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 modulate_color = Color(0.862745, 0.862745, 0.862745, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0461u"]
+texture = ExtResource("2_qaxkk")
+texture_margin_left = 50.0
+texture_margin_top = 30.0
+texture_margin_right = 140.0
+texture_margin_bottom = 30.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3chhb"]
 texture = ExtResource("2_qaxkk")
@@ -40,7 +48,7 @@ Button/colors/font_hover_pressed_color = Color(0.921569, 0.909804, 0, 1)
 Button/colors/font_pressed_color = Color(0.960784, 0.94902, 0, 1)
 Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("1_fsevw")
-Button/styles/disabled = SubResource("StyleBoxTexture_0461u")
+Button/styles/disabled = SubResource("StyleBoxTexture_krqil")
 Button/styles/focus = SubResource("StyleBoxEmpty_ghfuk")
 Button/styles/hover = SubResource("StyleBoxTexture_uwwkg")
 Button/styles/normal = SubResource("StyleBoxTexture_0461u")

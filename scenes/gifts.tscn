@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcosxm1mqni32"]
+[gd_scene load_steps=8 format=3 uid="uid://bcosxm1mqni32"]
 
+[ext_resource type="Script" path="res://script/gifts.gd" id="1_sa5k5"]
 [ext_resource type="Texture2D" uid="uid://ci7pv38ssm6tk" path="res://sprite/gift.jpg" id="1_xcbri"]
+[ext_resource type="FontFile" uid="uid://bo36fo64tpc01" path="res://fonts/IR Morabba Regular.ttf" id="2_pe7we"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_dcjfv"]
 viewport_path = NodePath("SubViewport")
@@ -13,6 +15,15 @@ point_count = 3
 offsets = PackedFloat32Array(0, 0.352632, 0.468421, 0.721053, 0.794737)
 colors = PackedColorArray(1, 1, 0, 1, 1, 0.569729, 0.216523, 1, 1, 0.392157, 0.305882, 1, 0, 0, 0, 1, 1, 1, 1, 0)
 
+[sub_resource type="LabelSettings" id="LabelSettings_j3crn"]
+font = ExtResource("2_pe7we")
+font_size = 80
+outline_size = 10
+outline_color = Color(0.705882, 0.384314, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.309804)
+shadow_offset = Vector2(1, -5)
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -20,6 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_sa5k5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -69,3 +81,122 @@ scale_amount_min = 2.0
 scale_amount_max = 5.0
 scale_amount_curve = SubResource("Curve_1pjfy")
 color_ramp = SubResource("Gradient_goflj")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(151, 526)
+amount = 100
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 10.76
+direction = Vector2(0, -1)
+spread = 41.95
+gravity = Vector2(0, -200)
+initial_velocity_min = 186.45
+initial_velocity_max = 271.2
+angle_min = 42.0
+angle_max = 57.5
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_1pjfy")
+color_ramp = SubResource("Gradient_goflj")
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="."]
+position = Vector2(90, 573)
+amount = 100
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 10.76
+direction = Vector2(0, -1)
+spread = 41.95
+gravity = Vector2(0, -200)
+initial_velocity_min = 186.45
+initial_velocity_max = 271.2
+angle_min = 42.0
+angle_max = 57.5
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_1pjfy")
+color_ramp = SubResource("Gradient_goflj")
+
+[node name="CPUParticles2D7" type="CPUParticles2D" parent="."]
+position = Vector2(32, 607)
+amount = 100
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 10.76
+direction = Vector2(0, -1)
+spread = 41.95
+gravity = Vector2(0, -200)
+initial_velocity_min = 186.45
+initial_velocity_max = 271.2
+angle_min = 42.0
+angle_max = 57.5
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_1pjfy")
+color_ramp = SubResource("Gradient_goflj")
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+position = Vector2(556, 536)
+amount = 100
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 10.76
+direction = Vector2(0, -1)
+spread = 41.95
+gravity = Vector2(0, -200)
+initial_velocity_min = 186.45
+initial_velocity_max = 271.2
+angle_min = 42.0
+angle_max = 57.5
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_1pjfy")
+color_ramp = SubResource("Gradient_goflj")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="."]
+position = Vector2(611, 573)
+amount = 100
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 10.76
+direction = Vector2(0, -1)
+spread = 41.95
+gravity = Vector2(0, -200)
+initial_velocity_min = 186.45
+initial_velocity_max = 271.2
+angle_min = 42.0
+angle_max = 57.5
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_1pjfy")
+color_ramp = SubResource("Gradient_goflj")
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="."]
+position = Vector2(657, 618)
+amount = 100
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 10.76
+direction = Vector2(0, -1)
+spread = 41.95
+gravity = Vector2(0, -200)
+initial_velocity_min = 186.45
+initial_velocity_max = 271.2
+angle_min = 42.0
+angle_max = 57.5
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_1pjfy")
+color_ramp = SubResource("Gradient_goflj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 42.0
+offset_right = 560.0
+offset_bottom = 173.0
+text = "جوایز"
+label_settings = SubResource("LabelSettings_j3crn")
+horizontal_alignment = 1
+vertical_alignment = 1

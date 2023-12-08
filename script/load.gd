@@ -7,7 +7,7 @@ var save_img_path = "user://files.cfg"
 var load_complate = false
 var update_game2 = false
 var current_load = 0
-var version = "1.3.6"
+var version = "1.3.8"
 var load_list = []
 var http
 var job_complate = false
@@ -53,7 +53,7 @@ func request_complated(result, response_code, header, body):
 	http.request(list["1"])
 
 func request_complated2(result, response_code, header, body):
-	print(body.get_string_from_utf8())
+	
 	if response_code == 0:
 		no_internet()
 		return

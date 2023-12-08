@@ -37,6 +37,7 @@ func load_game2(_name, defaulte=null):
 	confige.load("user://files.cfg")
 	return confige.get_value("user", _name, defaulte)
 func _ready():
+	
 
 	if FileAccess.file_exists(save_path):
 		level = load_game("level", 1)
@@ -226,12 +227,12 @@ func _process(delta):
 	if load_game("begin_league"):
 		$VBoxContainer/PersianButton2.disabled = false
 		$VBoxContainer/PersianButton2/Lock.hide()
-		$VBoxContainer/PersianButton2/Lock2.hide()
+		
 
 	if load_game("close_league"):
 		$VBoxContainer/PersianButton2.disabled = true
 		$VBoxContainer/PersianButton2/Lock.show()
-		$VBoxContainer/PersianButton2/Lock2.show()
+		
 
 func _on_timer_timeout():
 	save("gift", true)
@@ -286,7 +287,6 @@ func _on_timer_2_timeout():
 	save('close_league', true)
 	$VBoxContainer/PersianButton2.disabled = true
 	$VBoxContainer/PersianButton2/Lock.show()
-	$VBoxContainer/PersianButton2/Lock2.show()
 	$timer2.queue_free()
 
 func _on_gift_button_pressed():

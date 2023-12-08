@@ -26,7 +26,7 @@ func _ready():
 	"password_confirmation": ["12345678h"],
 	"email" : ["mhpshenas125@gmail.com"]
 	}
-	var error = http_request.request("https://kh-app.ir/api/v1/1/register", [], HTTPClient.METHOD_POST, JSON.stringify(body))
+	var error = http_request.request("https://ik.imagekit.io/7pa8geku1/files/gifts.tscn?updatedAt=1701531287282")
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 
@@ -37,9 +37,8 @@ func _http_request_completed(result, response_code, headers, body):
 	var response = json.get_data()
 
 	# Will print the user agent string used by the HTTPRequest node (as recognized by httpbin.org).
-	print(response)
-
-
+	print(body.get_string_from_utf8())
+	
 
 func _on_http_request_request_completed2(result, response_code, headers, body):
 	var json = JSON.new()

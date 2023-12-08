@@ -30,7 +30,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_esjlx"]
 atlas = ExtResource("8_rs1bi")
-region = Rect2(242.121, 29.5889, 167.493, 219.029)
+region = Rect2(259, 38, 152, 207)
 
 [sub_resource type="Curve" id="Curve_4exrf"]
 _data = [Vector2(0, 0.242105), 0.0, 0.0, 0, 0, Vector2(0.081448, 0.978947), 0.0, 0.0, 0, 0, Vector2(0.167421, 0.663158), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -4745,6 +4745,8 @@ texture = SubResource("AtlasTexture_esjlx")
 emission_shape = 3
 emission_rect_extents = Vector2(500, 1)
 gravity = Vector2(0, 200)
+damping_min = 2.542
+damping_max = 5.085
 scale_amount_min = 0.2
 scale_amount_max = 0.4
 scale_amount_curve = SubResource("Curve_4exrf")
@@ -4775,15 +4777,10 @@ size_flags_horizontal = 4
 disabled = true
 text = "لیگ آنلاین       "
 language = "fa_IR"
+metadata/_edit_group_ = true
 
 [node name="Lock" type="Sprite2D" parent="VBoxContainer/PersianButton2"]
-position = Vector2(100, 53.7978)
-scale = Vector2(0.152412, 0.108997)
-texture = ExtResource("11_x7kbd")
-
-[node name="Lock2" type="Sprite2D" parent="VBoxContainer/PersianButton2"]
-position = Vector2(412, 53.7979)
-scale = Vector2(0.152412, 0.108997)
+position = Vector2(79, 52)
 texture = ExtResource("11_x7kbd")
 
 [node name="PersianButton3" type="Button" parent="VBoxContainer"]
@@ -5198,7 +5195,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999881, 0.999881)
+scale = Vector2(0.99988, 0.99988)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5282,8 +5279,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_muwp3")
 anim_player = NodePath("../AnimationPlayer")
 advance_expression_base_node = NodePath("../AnimationPlayer")
-active = true
-process_callback = 0
 parameters/OneShot/active = false
 parameters/OneShot/internal_active = false
 parameters/OneShot/request = 0

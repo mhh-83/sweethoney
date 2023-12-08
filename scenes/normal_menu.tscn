@@ -215,6 +215,42 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(783, 806)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("levels:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-576, 671)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("continue:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(783, 536)]
+}
 
 [sub_resource type="Animation" id="Animation_w1sgt"]
 resource_name = "change_scene"
@@ -294,6 +330,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_fvgln"]
 resource_name = "start"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -305,6 +342,42 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(783, 806), Vector2(783, 806), Vector2(88, 808)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("levels:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.3, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-576, 671), Vector2(-576, 671), Vector2(93, 671)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("continue:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(783, 536), Vector2(783, 536), Vector2(98, 536)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4uag8"]
@@ -3419,6 +3492,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 106.0
+offset_bottom = -511.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 54
@@ -3583,24 +3657,31 @@ texture_under = ExtResource("7_nihqv")
 texture_progress = ExtResource("8_njgn1")
 tint_progress = Color(1, 0.882353, 0.117647, 1)
 
-[node name="HBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
+[node name="continue" type="Button" parent="."]
 layout_mode = 2
-theme_override_constants/separation = -49
-alignment = 1
-
-[node name="continue" type="Button" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
+offset_left = 783.0
+offset_top = 536.0
+offset_right = 1320.0
+offset_bottom = 720.0
 size_flags_horizontal = 4
 text = "         ادامه            "
 
-[node name="levels" type="Button" parent="VBoxContainer/HBoxContainer2"]
+[node name="levels" type="Button" parent="."]
 layout_mode = 2
+offset_left = -576.0
+offset_top = 671.0
+offset_right = -38.0
+offset_bottom = 855.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "        مراحل          "
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 2
+offset_left = 783.0
+offset_top = 806.0
+offset_right = 1327.0
+offset_bottom = 990.0
 size_flags_horizontal = 4
 text = "    منو شروع       "
 
@@ -3616,8 +3697,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 364.0
 offset_top = 663.0
-offset_right = -364.0
-offset_bottom = -663.0
+offset_right = 404.0
+offset_bottom = 703.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 6.28319
@@ -3920,7 +4001,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999927, 0.999927)
+scale = Vector2(0.999926, 0.999926)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4004,8 +4085,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_muwp3")
 anim_player = NodePath("../AnimationPlayer")
 advance_expression_base_node = NodePath("../AnimationPlayer")
-active = true
-process_callback = 0
 parameters/OneShot/active = false
 parameters/OneShot/internal_active = false
 parameters/OneShot/request = 0
@@ -4013,10 +4092,10 @@ parameters/OneShot/request = 0
 [node name="icons" parent="." instance=ExtResource("17_83rsc")]
 visible = false
 
-[connection signal="gui_input" from="." to="." method="_on_gui_input" flags=18]
-[connection signal="text_submitted" from="VBoxContainer/HBoxContainer4/Control/Panel/Label" to="." method="_on_label_text_submitted" flags=18]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/Label/TextureButton" to="." method="_on_edit_name_pressed" flags=18]
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="text_submitted" from="VBoxContainer/HBoxContainer4/Control/Panel/Label" to="." method="_on_label_text_submitted"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/Label/TextureButton" to="." method="_on_edit_name_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/continue" to="." method="_on_persian_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/levels" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Button" to="." method="_on_persian_button_3_pressed"]
+[connection signal="pressed" from="continue" to="." method="_on_persian_button_pressed"]
+[connection signal="pressed" from="levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_persian_button_3_pressed"]
