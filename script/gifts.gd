@@ -14,8 +14,12 @@ func _ready():
 					d[child.name][1][child2.name][1][child3.name][1].append({child4.name : [[], []]})
 					for child5 in child4.get_children():
 						d[child.name][1][child2.name][1][child3.name][1][child4.name][1].append({child5.name : [[], []]})
-	print(d)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_texture_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/start.tscn")

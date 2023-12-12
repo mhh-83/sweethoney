@@ -1,13 +1,6 @@
-[gd_resource type="StyleBoxFlat" format=3 uid="uid://wlma28beyem6"]
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://wlma28beyem6"]
+
+[ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="1_43vwr"]
 
 [resource]
-bg_color = Color(0.0196078, 0.0196078, 0.0196078, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+texture = ExtResource("1_43vwr")

@@ -3,9 +3,7 @@
 [ext_resource type="Script" path="res://script/gifts.gd" id="1_sa5k5"]
 [ext_resource type="Texture2D" uid="uid://ci7pv38ssm6tk" path="res://sprite/gift.jpg" id="1_xcbri"]
 [ext_resource type="FontFile" uid="uid://bo36fo64tpc01" path="res://fonts/IR Morabba Regular.ttf" id="2_pe7we"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_dcjfv"]
-viewport_path = NodePath("SubViewport")
+[ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="3_g6ntc"]
 
 [sub_resource type="Curve" id="Curve_1pjfy"]
 _data = [Vector2(0.0180995, 0.0210526), 0.0, 0.0, 0, 0, Vector2(0.0769231, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -44,11 +42,13 @@ texture = ExtResource("1_xcbri")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 111.0
-offset_bottom = 65.0
-texture_normal = SubResource("ViewportTexture_dcjfv")
+offset_left = 676.0
+offset_top = 2.0
+offset_right = 765.0
+offset_bottom = 81.0
+texture_normal = ExtResource("3_g6ntc")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 5
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
@@ -200,3 +200,5 @@ text = "جوایز"
 label_settings = SubResource("LabelSettings_j3crn")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

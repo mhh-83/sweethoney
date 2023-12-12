@@ -284,410 +284,6 @@ scale_min = 0.07
 scale_max = 0.2
 scale_curve = SubResource("CurveTexture_gvsqq")
 
-[sub_resource type="Gradient" id="Gradient_3n5gk"]
-offsets = PackedFloat32Array(0, 0.672414, 1)
-colors = PackedColorArray(1, 0.72549, 0, 1, 1, 0.141176, 0.0784314, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_ssoi6"]
-gradient = SubResource("Gradient_3n5gk")
-
-[sub_resource type="Curve" id="Curve_3ocl4"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.145455), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_7b777"]
-curve = SubResource("Curve_3ocl4")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mxwsw"]
-emission_shape = 1
-emission_sphere_radius = 67.77
-particle_flag_disable_z = true
-gravity = Vector3(0, -98, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
-angle_min = 45.0
-angle_max = 45.0
-scale_max = 3.0
-scale_curve = SubResource("CurveTexture_7b777")
-color_ramp = SubResource("GradientTexture1D_ssoi6")
-
-[sub_resource type="Animation" id="Animation_npinw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Realistic-gold-gift-boxDoor:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Realistic-gold-gift-boxDoor:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(688, 1270)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Realistic-gold-gift-boxBody:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.416667, 0.416667)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Realistic-gold-gift-boxBody:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(625, 1231)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Realistic-gold-gift-boxDoor:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.417, 0.417)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Realistic-gold-gift-boxDoor:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Realistic-gold-gift-boxBody/CPUParticles2D:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("GPUParticles2D:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("GPUParticles2D:emitting")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("timer:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Label:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(666, 1291)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Label:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_b72nd"]
-resource_name = "gift"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Realistic-gold-gift-boxDoor:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Realistic-gold-gift-boxBody/CPUParticles2D:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("GPUParticles2D:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("GPUParticles2D:emitting")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("timer:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Label:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(658, 1291), Vector2(656, 1212)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Label:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_chg5v"]
-resource_name = "rotate_door"
-length = 2.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Realistic-gold-gift-boxDoor:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.261799, -0.261799, 0.0, 0.0, 0.261799, -0.261799, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Realistic-gold-gift-boxDoor:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(688, 1270), Vector2(682, 1256), Vector2(688, 1249), Vector2(688, 1241), Vector2(688, 1270), Vector2(686, 1267), Vector2(688, 1249), Vector2(682, 1231), Vector2(684, 1263)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Realistic-gold-gift-boxBody:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0.416667, 0.416667), Vector2(0.45, 0.45), Vector2(0.416667, 0.416667), Vector2(0.45, 0.45)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Realistic-gold-gift-boxBody:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(625, 1231), Vector2(614, 1212), Vector2(625, 1231), Vector2(614, 1218)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Realistic-gold-gift-boxDoor:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0.417, 0.417), Vector2(0.45, 0.45), Vector2(0.417, 0.417), Vector2(0.45, 0.45)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Label:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Realistic-gold-gift-boxBody/CPUParticles2D:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("timer:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_337yr"]
-_data = {
-"RESET": SubResource("Animation_npinw"),
-"gift": SubResource("Animation_b72nd"),
-"rotate_door": SubResource("Animation_chg5v")
-}
-
-[sub_resource type="LabelSettings" id="LabelSettings_qu40j"]
-font = ExtResource("4_ek24b")
-font_size = 25
-font_color = Color(0.0117647, 0.180392, 0.776471, 1)
-outline_size = 4
-
-[sub_resource type="Curve" id="Curve_hxlkn"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.290909), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_sx14a"]
-curve = SubResource("Curve_hxlkn")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uclgd"]
-emission_shape = 1
-emission_sphere_radius = 38.87
-particle_flag_disable_z = true
-gravity = Vector3(0, -98, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
-radial_accel_min = 71.43
-radial_accel_max = 89.8
-angle_min = 45.0
-angle_max = 45.0
-scale_max = 3.0
-scale_curve = SubResource("CurveTexture_sx14a")
-color = Color(0.105882, 0.87451, 0.654902, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_tghqh"]
-font = ExtResource("4_ek24b")
-font_size = 30
-font_color = Color(0, 1, 1, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="Animation" id="Animation_2gdji"]
 length = 0.001
 tracks/0/type = "value"
@@ -4685,6 +4281,410 @@ modulate_color = Color(0.952941, 0.952941, 0.952941, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0e8gv"]
 
+[sub_resource type="Gradient" id="Gradient_3n5gk"]
+offsets = PackedFloat32Array(0, 0.672414, 1)
+colors = PackedColorArray(1, 0.72549, 0, 1, 1, 0.141176, 0.0784314, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ssoi6"]
+gradient = SubResource("Gradient_3n5gk")
+
+[sub_resource type="Curve" id="Curve_3ocl4"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.145455), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7b777"]
+curve = SubResource("Curve_3ocl4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mxwsw"]
+emission_shape = 1
+emission_sphere_radius = 67.77
+particle_flag_disable_z = true
+gravity = Vector3(0, -98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = 45.0
+angle_max = 45.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_7b777")
+color_ramp = SubResource("GradientTexture1D_ssoi6")
+
+[sub_resource type="Animation" id="Animation_npinw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Realistic-gold-gift-boxDoor:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Realistic-gold-gift-boxDoor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(688, 1270)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Realistic-gold-gift-boxBody:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.416667, 0.416667)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Realistic-gold-gift-boxBody:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(625, 1231)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Realistic-gold-gift-boxDoor:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.417, 0.417)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Realistic-gold-gift-boxDoor:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Realistic-gold-gift-boxBody/CPUParticles2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GPUParticles2D:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GPUParticles2D:emitting")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("timer:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(666, 1291)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b72nd"]
+resource_name = "gift"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Realistic-gold-gift-boxDoor:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Realistic-gold-gift-boxBody/CPUParticles2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GPUParticles2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("timer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(658, 1291), Vector2(656, 1212)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_chg5v"]
+resource_name = "rotate_door"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Realistic-gold-gift-boxDoor:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.261799, -0.261799, 0.0, 0.0, 0.261799, -0.261799, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Realistic-gold-gift-boxDoor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(688, 1270), Vector2(682, 1256), Vector2(688, 1249), Vector2(688, 1241), Vector2(688, 1270), Vector2(686, 1267), Vector2(688, 1249), Vector2(682, 1231), Vector2(684, 1263)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Realistic-gold-gift-boxBody:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.416667, 0.416667), Vector2(0.45, 0.45), Vector2(0.416667, 0.416667), Vector2(0.45, 0.45)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Realistic-gold-gift-boxBody:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(625, 1231), Vector2(614, 1212), Vector2(625, 1231), Vector2(614, 1218)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Realistic-gold-gift-boxDoor:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.417, 0.417), Vector2(0.45, 0.45), Vector2(0.417, 0.417), Vector2(0.45, 0.45)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Realistic-gold-gift-boxBody/CPUParticles2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("timer:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_337yr"]
+_data = {
+"RESET": SubResource("Animation_npinw"),
+"gift": SubResource("Animation_b72nd"),
+"rotate_door": SubResource("Animation_chg5v")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_qu40j"]
+font = ExtResource("4_ek24b")
+font_size = 25
+font_color = Color(0.0117647, 0.180392, 0.776471, 1)
+outline_size = 4
+
+[sub_resource type="Curve" id="Curve_hxlkn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.290909), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_sx14a"]
+curve = SubResource("Curve_hxlkn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uclgd"]
+emission_shape = 1
+emission_sphere_radius = 38.87
+particle_flag_disable_z = true
+gravity = Vector3(0, -98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+radial_accel_min = 71.43
+radial_accel_max = 89.8
+angle_min = 45.0
+angle_max = 45.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_sx14a")
+color = Color(0.105882, 0.87451, 0.654902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tghqh"]
+font = ExtResource("4_ek24b")
+font_size = 30
+font_color = Color(0, 1, 1, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [node name="start" type="Control" groups=["start"]]
 layout_mode = 3
 anchors_preset = 15
@@ -4838,64 +4838,6 @@ process_material = SubResource("ParticleProcessMaterial_djdw3")
 texture = ExtResource("21_ogund")
 lifetime = 9.0
 visibility_rect = Rect2(-384, -100, 768, 200)
-
-[node name="gift" type="Node2D" parent="."]
-position = Vector2(-13, 95)
-scale = Vector2(0.932855, 0.932855)
-
-[node name="Realistic-gold-gift-boxBody" type="TextureButton" parent="gift"]
-self_modulate = Color(0.580392, 0.0431373, 1, 1)
-offset_left = 625.0
-offset_top = 1231.0
-offset_right = 925.0
-offset_bottom = 1544.0
-scale = Vector2(0.416667, 0.416667)
-texture_normal = ExtResource("18_0gltd")
-
-[node name="CPUParticles2D" type="GPUParticles2D" parent="gift/Realistic-gold-gift-boxBody"]
-position = Vector2(151.2, 108)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_mxwsw")
-lifetime = 0.55
-
-[node name="Realistic-gold-gift-boxDoor" type="Sprite2D" parent="gift"]
-modulate = Color(0.580392, 0.0431373, 1, 1)
-position = Vector2(688, 1270)
-scale = Vector2(0.417, 0.417)
-texture = ExtResource("19_umcym")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="gift"]
-libraries = {
-"": SubResource("AnimationLibrary_337yr")
-}
-
-[node name="timer" parent="gift" instance=ExtResource("20_fd07v")]
-offset_left = 518.838
-offset_top = 1232.77
-offset_right = 874.838
-offset_bottom = 1369.77
-text = "22:12:00"
-label_settings = SubResource("LabelSettings_qu40j")
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="gift"]
-visible = false
-position = Vector2(688, 1276)
-emitting = false
-amount = 100
-process_material = SubResource("ParticleProcessMaterial_uclgd")
-one_shot = true
-speed_scale = 1.5
-
-[node name="Label" type="Label" parent="gift"]
-modulate = Color(1, 1, 1, 0)
-offset_left = 666.0
-offset_top = 1291.0
-offset_right = 721.0
-offset_bottom = 1325.0
-text = "+30"
-label_settings = SubResource("LabelSettings_tghqh")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Panel" parent="." instance=ExtResource("21_jtw34")]
 visible = false
@@ -5195,7 +5137,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.99988, 0.99988)
+scale = Vector2(0.999879, 0.999879)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -5483,6 +5425,64 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_nl4xy")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0e8gv")
 text = "تنظیمات"
 
+[node name="gift" type="Node2D" parent="."]
+position = Vector2(-13, 95)
+scale = Vector2(0.932855, 0.932855)
+
+[node name="Realistic-gold-gift-boxBody" type="TextureButton" parent="gift"]
+self_modulate = Color(0.580392, 0.0431373, 1, 1)
+offset_left = 625.0
+offset_top = 1231.0
+offset_right = 925.0
+offset_bottom = 1544.0
+scale = Vector2(0.416667, 0.416667)
+texture_normal = ExtResource("18_0gltd")
+
+[node name="CPUParticles2D" type="GPUParticles2D" parent="gift/Realistic-gold-gift-boxBody"]
+position = Vector2(151.2, 108)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_mxwsw")
+lifetime = 0.55
+
+[node name="Realistic-gold-gift-boxDoor" type="Sprite2D" parent="gift"]
+modulate = Color(0.580392, 0.0431373, 1, 1)
+position = Vector2(688, 1270)
+scale = Vector2(0.417, 0.417)
+texture = ExtResource("19_umcym")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gift"]
+libraries = {
+"": SubResource("AnimationLibrary_337yr")
+}
+
+[node name="timer" parent="gift" instance=ExtResource("20_fd07v")]
+offset_left = 518.838
+offset_top = 1232.77
+offset_right = 874.838
+offset_bottom = 1369.77
+text = "22:12:00"
+label_settings = SubResource("LabelSettings_qu40j")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="gift"]
+visible = false
+position = Vector2(688, 1276)
+emitting = false
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_uclgd")
+one_shot = true
+speed_scale = 1.5
+
+[node name="Label" type="Label" parent="gift"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 666.0
+offset_top = 1291.0
+offset_right = 721.0
+offset_bottom = 1325.0
+text = "+30"
+label_settings = SubResource("LabelSettings_tghqh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="pressed" from="VBoxContainer/PersianButton" to="." method="_on_PersianButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/PersianButton2" to="." method="_on_league_button_pressed"]
@@ -5490,8 +5490,6 @@ text = "تنظیمات"
 [connection signal="pressed" from="VBoxContainer/hives" to="." method="_on_hives_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="file_sellected" from="file_dialog" to="." method="_on_file_dialog_file_sellected"]
-[connection signal="pressed" from="gift/Realistic-gold-gift-boxBody" to="." method="_on_realisticgoldgiftbox_body_pressed"]
-[connection signal="timeout" from="gift/timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="PersianButton4" to="." method="_on_guid_button_pressed"]
 [connection signal="timeout" from="timer" to="." method="_on_timer_begin_league_timeout"]
 [connection signal="timeout" from="timer2" to="." method="_on_timer_2_timeout"]
@@ -5499,5 +5497,7 @@ text = "تنظیمات"
 [connection signal="pressed" from="PopupPanel2/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="_on_PersianButton3_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_gift_button_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="gift/Realistic-gold-gift-boxBody" to="." method="_on_realisticgoldgiftbox_body_pressed"]
+[connection signal="timeout" from="gift/timer" to="." method="_on_timer_timeout"]
 
 [editable path="PopupPanel2"]

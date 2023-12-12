@@ -1,34 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://b0rnge5h1iun8"]
+[gd_scene load_steps=51 format=3 uid="uid://b0rnge5h1iun8"]
 
 [ext_resource type="Script" path="res://script/levels.gd" id="1_egdof"]
-[ext_resource type="Texture2D" uid="uid://dtvamb2w8i8wd" path="res://sprite/masjed9.jpg" id="2_xfbk0"]
-[ext_resource type="StyleBox" uid="uid://wlma28beyem6" path="res://styles/btn.tres" id="5_4b7yr"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33hpo"]
-bg_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6xb6d"]
-bg_color = Color(0.14902, 0.14902, 0.14902, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8e7c"]
+[ext_resource type="Texture2D" uid="uid://bbfuiusyyrr5k" path="res://sprite/manzel3.png" id="2_1b7gp"]
+[ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="3_h2v3t"]
+[ext_resource type="Texture2D" uid="uid://dcfa3xrc004ul" path="res://sprite/لیگ2.png" id="4_dw4ff"]
+[ext_resource type="Texture2D" uid="uid://bbat7dydd7o0h" path="res://sprite/honey_drop.png" id="4_w5vay"]
+[ext_resource type="Texture2D" uid="uid://cwasm6w2gibnw" path="res://sprite/empty_honey.png" id="6_7qfe8"]
+[ext_resource type="FontFile" uid="uid://de3lra4xfgvam" path="res://fonts/BTitrBd.ttf" id="6_nnjm3"]
+[ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="7_xvqg8"]
+[ext_resource type="Texture2D" uid="uid://vo6q51vfdxs5" path="res://sprite/honey (11).png" id="8_olrhi"]
+[ext_resource type="Texture2D" uid="uid://nwtgsl2mxjd0" path="res://sprite/smoke.png" id="10_m23yq"]
 
 [sub_resource type="Animation" id="Animation_vhuve"]
 length = 0.001
@@ -55,6 +36,186 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/buttons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/buttons/Button/GPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/buttons/Button2/GPUParticles2D:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/buttons/Button3/GPUParticles2D:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/buttons/Button4/GPUParticles2D:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/buttons/Button5/GPUParticles2D:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/buttons/Button6/GPUParticles2D:emitting")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/buttons/Button7/GPUParticles2D:emitting")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/buttons/Button8/GPUParticles2D:emitting")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2D/buttons/Button9/GPUParticles2D:emitting")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2D/buttons/Button10/GPUParticles2D:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2D/buttons/Button11/GPUParticles2D:emitting")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2D/buttons/Button12/GPUParticles2D:emitting")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2D/buttons/Button13/GPUParticles2D:emitting")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2D/buttons/Button15/GPUParticles2D:emitting")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ha452"]
@@ -84,9 +245,193 @@ tracks/1/keys = {
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_1qjy1"]
+resource_name = "reset_btn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/buttons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.535887, 0.5),
+"update": 0,
+"values": [Vector2(0, -80), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/buttons/Button/GPUParticles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/buttons/Button2/GPUParticles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/buttons/Button3/GPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/buttons/Button4/GPUParticles2D:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/buttons/Button5/GPUParticles2D:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/buttons/Button6/GPUParticles2D:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/buttons/Button7/GPUParticles2D:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/buttons/Button8/GPUParticles2D:emitting")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/buttons/Button9/GPUParticles2D:emitting")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/buttons/Button10/GPUParticles2D:emitting")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2D/buttons/Button11/GPUParticles2D:emitting")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2D/buttons/Button12/GPUParticles2D:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2D/buttons/Button13/GPUParticles2D:emitting")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2D/buttons/Button15/GPUParticles2D:emitting")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vvekp"]
 _data = {
 "RESET": SubResource("Animation_vhuve"),
+"reset_btn": SubResource("Animation_1qjy1"),
 "zoom": SubResource("Animation_ha452")
 }
 
@@ -234,6 +579,191 @@ _data = {
 "village": SubResource("Animation_qxg82")
 }
 
+[sub_resource type="Gradient" id="Gradient_wt5u0"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2nllo"]
+gradient = SubResource("Gradient_wt5u0")
+
+[sub_resource type="Curve" id="Curve_kq7qx"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_vem2n"]
+curve = SubResource("Curve_kq7qx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bjq4i"]
+emission_shape = 1
+emission_sphere_radius = 25.7
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_vem2n")
+color = Color(1, 0.976471, 0, 1)
+color_ramp = SubResource("GradientTexture1D_2nllo")
+
+[sub_resource type="Curve" id="Curve_bcxfw"]
+_data = [Vector2(0, 0.536842), 0.0, 0.0, 0, 0, Vector2(0.521951, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.473684), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jcpom"]
+curve = SubResource("Curve_bcxfw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_brytu"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 10.1
+flatness = 0.39
+gravity = Vector3(0, 500, 0)
+initial_velocity_min = 295.92
+initial_velocity_max = 395.91
+angular_velocity_min = 73.47
+angular_velocity_max = 73.47
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 30.612
+damping_max = 73.08
+angle_min = 180.0
+angle_max = 180.0
+scale_min = 0.05
+scale_max = 0.1
+scale_curve = SubResource("CurveTexture_jcpom")
+turbulence_noise_strength = 5.2
+turbulence_noise_speed_random = 0.9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78ec1"]
+atlas = ExtResource("4_w5vay")
+region = Rect2(265, 31, 137, 204)
+
+[sub_resource type="Gradient" id="Gradient_y5t0k"]
+offsets = PackedFloat32Array(0.770115, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mgvpn"]
+gradient = SubResource("Gradient_y5t0k")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v34an"]
+particle_flag_align_y = true
+direction = Vector3(0, -1, 0)
+spread = 15.19
+flatness = 0.18
+gravity = Vector3(0, 500, 0)
+initial_velocity_min = 50.31
+initial_velocity_max = 173.12
+angular_velocity_min = 73.47
+angular_velocity_max = 73.47
+damping_min = 30.612
+damping_max = 73.08
+angle_min = 180.0
+angle_max = 180.0
+scale_min = 0.05
+scale_max = 0.1
+scale_curve = SubResource("CurveTexture_jcpom")
+color_ramp = SubResource("GradientTexture1D_mgvpn")
+turbulence_noise_strength = 5.2
+turbulence_noise_speed_random = 0.9
+
+[sub_resource type="Curve" id="Curve_rl7mj"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.482927, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_a73o3"]
+curve = SubResource("Curve_rl7mj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_iechs"]
+emission_shape = 3
+emission_box_extents = Vector3(70, 70, 20)
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 5.72
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_a73o3")
+
+[sub_resource type="Curve" id="Curve_2oxqy"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.507317, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_0l2r7"]
+curve = SubResource("Curve_2oxqy")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xvoil"]
+emission_shape = 3
+emission_box_extents = Vector3(50, 50, 20)
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 8.77
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_0l2r7")
+
+[sub_resource type="FontVariation" id="FontVariation_lk0du"]
+base_font = ExtResource("6_nnjm3")
+spacing_top = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rfvno"]
+texture = ExtResource("6_7qfe8")
+modulate_color = Color(0.835294, 0.835294, 0.835294, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jntyw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dupo3"]
+texture = ExtResource("7_xvqg8")
+modulate_color = Color(0.835294, 0.835294, 0.835294, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2mv3t"]
+texture = ExtResource("7_xvqg8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_751jp"]
+texture = ExtResource("8_olrhi")
+
+[sub_resource type="Theme" id="Theme_rix23"]
+Button/colors/font_color = Color(0.184314, 0.482353, 0.105882, 1)
+Button/colors/font_disabled_color = Color(0.270588, 0.0823529, 0.87451, 0.741176)
+Button/colors/font_focus_color = Color(0.184314, 0.482353, 0.105882, 1)
+Button/colors/font_hover_color = Color(0.184314, 0.482353, 0.105882, 1)
+Button/colors/font_hover_pressed_color = Color(0.184314, 0.482353, 0.105882, 1)
+Button/colors/font_pressed_color = Color(0.184314, 0.482353, 0.105882, 1)
+Button/constants/outline_size = 5
+Button/font_sizes/font_size = 40
+Button/fonts/font = SubResource("FontVariation_lk0du")
+Button/styles/disabled = SubResource("StyleBoxTexture_rfvno")
+Button/styles/focus = SubResource("StyleBoxEmpty_jntyw")
+Button/styles/hover = SubResource("StyleBoxTexture_dupo3")
+Button/styles/normal = SubResource("StyleBoxTexture_2mv3t")
+Button/styles/pressed = SubResource("StyleBoxTexture_751jp")
+
+[sub_resource type="Gradient" id="Gradient_sdhtd"]
+colors = PackedColorArray(0.374139, 0.374139, 0.374139, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xs1vk"]
+gradient = SubResource("Gradient_sdhtd")
+
+[sub_resource type="Curve" id="Curve_elhq3"]
+_data = [Vector2(0, 0.347368), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xe0yx"]
+curve = SubResource("Curve_elhq3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_siq74"]
+emission_shape = 1
+emission_sphere_radius = 6.61
+gravity = Vector3(0, 0, 0)
+angle_min = -113.7
+angle_max = 75.8
+scale_min = 0.1
+scale_max = 0.1
+scale_curve = SubResource("CurveTexture_xe0yx")
+color_ramp = SubResource("GradientTexture1D_xs1vk")
+
 [node name="levels" type="Control" groups=["levels"]]
 modulate = Color(0, 0, 0, 1)
 light_mask = 0
@@ -255,7 +785,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_xfbk0")
+texture = ExtResource("2_1b7gp")
 expand_mode = 1
 stretch_mode = 6
 
@@ -300,21 +830,17 @@ layout_direction = 2
 layout_mode = 2
 mouse_filter = 2
 
-[node name="PersianButton" type="Button" parent="."]
+[node name="PersianButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -130.0
-offset_bottom = 72.0
+offset_left = -95.0
+offset_bottom = 101.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("5_4b7yr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_33hpo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6xb6d")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_c8e7c")
-text = "بازگشت"
-language = "fa_IR"
+texture_normal = ExtResource("3_h2v3t")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "zoom"
@@ -330,6 +856,368 @@ zoom = Vector2(10, 10)
 libraries = {
 "": SubResource("AnimationLibrary_hrel8")
 }
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="GPUParticles2D6" type="GPUParticles2D" parent="Node2D"]
+position = Vector2(367, 853)
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_bjq4i")
+texture = ExtResource("4_dw4ff")
+lifetime = 5.0
+
+[node name="GPUParticles2D7" type="GPUParticles2D" parent="Node2D"]
+position = Vector2(374, 1261)
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_bjq4i")
+texture = ExtResource("4_dw4ff")
+lifetime = 5.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D"]
+position = Vector2(382, 880)
+amount = 1000
+process_material = SubResource("ParticleProcessMaterial_brytu")
+texture = SubResource("AtlasTexture_78ec1")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="Node2D"]
+position = Vector2(381, 1092)
+amount = 2000
+process_material = SubResource("ParticleProcessMaterial_v34an")
+texture = SubResource("AtlasTexture_78ec1")
+draw_order = 2
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="Node2D"]
+position = Vector2(254, 870)
+rotation = 0.140597
+amount = 500
+process_material = SubResource("ParticleProcessMaterial_iechs")
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="Node2D"]
+position = Vector2(484, 876)
+rotation = -0.121225
+amount = 500
+process_material = SubResource("ParticleProcessMaterial_xvoil")
+
+[node name="buttons" type="Control" parent="Node2D"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_rix23")
+
+[node name="Button" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 931.0
+offset_right = 75.0
+offset_bottom = 1010.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button2" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 958.0
+offset_right = 166.0
+offset_bottom = 1037.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button2"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button3" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 1016.0
+offset_right = 268.0
+offset_bottom = 1095.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button3"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button4" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1036.0
+offset_right = 78.0
+offset_bottom = 1115.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button4"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button5" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 1076.0
+offset_right = 188.0
+offset_bottom = 1155.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button5"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button6" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 1162.0
+offset_right = 103.0
+offset_bottom = 1241.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button6"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button7" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 1223.0
+offset_right = 196.0
+offset_bottom = 1302.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button7"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button8" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 1012.0
+offset_right = 568.0
+offset_bottom = 1091.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button8"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button9" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 961.0
+offset_right = 659.0
+offset_bottom = 1040.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button9"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button10" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 920.0
+offset_right = 758.0
+offset_bottom = 999.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button10"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button11" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 1020.0
+offset_right = 744.0
+offset_bottom = 1099.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button11"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button12" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 569.0
+offset_top = 1079.0
+offset_right = 639.0
+offset_bottom = 1158.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button12"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button13" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 1141.0
+offset_right = 744.0
+offset_bottom = 1220.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button13"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button14" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 1181.0
+offset_right = 627.0
+offset_bottom = 1260.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button14"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
+
+[node name="Button15" type="Button" parent="Node2D/buttons"]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 1252.0
+offset_right = 723.0
+offset_bottom = 1331.0
+disabled = true
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D/buttons/Button15"]
+show_behind_parent = true
+position = Vector2(35, 74)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_siq74")
+texture = ExtResource("10_m23yq")
+lifetime = 0.5
+one_shot = true
+randomness = 0.42
+draw_order = 2
 
 [connection signal="pressed" from="PersianButton" to="." method="_on_persian_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]

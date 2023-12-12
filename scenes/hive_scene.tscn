@@ -1,18 +1,17 @@
-[gd_scene load_steps=29 format=3 uid="uid://cx814yb2g65s7"]
+[gd_scene load_steps=25 format=3 uid="uid://cx814yb2g65s7"]
 
 [ext_resource type="Script" path="res://script/hive_scene.gd" id="1_co78e"]
 [ext_resource type="PackedScene" uid="uid://cuogrhixihefr" path="res://scenes/hive.tscn" id="2_6vu3g"]
 [ext_resource type="Shader" path="res://shaders/flower.gdshader" id="2_s2mf2"]
 [ext_resource type="Texture2D" uid="uid://cx3rmkeh7555x" path="res://sprite/pngtree-background-green-grass-picture-image_1913825.png" id="2_ugd17"]
-[ext_resource type="FontFile" uid="uid://ypl8tei5unmv" path="res://fonts/B Koodak Bold_0.ttf" id="3_3y05a"]
 [ext_resource type="Texture2D" uid="uid://bpc5sk3a6o3du" path="res://sprite/jar-of-honey-empty.png" id="3_lwgo5"]
-[ext_resource type="StyleBox" uid="uid://wlma28beyem6" path="res://styles/btn.tres" id="4_01pfw"]
 [ext_resource type="Texture2D" uid="uid://d2b4fu8bqhqlj" path="res://sprite/jar-png-jar-of-honey-full.png" id="4_qln58"]
 [ext_resource type="PackedScene" uid="uid://dxhm8phid2x2f" path="res://scenes/flowers.tscn" id="5_awoc7"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="6_8x2wn"]
 [ext_resource type="PackedScene" uid="uid://i6qfkgd125xy" path="res://scenes/bees.tscn" id="6_kqr84"]
 [ext_resource type="Texture2D" uid="uid://chfwj4pnbojfm" path="res://sprite/honey2.png" id="8_8ou60"]
 [ext_resource type="Texture2D" uid="uid://cjbkicdipwiqs" path="res://sprite/empty_hive.png" id="8_ntufy"]
+[ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="9_26xi7"]
 [ext_resource type="Texture2D" uid="uid://bxb2fvlxbm7tq" path="res://sprite/full_hive.png" id="9_jb8su"]
 [ext_resource type="Shader" path="res://shaders/honey.gdshader" id="14_hdfmj"]
 
@@ -27,32 +26,6 @@ font = ExtResource("6_8x2wn")
 font_size = 40
 font_color = Color(0, 0.2, 1, 1)
 outline_size = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrevh"]
-bg_color = Color(0.113725, 0.113725, 0.113725, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16isq"]
-bg_color = Color(0.176471, 0.176471, 0.176471, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdoib"]
 
 [sub_resource type="Animation" id="Animation_x2s6c"]
 length = 0.001
@@ -1008,20 +981,16 @@ num = 4
 [node name="bees" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 189.0
-offset_bottom = 72.0
-theme_override_fonts/font = ExtResource("3_3y05a")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("4_01pfw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_rrevh")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_16isq")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cdoib")
-text = "بازگشت"
+offset_left = 684.0
+offset_right = 765.0
+offset_bottom = 70.0
+texture_normal = ExtResource("9_26xi7")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 
 [node name="bees" parent="Node2D" instance=ExtResource("6_kqr84")]
 position = Vector2(145, 138)

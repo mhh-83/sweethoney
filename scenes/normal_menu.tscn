@@ -1,11 +1,10 @@
-[gd_scene load_steps=73 format=3 uid="uid://djnv8ue4qcy8o"]
+[gd_scene load_steps=71 format=3 uid="uid://djnv8ue4qcy8o"]
 
 [ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_sgl03"]
 [ext_resource type="Script" path="res://script/normal_menu.gd" id="1_t0enb"]
 [ext_resource type="Texture2D" uid="uid://bqkyqvmuladmg" path="res://sprite/asl1.png" id="2_82r7f"]
 [ext_resource type="Texture2D" uid="uid://bgue3s4l7muec" path="res://sprite/bg.png" id="2_a74we"]
 [ext_resource type="Texture2D" uid="uid://dhdd1dcjue1kh" path="res://sprite/gozine.png" id="3_7uspq"]
-[ext_resource type="Texture2D" uid="uid://bwylog0tjvnpt" path="res://sprite/honey_wood.png" id="3_nqc4s"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="4_dvmwn"]
 [ext_resource type="Texture2D" uid="uid://d1svtgreq1u0f" path="res://sprite/user_img.png" id="5_0hhh7"]
 [ext_resource type="Texture2D" uid="uid://cwasm6w2gibnw" path="res://sprite/empty_honey.png" id="7_nihqv"]
@@ -83,20 +82,6 @@ width = 500
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnda2"]
-bg_color = Color(0.360784, 0.45098, 0.47451, 1)
-border_width_left = 20
-border_width_top = 20
-border_width_right = 20
-border_width_bottom = 20
-border_blend = true
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jb6ga"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upmq0"]
 bg_color = Color(0.752941, 0.227451, 0, 1)
 border_width_left = 10
@@ -108,6 +93,8 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jb6ga"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u56a"]
 bg_color = Color(0.752941, 0.227451, 0, 1)
@@ -3535,7 +3522,7 @@ offset_right = -454.0
 offset_bottom = 310.0
 grow_horizontal = 0
 mouse_filter = 1
-theme_override_colors/font_color = Color(0.00784314, 0.254902, 0.192157, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(0.0431373, 0.501961, 0.392157, 1)
 theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.533333)
@@ -3546,25 +3533,14 @@ theme_override_colors/clear_button_color = Color(0.992157, 0, 0, 1)
 theme_override_colors/clear_button_color_pressed = Color(0.933333, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_sq4bp")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_cnda2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_upmq0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jb6ga")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_upmq0")
 placeholder_text = "نام خود را وارد کنید"
 alignment = 1
+caret_blink = true
+caret_force_displayed = true
 metadata/_edit_group_ = true
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer4/Control/Panel/Label"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-texture_normal = ExtResource("3_nqc4s")
-ignore_texture_size = true
-stretch_mode = 0
-flip_h = true
 
 [node name="PointLight2D2" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel/Label"]
 position = Vector2(126.5, 43.5)
@@ -3592,6 +3568,7 @@ autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
 clip_children = 2
+light_mask = 3
 material = SubResource("ShaderMaterial_1pnqx")
 layout_mode = 1
 anchors_preset = -1
@@ -3604,6 +3581,7 @@ offset_right = -1.52588e-05
 offset_bottom = -0.100021
 texture = ExtResource("9_11leg")
 expand_mode = 1
+metadata/_edit_group_ = true
 
 [node name="TextureRect2" type="TextureButton" parent="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect"]
 clip_children = 2
@@ -3642,6 +3620,12 @@ text = "انتخاب تصویر"
 label_settings = SubResource("LabelSettings_ntyr0")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PointLight2D3" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect"]
+position = Vector2(121, 119.5)
+scale = Vector2(0.552, 3.51563)
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_5a5uo")
 
 [node name="TextureRect2" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
 layout_mode = 0
@@ -4001,7 +3985,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999926, 0.999926)
+scale = Vector2(0.999924, 0.999924)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4093,8 +4077,8 @@ parameters/OneShot/request = 0
 visible = false
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer4/Control/Panel/Label" to="." method="_on_label_gui_input"]
 [connection signal="text_submitted" from="VBoxContainer/HBoxContainer4/Control/Panel/Label" to="." method="_on_label_text_submitted"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/Label/TextureButton" to="." method="_on_edit_name_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect/TextureRect2" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="continue" to="." method="_on_persian_button_pressed"]
 [connection signal="pressed" from="levels" to="." method="_on_levels_pressed"]

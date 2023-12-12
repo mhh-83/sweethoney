@@ -1,11 +1,11 @@
-[gd_scene load_steps=42 format=3 uid="uid://dlsbedchbmded"]
+[gd_scene load_steps=41 format=3 uid="uid://dlsbedchbmded"]
 
 [ext_resource type="Script" path="res://script/league_levels.gd" id="1_neujr"]
 [ext_resource type="Texture2D" uid="uid://brg1rhmemfae2" path="res://sprite/لیگ.png" id="2_s3mm6"]
 [ext_resource type="Texture2D" uid="uid://df1lls6o4f5ra" path="res://sprite/league_levels.png" id="3_tfyyu"]
-[ext_resource type="StyleBox" uid="uid://wlma28beyem6" path="res://styles/btn.tres" id="4_e6jsu"]
 [ext_resource type="Texture2D" uid="uid://c6cehtrxjq85d" path="res://sprite/Polygon 3.png" id="4_skp1u"]
 [ext_resource type="Texture2D" uid="uid://bniypapx8cqi2" path="res://sprite/Polygon 4.png" id="5_ssdq6"]
+[ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="6_g3u1k"]
 [ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="7_6iu7c"]
 [ext_resource type="Texture2D" uid="uid://b8al3w0qy0s0a" path="res://sprite/Polygon 7.png" id="8_7bjxh"]
 [ext_resource type="Texture2D" uid="uid://d2tw8s88xhih4" path="res://sprite/لیگ1.png" id="9_6n54h"]
@@ -39,8 +39,6 @@ tile_size = Vector2i(100, 100)
 sources/0 = SubResource("TileSetAtlasSource_3mjq0")
 sources/2 = SubResource("TileSetAtlasSource_l5caa")
 sources/4 = SubResource("TileSetAtlasSource_q0xwc")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eb0iw"]
 
 [sub_resource type="Animation" id="Animation_6rqvx"]
 length = 0.001
@@ -269,16 +267,14 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 83.0
-offset_bottom = 41.0
-theme_override_colors/font_color = Color(0, 0.729412, 0.729412, 1)
-theme_override_styles/normal = ExtResource("4_e6jsu")
-theme_override_styles/hover = ExtResource("4_e6jsu")
-theme_override_styles/pressed = ExtResource("4_e6jsu")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_eb0iw")
-text = "بازگشت"
+offset_left = 689.0
+offset_right = 770.0
+offset_bottom = 75.0
+texture_normal = ExtResource("6_g3u1k")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

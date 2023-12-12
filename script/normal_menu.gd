@@ -128,3 +128,8 @@ func _on_gui_input(event):
 		if text != "" and $VBoxContainer/HBoxContainer4/Control/Panel/Label.text != "":
 			save("name", $VBoxContainer/HBoxContainer4/Control/Panel/Label.text)
 			$VBoxContainer/HBoxContainer4/Control/Panel/Label.editable = false
+
+
+func _on_label_gui_input(event):
+	if event.is_pressed():
+		$VBoxContainer/HBoxContainer4/Control/Panel/Label.editable = true

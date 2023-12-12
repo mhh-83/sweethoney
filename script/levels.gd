@@ -19,7 +19,7 @@ func _ready():
 	
 	match mode:
 		Mode.Home:
-			$TextureRect.texture = preload("res://sprite/home.jpg")
+			$TextureRect.texture = preload("res://sprite/manzel3.png")
 			max_level = load_game("max_level_h", 1)
 			unlock_level = load_game("unlock_level_h", 1)
 			
@@ -58,11 +58,15 @@ func _ready():
 			$AnimationPlayer2.play("mosque")
 	$ScrollContainer2.size = $ScrollContainer.size
 	$ScrollContainer2.position = $ScrollContainer.position
-	if OS.get_name() == "Windows":
-		for x in range(max_level):
-			add_btn(x)
+	if mode != Mode.Home:
+		$Node2D.hide()
+		if OS.get_name() == "Windows":
+			for x in range(max_level):
+				add_btn(x)
+		else:
+			add_btn_mobile(max_level)
 	else:
-		add_btn_mobile(max_level)
+		reset_btn()
 func write_num(_name, num):
 	var file = FileAccess.open("user://files/"+_name+".txt", FileAccess.WRITE)
 	file.store_var(num)
@@ -122,6 +126,17 @@ func add_btn(lv):
 	if lv == max_level - 1:
 		for x in range(max_level % col):
 			$ScrollContainer/GridContainer.add_child(Control.new())
+func reset_btn():
+	await $AnimationPlayer.animation_finished
+	$AnimationPlayer.play("reset_btn")
+	for lv in range(max_level):
+		var btn = $Node2D/buttons.get_child(lv)
+		btn.text = str(lv + 1)
+		btn.pressed.connect(on_btn_pressed.bind(lv + 1))
+		if lv + 1 > unlock_level:
+			btn.disabled = true
+		else :
+			btn.disabled = false
 func add_btn_mobile(max_lv):
 	var texturs_normal = ["res://sprite/honey.png", "res://sprite/iconmahale-.png", "res://sprite/gol3.png", "res://sprite/3.png"]
 	var texturs_disabled = ["res://sprite/empty_honey.png", "res://sprite/iconmahale1-.png", "res://sprite/gol4.png", "res://sprite/5.png"]

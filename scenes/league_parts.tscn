@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://d2n77auqg4yq6"]
+[gd_scene load_steps=17 format=3 uid="uid://d2n77auqg4yq6"]
 
 [ext_resource type="Script" path="res://script/league_parts.gd" id="1_gxlnw"]
 [ext_resource type="Texture2D" uid="uid://cupdvp5it5kui" path="res://sprite/Untitled1-1.png" id="2_kk6ts"]
-[ext_resource type="StyleBox" uid="uid://wlma28beyem6" path="res://styles/btn.tres" id="3_6jiwx"]
+[ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="3_2ftk5"]
 [ext_resource type="Texture2D" uid="uid://dfgyauf0d6da" path="res://sprite/Untitled-31.png" id="4_jv7r2"]
 [ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="5_d00sw"]
 
@@ -20,8 +20,6 @@ viewport_path = NodePath("SubViewport4")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_pfgk6"]
 viewport_path = NodePath("SubViewport5")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sge6r"]
 
 [sub_resource type="FontVariation" id="FontVariation_5cffk"]
 base_font = ExtResource("5_d00sw")
@@ -130,20 +128,17 @@ ignore_texture_size = true
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="Button6" type="Button" parent="."]
+[node name="Button6" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -117.0
-offset_bottom = 60.0
+offset_left = -102.0
+offset_bottom = 90.0
 grow_horizontal = 0
-theme_override_colors/font_color = Color(0, 0.839216, 0.921569, 1)
-theme_override_styles/normal = ExtResource("3_6jiwx")
-theme_override_styles/hover = ExtResource("3_6jiwx")
-theme_override_styles/pressed = ExtResource("3_6jiwx")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_sge6r")
-text = "بازگشت"
+texture_normal = ExtResource("3_2ftk5")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
