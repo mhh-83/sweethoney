@@ -19,14 +19,14 @@ func _ready():
 	# Note: Don't make simultaneous requests using a single HTTPRequest node.
 	# The snippet below is provided for reference only.
 	var body = {
-	"name": ["محمد حسین حق شناس"],
-	"phone": [09111525112],
-	"password": ["12345678h"],
-	"device_name": ["android"],
-	"password_confirmation": ["12345678h"],
-	"email" : ["mhpshenas125@gmail.com"]
+	"full_name": "محمد حسین حق شناس",
+	"number": [09111525112],
+	"password": "12345678h",
+	"device_name": "android",
+	"password_confirmation": "12345678h",
+	
 	}
-	var error = http_request.request("https://ik.imagekit.io/7pa8geku1/files/gifts.tscn?updatedAt=1701531287282")
+	var error = http_request.request("http://localhost/api/register", [], HTTPClient.METHOD_POST, JSON.stringify(body))
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 
