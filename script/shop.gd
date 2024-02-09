@@ -11,7 +11,7 @@ func _ready():
 	$PopupPanel/Control/no.pressed.connect(_on_purchase_button_faild)
 	for x in range($Shop/ScrollContainer/VBoxContainer/HBoxContainer2.get_children().size()):
 		
-		var button = $Shop/ScrollContainer/VBoxContainer/HBoxContainer2.get_child(x)
+		var button = $Shop/ScrollContainer/VBoxContainer/HBoxContainer2.get_child(x).get_child(0)
 		button.pressed.connect(_on_hive_button_pressed.bind(x, button.get("metadata/cost")))
 		if load_game("open_hive"+str(x), false):
 			button.disabled = true

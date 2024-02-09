@@ -321,7 +321,8 @@ func _on_shop_button_pressed():
 			reset_guid = false
 			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 	else:
-		$PopupPanel.popup_centered()
+		$PopupPanel.visible= not $PopupPanel.visible
+			
 
 
 func _on_league_button_pressed():

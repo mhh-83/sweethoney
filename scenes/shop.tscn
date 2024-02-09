@@ -1,21 +1,31 @@
-[gd_scene load_steps=14 format=3 uid="uid://btxmu4sj6al70"]
+[gd_scene load_steps=22 format=3 uid="uid://btxmu4sj6al70"]
 
+[ext_resource type="Texture2D" uid="uid://cx5aq0c4b07dh" path="res://sprite/فروشگاه.png" id="1_6tcfn"]
 [ext_resource type="Texture2D" uid="uid://bstcgsitofo16" path="res://sprite/token.png" id="1_fx7fe"]
 [ext_resource type="Script" path="res://script/shop.gd" id="1_ko5lu"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="2_gx2d2"]
 [ext_resource type="FontFile" uid="uid://b27pddqoondca" path="res://fonts/Aviny2-mfnbbn.ttf" id="2_l2s0d"]
 [ext_resource type="PackedScene" uid="uid://cdfreyppromea" path="res://scenes/buy_purchases.tscn" id="5_hbl6t"]
+[ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="5_vnmi7"]
+[ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="6_2ruil"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slo2x"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cd364"]
+texture = ExtResource("1_6tcfn")
 
-[sub_resource type="LabelSettings" id="LabelSettings_he8mp"]
-font = ExtResource("2_l2s0d")
-font_size = 50
+[sub_resource type="Theme" id="Theme_an8m6"]
+Label/styles/normal = null
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6jmp"]
+bg_color = Color(0.537255, 0.192157, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.921569, 0.921569, 0.921569, 1)
+corner_radius_top_left = 50
+corner_radius_bottom_right = 50
+shadow_color = Color(1, 0.788235, 0.164706, 1)
+shadow_size = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_8huyl"]
 font = ExtResource("2_l2s0d")
@@ -30,13 +40,34 @@ viewport_path = NodePath("SubViewport3")
 [sub_resource type="ViewportTexture" id="ViewportTexture_ik187"]
 viewport_path = NodePath("SubViewport2")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6rph"]
+bg_color = Color(0.537255, 0.192157, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_bottom_right = 50
+shadow_color = Color(1, 0.788235, 0.164706, 1)
+shadow_size = 8
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jtjhw"]
+
+[sub_resource type="Theme" id="Theme_rj74u"]
+Button/styles/normal = SubResource("StyleBoxTexture_jtjhw")
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ypkg"]
+font = ExtResource("6_2ruil")
+font_size = 21
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t02ww"]
-bg_color = Color(0, 0.729412, 0.0117647, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0, 0.403922, 0, 1)
+bg_color = Color(0.537255, 0.192157, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.788235, 0.164706, 1)
 border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -45,14 +76,13 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_fsfix"]
 font = ExtResource("2_gx2d2")
-font_color = Color(1, 0, 0, 1)
 
 [node name="PopupPanel" type="PopupPanel"]
 transparent_bg = true
 initial_position = 1
 size = Vector2i(500, 700)
 visible = true
-theme_override_styles/panel = SubResource("StyleBoxFlat_slo2x")
+theme_override_styles/panel = SubResource("StyleBoxTexture_cd364")
 script = ExtResource("1_ko5lu")
 
 [node name="Shop" type="Control" parent="."]
@@ -60,10 +90,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 490.0
-offset_bottom = 690.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -79,30 +105,18 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="Shop/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-text = "فروشگاه"
-label_settings = SubResource("LabelSettings_he8mp")
-horizontal_alignment = 1
+size_flags_vertical = 6
+theme = SubResource("Theme_an8m6")
+theme_override_constants/separation = 43
 
 [node name="Label2" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "       لیگ"
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_k6jmp")
+text = "                         لیگ                       "
 label_settings = SubResource("LabelSettings_8huyl")
-horizontal_alignment = 2
-
-[node name="ColorRect" type="ColorRect" parent="Shop/ScrollContainer/VBoxContainer/Label2"]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 15.0
-offset_bottom = -18.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.00784314, 0.0117647, 1, 1)
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Shop/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -116,50 +130,155 @@ texture_hover = SubResource("ViewportTexture_ik187")
 
 [node name="Label3" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "       کندوها"
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_c6rph")
+text = "                    کندوها                      "
 label_settings = SubResource("LabelSettings_8huyl")
-horizontal_alignment = 2
-
-[node name="ColorRect" type="ColorRect" parent="Shop/ScrollContainer/VBoxContainer/Label3"]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 15.0
-offset_bottom = -18.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.00784314, 0.0117647, 1, 1)
+horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Shop/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 50
+size_flags_horizontal = 4
+theme = SubResource("Theme_rj74u")
+theme_override_constants/separation = 120
 alignment = 1
 
-[node name="Button" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-text = "کندو 1
-700"
-metadata/cost = 700
 
-[node name="Button2" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control"]
 layout_mode = 2
-text = "کندو 2
-1000"
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_vnmi7")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/cost = 750
+
+[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+کندو1
+750"
+label_settings = SubResource("LabelSettings_8ypkg")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/cost = 750
+
+[node name="Control3" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control3"]
+layout_mode = 2
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_vnmi7")
+ignore_texture_size = true
+stretch_mode = 5
 metadata/cost = 1000
 
-[node name="Button3" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-text = "کندو 3
-1250"
-metadata/cost = 1250
+[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control3/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+کندو2
+1000"
+label_settings = SubResource("LabelSettings_8ypkg")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/cost = 750
 
-[node name="Button4" type="Button" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control4" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-text = "کندو 4
+
+[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control4"]
+layout_mode = 2
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_vnmi7")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/cost = 700
+
+[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control4/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+کندو3
 1500"
+label_settings = SubResource("LabelSettings_8ypkg")
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/cost = 1500
+
+[node name="Control2" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control2"]
+layout_mode = 2
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_vnmi7")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/cost = 700
+
+[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control2/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+کندو4
+2500"
+label_settings = SubResource("LabelSettings_8ypkg")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/cost = 2500
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
