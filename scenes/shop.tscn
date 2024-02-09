@@ -8,9 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cdfreyppromea" path="res://scenes/buy_purchases.tscn" id="5_hbl6t"]
 [ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="5_vnmi7"]
 [ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="6_2ruil"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cd364"]
-texture = ExtResource("1_6tcfn")
+[ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="9_a2fq4"]
 
 [sub_resource type="Theme" id="Theme_an8m6"]
 Label/styles/normal = null
@@ -77,15 +75,7 @@ corner_radius_bottom_left = 10
 [sub_resource type="LabelSettings" id="LabelSettings_fsfix"]
 font = ExtResource("2_gx2d2")
 
-[node name="PopupPanel" type="PopupPanel"]
-transparent_bg = true
-initial_position = 1
-size = Vector2i(500, 700)
-visible = true
-theme_override_styles/panel = SubResource("StyleBoxTexture_cd364")
-script = ExtResource("1_ko5lu")
-
-[node name="Shop" type="Control" parent="."]
+[node name="Shop" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,8 +83,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = ExtResource("1_ko5lu")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Shop"]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6tcfn")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,14 +102,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Shop/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = SubResource("Theme_an8m6")
 theme_override_constants/separation = 43
 
-[node name="Label2" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -118,17 +118,17 @@ text = "                         لیگ                       "
 label_settings = SubResource("LabelSettings_8huyl")
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Shop/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = SubResource("ViewportTexture_5fh66")
 texture_pressed = SubResource("ViewportTexture_foqei")
 texture_hover = SubResource("ViewportTexture_ik187")
 
-[node name="Label3" type="Label" parent="Shop/ScrollContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -137,27 +137,27 @@ text = "                    کندوها                      "
 label_settings = SubResource("LabelSettings_8huyl")
 horizontal_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Shop/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_rj74u")
 theme_override_constants/separation = 120
 alignment = 1
 
-[node name="Control" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control"]
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control"]
 layout_mode = 2
 offset_left = -50.0
-offset_right = 50.0
-offset_bottom = 100.0
+offset_right = 150.0
+offset_bottom = 200.0
 texture_normal = ExtResource("5_vnmi7")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 750
 
-[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control/Button"]
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -178,20 +178,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/cost = 750
 
-[node name="Control3" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control3"]
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control3"]
 layout_mode = 2
 offset_left = -50.0
-offset_right = 50.0
-offset_bottom = 100.0
+offset_right = 150.0
+offset_bottom = 200.0
 texture_normal = ExtResource("5_vnmi7")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 1000
 
-[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control3/Button"]
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control3/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -212,10 +212,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/cost = 750
 
-[node name="Control4" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control4"]
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control4"]
 layout_mode = 2
 offset_left = -50.0
 offset_right = 50.0
@@ -225,7 +225,7 @@ ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 700
 
-[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control4/Button"]
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control4/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -246,10 +246,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/cost = 1500
 
-[node name="Control2" type="Control" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control2"]
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control2"]
 layout_mode = 2
 offset_left = -50.0
 offset_right = 50.0
@@ -259,7 +259,7 @@ ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 700
 
-[node name="Label" type="Label" parent="Shop/ScrollContainer/VBoxContainer/HBoxContainer2/Control2/Button"]
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control2/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -386,4 +386,12 @@ vertical_alignment = 1
 
 [node name="PopupPanel" parent="." instance=ExtResource("5_hbl6t")]
 
-[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 87.0
+texture_normal = ExtResource("9_a2fq4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

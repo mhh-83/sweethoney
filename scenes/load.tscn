@@ -358,10 +358,10 @@ text = "برای ورود ضربه بزنید"
 label_settings = SubResource("LabelSettings_j7u2d")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "waite"
 libraries = {
 "": SubResource("AnimationLibrary_1chfd")
 }
+autoplay = "waite"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 

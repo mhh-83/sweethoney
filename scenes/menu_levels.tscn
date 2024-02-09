@@ -358,7 +358,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.682353, 0.141176, 0.384314, 1)
+color = Color(0, 0.454902, 0.447059, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, 683)
@@ -369,10 +369,10 @@ limit_bottom = 1366
 position_smoothing_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "start"
 libraries = {
 "": SubResource("AnimationLibrary_w3c5w")
 }
+autoplay = "start"
 
 [node name="Button" type="Button" parent="." groups=["part"]]
 layout_mode = 0

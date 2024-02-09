@@ -593,16 +593,14 @@ point_count = 2
 curve = SubResource("Curve_kq7qx")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bjq4i"]
+particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 25.7
-particle_flag_disable_z = true
 direction = Vector3(0, 1, 0)
 spread = 0.0
-gravity = Vector3(0, 0, 0)
 initial_velocity_min = 5.0
 initial_velocity_max = 5.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 0, 0)
 scale_min = 0.5
 scale_max = 0.5
 scale_curve = SubResource("CurveTexture_vem2n")
@@ -618,20 +616,18 @@ curve = SubResource("Curve_bcxfw")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_brytu"]
 particle_flag_disable_z = true
+angle_min = 180.0
+angle_max = 180.0
 direction = Vector3(0, -1, 0)
 spread = 10.1
 flatness = 0.39
-gravity = Vector3(0, 500, 0)
 initial_velocity_min = 295.92
 initial_velocity_max = 395.91
 angular_velocity_min = 73.47
 angular_velocity_max = 73.47
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 500, 0)
 damping_min = 30.612
 damping_max = 73.08
-angle_min = 180.0
-angle_max = 180.0
 scale_min = 0.05
 scale_max = 0.1
 scale_curve = SubResource("CurveTexture_jcpom")
@@ -651,18 +647,18 @@ gradient = SubResource("Gradient_y5t0k")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v34an"]
 particle_flag_align_y = true
+angle_min = 180.0
+angle_max = 180.0
 direction = Vector3(0, -1, 0)
 spread = 15.19
 flatness = 0.18
-gravity = Vector3(0, 500, 0)
 initial_velocity_min = 50.31
 initial_velocity_max = 173.12
 angular_velocity_min = 73.47
 angular_velocity_max = 73.47
+gravity = Vector3(0, 500, 0)
 damping_min = 30.612
 damping_max = 73.08
-angle_min = 180.0
-angle_max = 180.0
 scale_min = 0.05
 scale_max = 0.1
 scale_curve = SubResource("CurveTexture_jcpom")
@@ -678,13 +674,11 @@ point_count = 3
 curve = SubResource("Curve_rl7mj")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_iechs"]
+particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(70, 70, 20)
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
 initial_velocity_max = 5.72
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_a73o3")
 
 [sub_resource type="Curve" id="Curve_2oxqy"]
@@ -695,13 +689,11 @@ point_count = 3
 curve = SubResource("Curve_2oxqy")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xvoil"]
+particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(50, 50, 20)
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
 initial_velocity_max = 8.77
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_0l2r7")
 
 [sub_resource type="FontVariation" id="FontVariation_lk0du"]
@@ -756,9 +748,9 @@ curve = SubResource("Curve_elhq3")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_siq74"]
 emission_shape = 1
 emission_sphere_radius = 6.61
-gravity = Vector3(0, 0, 0)
 angle_min = -113.7
 angle_max = 75.8
+gravity = Vector3(0, 0, 0)
 scale_min = 0.1
 scale_max = 0.1
 scale_curve = SubResource("CurveTexture_xe0yx")
@@ -843,10 +835,10 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "zoom"
 libraries = {
 "": SubResource("AnimationLibrary_vvekp")
 }
+autoplay = "zoom"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, 683)

@@ -321,7 +321,7 @@ func _on_shop_button_pressed():
 			reset_guid = false
 			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 	else:
-		$PopupPanel.visible= not $PopupPanel.visible
+		get_tree().get_root().add_child(preload("res://scenes/shop.tscn").instantiate())
 			
 
 
