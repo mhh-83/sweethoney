@@ -1,23 +1,25 @@
-[gd_scene load_steps=28 format=3 uid="uid://btxmu4sj6al70"]
+[gd_scene load_steps=31 format=3 uid="uid://btxmu4sj6al70"]
 
 [ext_resource type="Script" path="res://script/shop.gd" id="1_ko5lu"]
 [ext_resource type="FontFile" uid="uid://b27pddqoondca" path="res://fonts/Aviny2-mfnbbn.ttf" id="2_l2s0d"]
 [ext_resource type="Texture2D" uid="uid://di8bwpo7jpfen" path="res://sprite/shop_Bg.png" id="2_s1osn"]
 [ext_resource type="Texture2D" uid="uid://c3tdq8pksuxx3" path="res://sprite/header.png" id="3_0m6pg"]
+[ext_resource type="Texture2D" uid="uid://qlc56ri8oq85" path="res://sprite/shop3.png" id="3_c4bc1"]
 [ext_resource type="Texture2D" uid="uid://d17jcp3igm0uj" path="res://sprite/blit.png" id="5_h0n16"]
 [ext_resource type="PackedScene" uid="uid://cdfreyppromea" path="res://scenes/buy_purchases.tscn" id="5_hbl6t"]
 [ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="6_2ruil"]
 [ext_resource type="Texture2D" uid="uid://bp5dt6gyx0ktv" path="res://sprite/blit_p.png" id="6_dff0h"]
 [ext_resource type="Texture2D" uid="uid://cqdsf7qaitnpd" path="res://sprite/blit_h.png" id="7_koujg"]
-[ext_resource type="Texture2D" uid="uid://b5kav0fgpxca6" path="res://sprite/hive4.png" id="8_vlke2"]
+[ext_resource type="FontFile" uid="uid://de3lra4xfgvam" path="res://fonts/BTitrBd.ttf" id="9_1dkwx"]
 [ext_resource type="Texture2D" uid="uid://d0av3m83f4ip2" path="res://sprite/return.png" id="9_a2fq4"]
-[ext_resource type="Texture2D" uid="uid://dm7wuxobpxtuj" path="res://sprite/hive6.png" id="9_goaek"]
-[ext_resource type="Texture2D" uid="uid://dvivhg3boxl4m" path="res://sprite/shop_border.png" id="10_hca47"]
-[ext_resource type="Texture2D" uid="uid://bl3dabgalt7le" path="res://sprite/hive5.png" id="10_i5t77"]
-[ext_resource type="Texture2D" uid="uid://d07q442og8cyb" path="res://sprite/hive7.png" id="11_j4rog"]
+[ext_resource type="Texture2D" uid="uid://1rv04noamcra" path="res://sprite/کندو1.png" id="10_5nmyh"]
+[ext_resource type="Texture2D" uid="uid://y7ty8whqv3x4" path="res://sprite/shop5.png" id="11_0w5vc"]
+[ext_resource type="Texture2D" uid="uid://bocudb6ipsunn" path="res://sprite/shop4.png" id="12_m4mcl"]
+[ext_resource type="Texture2D" uid="uid://paeh4onalmby" path="res://sprite/کندو2.png" id="13_vdppi"]
 [ext_resource type="Texture2D" uid="uid://bfg727r7e4vfl" path="res://sprite/honey4.png" id="13_xk203"]
 [ext_resource type="Texture2D" uid="uid://b4su2mkc7d3wq" path="res://sprite/honey3.png" id="14_jqxjd"]
 [ext_resource type="FontFile" uid="uid://d1pwvl5nj00od" path="res://fonts/B Traffic Bold_0.ttf" id="15_3kvyp"]
+[ext_resource type="Texture2D" uid="uid://bbat7dydd7o0h" path="res://sprite/honey_drop.png" id="20_ie5gf"]
 
 [sub_resource type="Theme" id="Theme_an8m6"]
 Label/styles/normal = null
@@ -29,15 +31,6 @@ font_color = Color(1, 0, 0, 1)
 outline_size = 10
 outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_6y7io"]
-font = ExtResource("6_2ruil")
-font_size = 21
-font_color = Color(0, 0, 0, 1)
-outline_size = 5
-outline_color = Color(1, 1, 0, 1)
-shadow_size = 17
-shadow_color = Color(1, 1, 0, 0.486275)
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xe2s"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f75d2"]
@@ -47,17 +40,6 @@ shadow_color = Color(1, 1, 0, 0.486275)
 [sub_resource type="Theme" id="Theme_rj74u"]
 Button/styles/normal = SubResource("StyleBoxTexture_jtjhw")
 
-[sub_resource type="LabelSettings" id="LabelSettings_8ypkg"]
-line_spacing = 10.0
-font = ExtResource("6_2ruil")
-font_size = 32
-font_color = Color(0, 0, 0, 1)
-outline_size = 10
-outline_color = Color(1, 1, 0, 1)
-shadow_size = 10
-shadow_color = Color(1, 1, 1, 1)
-shadow_offset = Vector2(-1.085, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_b87lh"]
 font = ExtResource("15_3kvyp")
 font_size = 44
@@ -65,6 +47,18 @@ font_color = Color(1, 0, 0, 1)
 outline_size = 8
 shadow_size = 9
 shadow_color = Color(1, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eby1s"]
+atlas = ExtResource("20_ie5gf")
+region = Rect2(268.983, 41.8624, 133.672, 193.261)
+
+[sub_resource type="Curve" id="Curve_4ns5j"]
+_data = [Vector2(0, 0.362637), 0.0, 0.0, 0, 0, Vector2(0.342697, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.263736), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_ixywq"]
+offsets = PackedFloat32Array(0.0133333, 0.7, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -85,13 +79,27 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_s1osn")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_c4bc1")
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0688141
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
@@ -134,32 +142,45 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer/Control"]
 layout_mode = 2
-offset_left = -75.0
-offset_right = 91.0
-offset_bottom = 200.0
+offset_left = -127.0
+offset_right = 145.0
+offset_bottom = 275.0
 texture_normal = ExtResource("5_h0n16")
 texture_pressed = ExtResource("6_dff0h")
 texture_hover = ExtResource("7_koujg")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Control/TextureButton"]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 57.0
-offset_right = 145.0
-offset_bottom = 179.0
-text = "بلیط ورودی به لیگ
-20 هزار تومان"
-label_settings = SubResource("LabelSettings_6y7io")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer/Control/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -49.5
+offset_right = 63.0
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0.435294, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = -15
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("2_l2s0d")
+theme_override_fonts/bold_font = ExtResource("9_1dkwx")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 23
+bbcode_enabled = true
+text = "[center]بلیط ورودی به لیگ
+
+[b]20 هزار تومان"
 
 [node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/separation = 265
+theme_override_constants/separation = 340
 theme_override_styles/separator = SubResource("StyleBoxEmpty_8xe2s")
 
 [node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
@@ -189,166 +210,249 @@ vertical_alignment = 1
 
 [node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 75
+theme_override_constants/separation = 35
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f75d2")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_rj74u")
-theme_override_constants/separation = 155
+theme_override_constants/separation = 210
 alignment = 1
 
-[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 220
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control"]
-layout_mode = 2
-offset_left = -70.0
-offset_right = 80.0
-offset_bottom = 150.0
-texture_normal = ExtResource("8_vlke2")
-texture_pressed = ExtResource("9_goaek")
-texture_hover = ExtResource("10_i5t77")
-texture_disabled = ExtResource("11_j4rog")
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_5nmyh")
+texture_pressed = ExtResource("11_0w5vc")
+texture_hover = ExtResource("12_m4mcl")
+texture_disabled = ExtResource("13_vdppi")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 750
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control/Button"]
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -64.0
-offset_right = 53.0
-offset_bottom = 45.0
+offset_left = -52.5
+offset_top = -54.5
+offset_right = 52.5
+offset_bottom = 54.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "کندو 1
-750"
-label_settings = SubResource("LabelSettings_8ypkg")
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
+theme_override_constants/shadow_offset_x = -5
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/line_separation = 13
+theme_override_constants/outline_size = 10
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_fonts/normal_font = ExtResource("6_2ruil")
+theme_override_fonts/bold_font = ExtResource("9_1dkwx")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 37
+bbcode_enabled = true
+text = "[center]کندو 1
+[b]750"
 metadata/cost = 750
 
-[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control3"]
-layout_mode = 2
-offset_left = -70.0
-offset_right = 80.0
-offset_bottom = 150.0
-texture_normal = ExtResource("8_vlke2")
-texture_pressed = ExtResource("9_goaek")
-texture_hover = ExtResource("10_i5t77")
-texture_disabled = ExtResource("11_j4rog")
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control3"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_5nmyh")
+texture_pressed = ExtResource("11_0w5vc")
+texture_hover = ExtResource("12_m4mcl")
+texture_disabled = ExtResource("13_vdppi")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 1000
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control3/Button"]
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control3/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -65.0
-offset_right = 53.0
-offset_bottom = 44.0
+offset_left = -52.5
+offset_top = -54.5
+offset_right = 52.5
+offset_bottom = 54.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "کندو 2
-1000"
-label_settings = SubResource("LabelSettings_8ypkg")
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
+theme_override_constants/shadow_offset_x = -5
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/line_separation = 13
+theme_override_constants/outline_size = 10
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_fonts/normal_font = ExtResource("6_2ruil")
+theme_override_fonts/bold_font = ExtResource("9_1dkwx")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 37
+bbcode_enabled = true
+text = "[center]کندو2
+[b]1000"
 metadata/cost = 750
 
-[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 220
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control4"]
-layout_mode = 2
-offset_left = -70.0
-offset_right = 80.0
-offset_bottom = 150.0
-texture_normal = ExtResource("8_vlke2")
-texture_pressed = ExtResource("9_goaek")
-texture_hover = ExtResource("10_i5t77")
-texture_disabled = ExtResource("11_j4rog")
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control4"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_5nmyh")
+texture_pressed = ExtResource("11_0w5vc")
+texture_hover = ExtResource("12_m4mcl")
+texture_disabled = ExtResource("13_vdppi")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 1500
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control4/Button"]
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control4/Button"]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -65.0
-offset_right = 53.0
-offset_bottom = 44.0
+offset_left = -55.0
+offset_top = -54.5
+offset_right = 55.0
+offset_bottom = 54.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "کندو 3
-1500"
-label_settings = SubResource("LabelSettings_8ypkg")
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
+theme_override_constants/shadow_offset_x = -5
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/line_separation = 13
+theme_override_constants/outline_size = 10
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_fonts/normal_font = ExtResource("6_2ruil")
+theme_override_fonts/bold_font = ExtResource("9_1dkwx")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 37
+bbcode_enabled = true
+text = "[center]کندو 3
+[b]1500"
 metadata/cost = 1500
 
-[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control2"]
-layout_mode = 2
-offset_left = -70.0
-offset_right = 80.0
-offset_bottom = 150.0
-texture_normal = ExtResource("8_vlke2")
-texture_pressed = ExtResource("9_goaek")
-texture_hover = ExtResource("10_i5t77")
-texture_disabled = ExtResource("11_j4rog")
+[node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control2"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_5nmyh")
+texture_pressed = ExtResource("11_0w5vc")
+texture_hover = ExtResource("12_m4mcl")
+texture_disabled = ExtResource("13_vdppi")
 ignore_texture_size = true
 stretch_mode = 5
 metadata/cost = 2500
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control2/Button"]
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control2/Button"]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -65.0
-offset_right = 53.0
-offset_bottom = 44.0
+offset_left = -52.5
+offset_top = -54.5
+offset_right = 52.5
+offset_bottom = 54.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "کندو 4
-2500"
-label_settings = SubResource("LabelSettings_8ypkg")
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
+theme_override_constants/shadow_offset_x = -5
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/line_separation = 13
+theme_override_constants/outline_size = 10
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_fonts/normal_font = ExtResource("6_2ruil")
+theme_override_fonts/bold_font = ExtResource("9_1dkwx")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 37
+bbcode_enabled = true
+text = "[center]کندو 4
+[b]2500"
 metadata/cost = 2500
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_left = 606.0
-offset_top = 76.0
-offset_right = 709.0
-offset_bottom = 228.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.742
+anchor_top = 0.056
+anchor_right = 0.923
+anchor_bottom = 0.204
+offset_left = -5.85602
+offset_top = -71.496
+offset_right = 41.136
+offset_bottom = -23.664
 value = 50.0
 fill_mode = 3
 nine_patch_stretch = true
@@ -369,18 +473,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("10_hca47")
-metadata/_edit_lock_ = true
-
 [node name="PopupPanel" parent="." instance=ExtResource("5_hbl6t")]
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -392,5 +484,39 @@ offset_bottom = 94.0
 texture_normal = ExtResource("9_a2fq4")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(91, 132)
+amount = 25
+lifetime = 5.95
+texture = SubResource("AtlasTexture_eby1s")
+emission_shape = 3
+emission_rect_extents = Vector2(57.695, 1)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 111.11
+initial_velocity_max = 272.73
+scale_amount_min = 0.2
+scale_amount_max = 0.3
+scale_amount_curve = SubResource("Curve_4ns5j")
+color_ramp = SubResource("Gradient_ixywq")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(641, 240)
+amount = 25
+lifetime = 5.95
+texture = SubResource("AtlasTexture_eby1s")
+emission_shape = 3
+emission_rect_extents = Vector2(57.695, 1)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 111.11
+initial_velocity_max = 272.73
+scale_amount_min = 0.2
+scale_amount_max = 0.3
+scale_amount_curve = SubResource("Curve_4ns5j")
+color_ramp = SubResource("Gradient_ixywq")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

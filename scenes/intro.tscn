@@ -133,9 +133,9 @@ scale_amount_curve = SubResource("Curve_0xky0")
 color_ramp = SubResource("Gradient_phcns")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "start"
 libraries = {
 "": SubResource("AnimationLibrary_r8t3c")
 }
+autoplay = "start"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
