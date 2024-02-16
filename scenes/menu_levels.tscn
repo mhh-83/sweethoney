@@ -369,10 +369,10 @@ limit_bottom = 1366
 position_smoothing_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "start"
 libraries = {
 "": SubResource("AnimationLibrary_w3c5w")
 }
-autoplay = "start"
 
 [node name="Button" type="Button" parent="." groups=["part"]]
 layout_mode = 0

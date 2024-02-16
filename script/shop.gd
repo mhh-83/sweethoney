@@ -4,9 +4,10 @@ var save_path = "user://data.cfg"
 var num
 var cost
 var mode_purchase
+var score = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	score = load_game("score", 0)
 	$PopupPanel/Control/yes.pressed.connect(_on_purchase_button_complated)
 	$PopupPanel/Control/no.pressed.connect(_on_purchase_button_faild)
 	for x in range($ScrollContainer/VBoxContainer/HBoxContainer2.get_children().size()):
@@ -15,6 +16,7 @@ func _ready():
 		button.pressed.connect(_on_hive_button_pressed.bind(x, button.get("metadata/cost")))
 		if load_game("open_hive"+str(x), false):
 			button.disabled = true
+			button.get_child(0).hide()
 func save(_name, num):
 	var confige = ConfigFile.new()
 	confige.load(save_path)
@@ -28,19 +30,20 @@ func load_game(_name, defaulte=null):
 func _process(delta):
 	
 	modulate = [Color.WHITE, Color("4f4f4f")][int($PopupPanel.visible)]
-	
+	$TextureProgressBar/Label.text = str(score)
+	$TextureProgressBar.value = score * 100 / 5000
 func _on_purchase_button_faild():
 	$PopupPanel.hide()
 func _on_purchase_button_complated():
 	$PopupPanel.hide()
-	var score = load_game("score", 0)
+	
 	match mode_purchase:
 		"hive":
 			score -= cost
 			save("score", score)
 			if get_tree().has_group('score'):
 				get_tree().get_nodes_in_group("score")[0].text = "امتیاز : "+ str(load_game("score", 0))
-			$ScrollContainer/VBoxContainer/HBoxContainer2.get_child(num).disabled = true
+			$ScrollContainer/VBoxContainer/HBoxContainer2.get_child(num).get_child(0).disabled = true
 			save("open_hive"+str(num), true)
 			var time = {"hour" : GlobalTime.current_time.hour, "minute": GlobalTime.current_time.minute, "second": GlobalTime.current_time.second}
 			save("hive_time"+str(num), time)
