@@ -403,13 +403,15 @@ point_count = 2
 curve = SubResource("Curve_a4wg0")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_viu73"]
-particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(768, 1, 1)
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 angle_min = -203.0
 angle_max = 2.7
 angle_curve = SubResource("CurveTexture_iqall")
-gravity = Vector3(0, 98, 0)
 scale_min = 0.11
 scale_max = 0.36
 scale_curve = SubResource("CurveTexture_rxk8n")
@@ -433,13 +435,15 @@ point_count = 2
 curve = SubResource("Curve_d3ccd")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_djdw3"]
-particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(768, 1, 1)
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 angle_min = -203.0
 angle_max = 2.7
 angle_curve = SubResource("CurveTexture_swhy1")
-gravity = Vector3(0, 98, 0)
 scale_min = 0.07
 scale_max = 0.2
 scale_curve = SubResource("CurveTexture_gvsqq")
@@ -3443,7 +3447,7 @@ nodes/Animation/position = Vector2(-120, 180)
 nodes/OneShot/node = SubResource("AnimationNodeOneShot_leohq")
 nodes/OneShot/position = Vector2(380, -40)
 nodes/output/position = Vector2(800, 100)
-node_connections = [&"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2", &"output", 0, &"OneShot"]
+node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2"]
 
 [node name="start" type="Control" groups=["start"]]
 layout_mode = 3
@@ -3688,10 +3692,10 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+autoplay = "start"
 libraries = {
 "": SubResource("AnimationLibrary_4uag8")
 }
-autoplay = "start"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 disable_mode = 2
@@ -3981,7 +3985,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999921, 0.999921)
+scale = Vector2(0.999912, 0.999912)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4056,18 +4060,15 @@ length = 16.0
 bone_angle = -77.7974
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="bee"]
+autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_l5ucv")
 }
-autoplay = "Idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="bee"]
-libraries = {
-"": SubResource("AnimationLibrary_l5ucv")
-}
 tree_root = SubResource("AnimationNodeBlendTree_muwp3")
-advance_expression_base_node = NodePath("../AnimationPlayer")
 anim_player = NodePath("../AnimationPlayer")
+advance_expression_base_node = NodePath("../AnimationPlayer")
 parameters/OneShot/active = false
 parameters/OneShot/internal_active = false
 parameters/OneShot/request = 0

@@ -52,9 +52,9 @@ func _process(delta):
 		light -= 4
 		$CanvasModulate.color = Color8(light, light, light, 255)
 		if $Camera2D.zoom.x >= 10:
-			get_tree().change_scene_to_file("res://scenes/league_parts.tscn")
+			Exit.change_scene("res://scenes/league_parts.tscn")
 func _on_button_2_pressed():
-	get_tree().change_scene_to_file("res://scenes/start.tscn")
+	Exit.change_scene("res://scenes/start.tscn")
 
 func _notification(what):
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
@@ -65,7 +65,7 @@ func _on_timer_timeout():
 
 func _on_timer2_timeout():
 	save("close_league", true)
-	get_tree().change_scene_to_file("res://scenes/start.tscn")
+	Exit.change_scene("res://scenes/start.tscn")
 
 
 func _on_button_3_pressed():

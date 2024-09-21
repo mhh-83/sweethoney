@@ -7,7 +7,7 @@ var save_img_path = "user://files.cfg"
 var load_complate = false
 var update_game2 = false
 var current_load = 0
-var version = "1.3.8"
+var version = "1.4"
 var load_list = []
 var http
 var job_complate = false
@@ -42,6 +42,7 @@ func _ready():
 
 func request_complated(result, response_code, header, body):
 	if response_code == 0:
+		
 		no_internet()
 		return
 	var json = JSON.new()
@@ -95,7 +96,7 @@ func _http_request_completed(body, url:String, _name2, array=false):
 			save(_name2, icons, save_path)
 func _input(event):
 	if event is InputEventScreenTouch and load_complate:
-		get_tree().change_scene_to_file(scene)
+		Exit.change_scene(scene)
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "load_complate":

@@ -204,27 +204,27 @@ func _ready():
 	save("level_data", [level, load_game("part", 0)])
 	match part:
 		0:
-			unlock_level = load_game("unlock_level_h", 1)
+			unlock_level = load_game("unlock_level_m", 1)
 		1:
-			unlock_level = load_game("unlock_level_v", 1)
+			unlock_level = load_game("unlock_level_h", 1)
 		2:
 			unlock_level = load_game("unlock_level_s", 1)
 		3:
-			unlock_level = load_game("unlock_level_m", 1)
-	var p = ["levels_home", "levels_village", "levels_school", "levels_mosque"]
+			unlock_level = load_game("unlock_level_v", 1)
+	var p = ["levels_mosque", "levels_home", "levels_school", "levels_village"]
 	
 	var file2 = FileAccess.open("user://"+p[part]+"/level_" + str(level) + ".json", FileAccess.READ)
 	data = JSON.parse_string(file2.get_line())
 	file2.close()
 	match part:
 		0:
-			max_level = load_game("max_level_h", 1)
+			max_level = load_game("max_level_m", 1)
 		1:
-			max_level = load_game("max_level_v", 0)
+			max_level = load_game("max_level_h", 0)
 		2:
 			max_level = load_game("max_level_s", 0)
 		3:
-			max_level = load_game("max_level_m", 0)
+			max_level = load_game("max_level_v", 0)
 	$VBoxContainer/Control/Label2.text = "مرحلـه " + str(level)
 	$TextureRect3/Line2D.position = -$TextureRect3.global_position
 	
@@ -383,11 +383,14 @@ func add_answer(num, count):
 
 func win():
 	var w = preload("res://scenes/win.tscn").instantiate()
-	var p = ["h", "v", "s", "m"]
+	var p = ["m", "h", "s", "v"]
 	if level + 1 > unlock_level and level < max_level:
 		save("unlock_level_"+p[part], level + 1)
 		w.score = data.score
 		update_score(data.score)
+	elif level + 1 > unlock_level and level >= max_level:
+		if part >= load_game("unlock_part", 1):
+			save("unlock_part", part + 1)
 	save("answer_data", [])
 	save("level", level + 1)
 	get_tree().get_root().add_child(w)
@@ -436,6 +439,9 @@ func _process(delta):
 			drag = true
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		if drag:
+			$label_pos/Label.add_theme_stylebox_override("normal", preload("res://styles/word_label_n.tres"))
+			true_answer = false
+			answered = false
 			if word:
 				if !target_word.has(word):
 					target_word.append(word)
@@ -513,17 +519,9 @@ func _process(delta):
 				$label_pos/Label.add_theme_stylebox_override("normal", preload("res://styles/word_label_f.tres"))
 			target_word = []
 			$TextureRect3/Line2D.points = []
-			await get_tree().create_timer(0.5).timeout
-			
 			drag = true
-			true_answer = false
-			answered = false
-			$label_pos/Label.add_theme_stylebox_override("normal", preload("res://styles/word_label_n.tres"))
-			text = ""
-			$label_pos/Label.text = text
-			
 			if next_level:
-				await get_tree().create_timer(0.5).timeout
+				await get_tree().create_timer(1).timeout
 				win()
 				
 	$label_pos.global_position.y = $TextureRect3.global_position.y - $label_pos/Label.size.y
@@ -561,12 +559,17 @@ func _on_TextureButton_pressed():
 
 
 func _on_button_5_pressed():
-	get_tree().change_scene_to_file("res://scenes/start.tscn")
+	Exit.change_scene("res://scenes/start.tscn")
 
 
 func true_answer_animation():
 	$bee/AnimationPlayer.play("true_answer")
 	$bee/AnimatedSprite2D.play("default")
+	await $bee/AnimationPlayer.animation_finished
+	true_answer = false
+	if !drag:
+		text = ""
+		$label_pos/Label.text = text
 func _on_help_button_pressed(state, _score):
 	help(state, _score)
 	menu_open = false

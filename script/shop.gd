@@ -10,11 +10,12 @@ func _ready():
 	score = load_game("score", 0)
 	$PopupPanel/Control/yes.pressed.connect(_on_purchase_button_complated)
 	$PopupPanel/Control/no.pressed.connect(_on_purchase_button_faild)
-	for x in range($ScrollContainer/VBoxContainer/HBoxContainer2.get_children().size()):
+	for x in range(get_tree().get_nodes_in_group("hive_shop").size()):
 		
-		var button = $ScrollContainer/VBoxContainer/HBoxContainer2.get_child(x).get_child(0)
+		var button = get_tree().get_nodes_in_group("hive_shop")[x].get_child(0)
 		button.pressed.connect(_on_hive_button_pressed.bind(x, button.get("metadata/cost")))
 		if load_game("open_hive"+str(x), false):
+
 			button.disabled = true
 			button.get_child(0).hide()
 func save(_name, num):
@@ -43,7 +44,8 @@ func _on_purchase_button_complated():
 			save("score", score)
 			if get_tree().has_group('score'):
 				get_tree().get_nodes_in_group("score")[0].text = "امتیاز : "+ str(load_game("score", 0))
-			$ScrollContainer/VBoxContainer/HBoxContainer2.get_child(num).get_child(0).disabled = true
+			get_tree().get_nodes_in_group("hive_shop")[num].get_child(0).disabled = true
+			get_tree().get_nodes_in_group("hive_shop")[num].get_child(0).get_child(0).hide()
 			save("open_hive"+str(num), true)
 			var time = {"hour" : GlobalTime.current_time.hour, "minute": GlobalTime.current_time.minute, "second": GlobalTime.current_time.second}
 			save("hive_time"+str(num), time)
@@ -55,4 +57,7 @@ func _on_hive_button_pressed(_num, _cost):
 		num = _num
 		mode_purchase = "hive"
 func _on_texture_button_pressed():
-	queue_free()
+	Exit.change_scene("res://scenes/start.tscn")
+func _notification(what):
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		Exit.change_scene("res://scenes/start.tscn")

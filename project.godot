@@ -14,7 +14,7 @@ config/name="SweetHoney"
 run/main_scene="res://scenes/intro.tscn"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 boot_splash/image="res://sprite/icon.png"
@@ -48,8 +48,8 @@ gdscript/warnings/onready_with_export=0
 
 [display]
 
-window/size/viewport_width=768
-window/size/viewport_height=1366
+window/size/viewport_width=1000
+window/size/viewport_height=2000
 window/size/mode=2
 window/size/transparent=true
 window/stretch/mode="canvas_items"
@@ -60,7 +60,7 @@ window/ios/hide_status_bar=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/HTTPManager/plugin.cfg")
+enabled=PackedStringArray("res://addons/HTTPManager/plugin.cfg", "res://addons/wiggly_appendage_2d/plugin.cfg")
 
 [filesystem]
 
@@ -84,3 +84,5 @@ locale/fallback="fa_IR"
 
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+vrs/mode=1
+vrs/texture="res://icon.png"

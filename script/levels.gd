@@ -1,10 +1,11 @@
 extends Control
-enum Mode{Home, Village, school, mosque}
+enum Mode{mosque,  Home, school, Village, VS}
 var mode = Mode.Home
 var max_level = 1
 var unlock_level = 1
 var save_path = "user://data.cfg"
 var col = 5
+
 func save(_name, num):
 	var confige = ConfigFile.new()
 	confige.load(save_path)
@@ -47,14 +48,14 @@ func _ready():
 			$ScrollContainer/GridContainer.add_theme_constant_override("v_separation", 140)
 			$ScrollContainer/GridContainer.add_theme_constant_override("h_separation", 90)
 		Mode.mosque:
-			col = 6
+			col = 5
 			$ScrollContainer2/VBoxContainer.add_theme_constant_override("separation", 110)
 			max_level = load_game("max_level_m", 1)
 			$ScrollContainer/GridContainer.columns = col
 			unlock_level = load_game("unlock_level_m", 1)
 			$TextureRect.texture = preload("res://sprite/masjed9.jpg")
-			$ScrollContainer/GridContainer.add_theme_constant_override("v_separation", 100)
-			$ScrollContainer/GridContainer.add_theme_constant_override("h_separation", 100)
+			$ScrollContainer/GridContainer.add_theme_constant_override("v_separation", 160)
+			$ScrollContainer/GridContainer.add_theme_constant_override("h_separation", 160)
 			$AnimationPlayer2.play("mosque")
 	$ScrollContainer2.size = $ScrollContainer.size
 	$ScrollContainer2.position = $ScrollContainer.position
@@ -72,9 +73,9 @@ func write_num(_name, num):
 	file.store_var(num)
 	file.close()
 func add_btn(lv):
-	var texturs_normal = ["res://sprite/honey.png", "res://sprite/iconmahale-.png", "res://sprite/gol3.png", "res://sprite/3.png"]
-	var texturs_disabled = ["res://sprite/empty_honey.png", "res://sprite/iconmahale1-.png", "res://sprite/gol4.png", "res://sprite/5.png"]
-	var texturs_pressed = ["res://sprite/honey (11).png", "res://sprite/iconmahale13-.png", "res://sprite/gol5.png", "res://sprite/4.png"]
+	var texturs_normal = ["res://sprite/3.png","res://sprite/honey.png","res://sprite/gol3.png", "res://sprite/iconmahale-.png"]
+	var texturs_disabled = [ "res://sprite/5.png", "res://sprite/empty_honey.png", "res://sprite/gol4.png","res://sprite/iconmahale1-.png"]
+	var texturs_pressed = ["res://sprite/4.png", "res://sprite/honey (11).png", "res://sprite/gol5.png","res://sprite/iconmahale13-.png" ]
 
 	var btn = TextureButton.new()
 	btn.texture_normal = load(texturs_normal[mode])
@@ -95,9 +96,9 @@ func add_btn(lv):
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	match mode:
 		0:
-			label.add_theme_font_size_override("font_size", 45)
+			label.add_theme_font_size_override("font_size", 55)
 			label.add_theme_constant_override("outline", 5)
-			btn.size = Vector2(100, 100)
+			btn.size = Vector2(150, 150)
 		1:
 			label.vertical_alignment = VERTICAL_ALIGNMENT_BOTTOM
 			label.add_theme_font_size_override("font_size", 50)
@@ -212,14 +213,7 @@ func on_btn_pressed(lv):
 	if load_game("level_data", [1, 0])[0] != lv or load_game("level_data", [1, 0])[1] != load_game("part", 0):
 		save("answer_data", [])
 	save("level", lv)
-	for child in get_tree().get_root().get_children():
-		
-		if child != AddBee and child != Exit and child != GlobalTime and child != CheckInternet:
-			child.queue_free()
-	if get_tree().has_group("timer"):
-		save("last_time", get_tree().get_nodes_in_group("timer")[0].current_time)
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
-	
+	Exit.change_scene("res://scenes/main.tscn")
 
 
 func _notification(what):

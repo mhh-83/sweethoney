@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d2n77auqg4yq6"]
+[gd_scene load_steps=18 format=3 uid="uid://d2n77auqg4yq6"]
 
 [ext_resource type="Script" path="res://script/league_parts.gd" id="1_gxlnw"]
 [ext_resource type="Texture2D" uid="uid://cupdvp5it5kui" path="res://sprite/Untitled1-1.png" id="2_kk6ts"]
@@ -18,6 +18,9 @@ viewport_path = NodePath("SubViewport3")
 [sub_resource type="ViewportTexture" id="ViewportTexture_ptog8"]
 viewport_path = NodePath("SubViewport4")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_4ajhj"]
+viewport_path = NodePath("SubViewport6")
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_pfgk6"]
 viewport_path = NodePath("SubViewport5")
 
@@ -26,7 +29,7 @@ base_font = ExtResource("5_d00sw")
 
 [sub_resource type="LabelSettings" id="LabelSettings_rk0yr"]
 font = SubResource("FontVariation_5cffk")
-font_size = 44
+font_size = 42
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_kkhe6"]
@@ -71,9 +74,9 @@ texture = ExtResource("2_kk6ts")
 [node name="Button" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.299479
+anchor_left = 0.0859375
 anchor_top = 0.198389
-anchor_right = 0.6875
+anchor_right = 0.473958
 anchor_bottom = 0.442899
 texture_normal = SubResource("ViewportTexture_a7ebs")
 ignore_texture_size = true
@@ -83,10 +86,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Button2" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.539063
-anchor_top = 0.442899
-anchor_right = 0.936198
-anchor_bottom = 0.641288
+anchor_left = 0.473958
+anchor_top = 0.103221
+anchor_right = 0.871093
+anchor_bottom = 0.30161
 texture_normal = SubResource("ViewportTexture_7ee21")
 ignore_texture_size = true
 stretch_mode = 5
@@ -107,10 +110,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Button4" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.539063
-anchor_top = 0.655198
-anchor_right = 0.936198
-anchor_bottom = 0.853587
+anchor_left = 0.483073
+anchor_top = 0.565886
+anchor_right = 0.880208
+anchor_bottom = 0.764275
 texture_normal = SubResource("ViewportTexture_ptog8")
 ignore_texture_size = true
 stretch_mode = 5
@@ -123,6 +126,18 @@ anchor_left = 0.0859375
 anchor_top = 0.655198
 anchor_right = 0.483073
 anchor_bottom = 0.853587
+texture_normal = SubResource("ViewportTexture_4ajhj")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Button7" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.483073
+anchor_top = 0.329429
+anchor_right = 0.880208
+anchor_bottom = 0.527818
 texture_normal = SubResource("ViewportTexture_pfgk6")
 ignore_texture_size = true
 stretch_mode = 5
@@ -245,6 +260,27 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="SubViewport6" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(305, 271)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport6"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_jv7r2")
+
+[node name="Label" type="Label" parent="SubViewport6"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "شناخت    شخصیت"
+label_settings = SubResource("LabelSettings_rk0yr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="GPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(371, 684)
 amount = 50
@@ -274,5 +310,6 @@ hue_variation_max = 1.0
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed" binds= [1]]
 [connection signal="pressed" from="Button3" to="." method="_on_button_pressed" binds= [2]]
 [connection signal="pressed" from="Button4" to="." method="_on_button_pressed" binds= [3]]
-[connection signal="pressed" from="Button5" to="." method="_on_button_pressed" binds= [4]]
+[connection signal="pressed" from="Button5" to="." method="_on_button_pressed" binds= [5]]
+[connection signal="pressed" from="Button7" to="." method="_on_button_pressed" binds= [4]]
 [connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]

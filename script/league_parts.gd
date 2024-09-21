@@ -19,4 +19,4 @@ func _notification(what):
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST and not get_tree().has_group("levels"):
 		_on_button_6_pressed()
 func _on_button_6_pressed():
-	get_tree().change_scene_to_file("res://scenes/league_menu.tscn")
+	Exit.change_scene("res://scenes/league_menu.tscn")

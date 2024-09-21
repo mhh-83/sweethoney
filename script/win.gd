@@ -30,13 +30,13 @@ func _ready():
 	part = load_game("part", 0)
 	match part:
 		0:
-			max_level = load_game("max_level_h", 1)
+			max_level = load_game("max_level_m", 1)
 		1:
-			max_level = load_game("max_level_v", 0)
+			max_level = load_game("max_level_h", 0)
 		2:
 			max_level = load_game("max_level_s", 0)
 		3:
-			max_level = load_game("max_level_m", 0)
+			max_level = load_game("max_level_v", 0)
 	if level > max_level:
 		$VBoxContainer/HBoxContainer/GridContainer/PersianButton3.hide()
 		if part < load_game("max_part", 4) - 1:
@@ -48,7 +48,7 @@ func _ready():
 func _on_PersianButton4_pressed():
 	save("level", level-1)
 	queue_free()
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Exit.change_scene("res://scenes/main.tscn")
 	
 func _process(delta):
 
@@ -66,7 +66,7 @@ func _process(delta):
 
 func _on_PersianButton3_pressed():
 	queue_free()
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Exit.change_scene("res://scenes/main.tscn")
 	
 
 
@@ -83,14 +83,12 @@ func _on_PersianButton2_pressed():
 
 func _on_PersianButton5_pressed():
 	part += 1
-	if part >= load_game("unlock_part", 1):
-		save("unlock_part", part + 1)
 	save("part", part)
 	save("level", 1)
 	queue_free()
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Exit.change_scene("res://scenes/main.tscn")
 
 
 func _on_persian_button_8_pressed():
 	queue_free()
-	get_tree().change_scene_to_file("res://scenes/start.tscn")
+	Exit.change_scene("res://scenes/start.tscn")

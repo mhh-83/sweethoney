@@ -13,7 +13,7 @@ font_color = Color(0.0901961, 0.882353, 1, 1)
 outline_size = 2
 outline_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
 
-[node name="TextureButton4" type="TextureButton" groups=["hive"]]
+[node name="TextureButton4" type="TextureButton"]
 offset_right = 155.0
 offset_bottom = 156.0
 disabled = true

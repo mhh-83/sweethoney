@@ -112,11 +112,11 @@ func _on_levels_pressed():
 
 
 func _on_persian_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Exit.change_scene("res://scenes/main.tscn")
 
 
 func _on_persian_button_3_pressed():
-	get_tree().change_scene_to_file("res://scenes/start.tscn")
+	Exit.change_scene("res://scenes/start.tscn")
 	
 func _on_gui_input(event):
 	if event is InputEventScreenTouch:

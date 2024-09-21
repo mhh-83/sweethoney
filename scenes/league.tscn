@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://c1ntj5vs0h0jh"]
+[gd_scene load_steps=111 format=3 uid="uid://c1ntj5vs0h0jh"]
 
 [ext_resource type="Script" path="res://script/league.gd" id="2_46hvv"]
 [ext_resource type="Texture2D" uid="uid://cjjfvrde2j36h" path="res://sprite/Untitled56-4.png" id="2_de3my"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://beesoj63tr2gc" path="res://sprite/Untitled756-4.png" id="6_jwcwm"]
 [ext_resource type="StyleBox" uid="uid://bnvo8w7qisp1j" path="res://styles/word_label_n.tres" id="7_kmh2a"]
 [ext_resource type="FontFile" uid="uid://c583i0tksdfuq" path="res://fonts/B Titr Bold_0.ttf" id="8_255m3"]
+[ext_resource type="PackedScene" uid="uid://drfvcvn3rnthe" path="res://scenes/box_word.tscn" id="8_a5hv3"]
+[ext_resource type="FontFile" uid="uid://de3lra4xfgvam" path="res://fonts/BTitrBd.ttf" id="8_t2lxm"]
 [ext_resource type="Texture2D" uid="uid://c2lfvjy0cqg5i" path="res://sprite/mar.png" id="9_rrprb"]
 [ext_resource type="Texture2D" uid="uid://cppekcjr6xx7v" path="res://sprite/honey.png" id="10_wd0m4"]
 [ext_resource type="Texture2D" uid="uid://bchtwxc83yxea" path="res://sprite/menu.png" id="12_sbq56"]
@@ -29,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://b32evagccsp3u" path="res://sprite/bach3.png" id="23_6232t"]
 [ext_resource type="PackedScene" uid="uid://c0v6yech42sfm" path="res://scenes/jar.tscn" id="24_kd05c"]
 [ext_resource type="PackedScene" uid="uid://d375yikpsib6q" path="res://scenes/help_menu.tscn" id="29_r8k8v"]
+[ext_resource type="PackedScene" uid="uid://cxebda5o26j25" path="res://scenes/biography.tscn" id="30_1ys4o"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_o1x51"]
 tile_data = PackedInt32Array(65536, 2, 0, 131072, 2, 0, 1, 2, 0, 65537, 1, 0, 131073, 2, 0, 65538, 2, 0, 131074, 2, 0)
@@ -70,6 +73,84 @@ gradient = SubResource("12")
 fill = 1
 fill_to = Vector2(0.278302, 0.40566)
 repeat = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42g74"]
+bg_color = Color(0.156863, 1, 0.0352941, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.196078, 0.152941, 0.141176, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(-1.55, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0cfwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46vvw"]
+bg_color = Color(0.568627, 0.462745, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.196078, 0.152941, 0.141176, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(-1.55, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqslq"]
+bg_color = Color(0.717647, 0.588235, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.196078, 0.152941, 0.141176, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(-1.55, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24651"]
+bg_color = Color(0.843137, 0.694118, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.196078, 0.152941, 0.141176, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(-1.55, 0)
+
+[sub_resource type="Theme" id="Theme_v0jpx"]
+Button/colors/font_color = Color(0, 0.226128, 2.40654e-08, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.501961)
+Button/colors/font_focus_color = Color(0, 0.227451, 0, 1)
+Button/colors/font_hover_color = Color(0, 0.168627, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0.227451, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0.376471, 0, 1)
+Button/constants/outline_size = 7
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("8_t2lxm")
+Button/styles/disabled = SubResource("StyleBoxFlat_42g74")
+Button/styles/focus = SubResource("StyleBoxEmpty_0cfwl")
+Button/styles/hover = SubResource("StyleBoxFlat_46vvw")
+Button/styles/normal = SubResource("StyleBoxFlat_gqslq")
+Button/styles/pressed = SubResource("StyleBoxFlat_24651")
 
 [sub_resource type="LabelSettings" id="LabelSettings_8rd6i"]
 font = ExtResource("8_255m3")
@@ -4036,6 +4117,78 @@ tracks/39/keys = {
 "points": PackedFloat32Array(107, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("biography:visible")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("GridContainer:visible")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("GridContainer2:visible")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("CanvasLayer/Panel/VBoxContainer/Button15:visible")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("CanvasLayer/Panel/VBoxContainer/Button13:visible")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("CanvasLayer/Panel/VBoxContainer/Button14:visible")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_m6kvn"]
 resource_name = "state1"
@@ -5437,14 +5590,204 @@ tracks/29/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_gefkj"]
+resource_name = "state5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("label_pos:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("biography:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GridContainer:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GridContainer2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Panel/VBoxContainer/Button15:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Panel/VBoxContainer/Button13:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/Panel/VBoxContainer/Button14:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VBoxContainer/Control/Label2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(479, -60)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("VBoxContainer/Control/Label:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(297, -60)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("VBoxContainer/Control/Label:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(190, 57.994)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("VBoxContainer/Control/ProgressBar:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(289, -65)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nq2lr"]
 _data = {
 "RESET": SubResource("Animation_xf7nl"),
 "state1": SubResource("Animation_m6kvn"),
 "state2": SubResource("Animation_w6dri"),
 "state3": SubResource("Animation_8j6is"),
-"state4": SubResource("Animation_4h3u4")
+"state4": SubResource("Animation_4h3u4"),
+"state5": SubResource("Animation_gefkj")
 }
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjnfw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmbek"]
+bg_color = Color(0.94902, 0.392157, 0, 0.713726)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_eq4nd"]
+font = ExtResource("8_t2lxm")
+font_size = 80
+font_color = Color(1, 0.211765, 0, 1)
+outline_size = 10
+shadow_size = 30
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_df1hr"]
 length = 0.001
@@ -5565,6 +5908,178 @@ antialiased = true
 [node name="words" type="Node2D" parent="TextureRect3"]
 position = Vector2(225, 195)
 
+[node name="GridContainer" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0625
+anchor_top = 0.681552
+anchor_right = 0.932292
+anchor_bottom = 0.924597
+theme = SubResource("Theme_v0jpx")
+columns = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ض"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ص"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ث"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ق"
+
+[node name="Button5" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ف"
+
+[node name="Button6" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "غ"
+
+[node name="Button7" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ع"
+
+[node name="Button8" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ه"
+
+[node name="Button9" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "خ"
+
+[node name="Button10" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ح"
+
+[node name="Button11" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ج"
+
+[node name="Button12" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "چ"
+
+[node name="Button13" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ش"
+
+[node name="Button14" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "س"
+
+[node name="Button15" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ی"
+
+[node name="Button16" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ل"
+
+[node name="Button17" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ا"
+
+[node name="Button18" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ت"
+
+[node name="Button19" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ن"
+
+[node name="Button20" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "م"
+
+[node name="Button21" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ک"
+
+[node name="Button22" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "گ"
+
+[node name="Button23" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ظ"
+
+[node name="Button24" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ط"
+
+[node name="Button25" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ز"
+
+[node name="Button26" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ر"
+
+[node name="Button27" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ذ"
+
+[node name="Button28" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "د"
+
+[node name="Button29" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "پ"
+
+[node name="Button30" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "و"
+
+[node name="Button31" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ژ"
+
+[node name="Button32" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "ب"
+
 [node name="label_pos" type="Node2D" parent="."]
 position = Vector2(338, 700)
 
@@ -5586,10 +6101,10 @@ anchor_left = 0.5
 anchor_top = 0.031
 anchor_right = 0.5
 anchor_bottom = 0.51
-offset_left = 75.0
-offset_top = 79.0
-offset_right = 714.0
-offset_bottom = 696.0
+offset_left = -309.0
+offset_top = 36.654
+offset_right = 330.0
+offset_bottom = -0.659973
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
@@ -5604,14 +6119,14 @@ size_flags_stretch_ratio = 0.1
 
 [node name="Label" type="Label" parent="VBoxContainer/Control"]
 layout_mode = 2
-anchor_left = 0.55133
-anchor_top = -10.8532
-anchor_right = 0.84867
-anchor_bottom = -10.774
-offset_left = 289.0
-offset_top = -51.0
-offset_right = 479.0
-offset_bottom = 7.0
+anchor_left = 0.464789
+anchor_top = -3.33333
+anchor_right = 0.762128
+anchor_bottom = -0.542304
+offset_left = -8.0
+offset_top = 9.0
+offset_right = -8.00003
+offset_bottom = 16.7615
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.15
@@ -5637,15 +6152,15 @@ expand_mode = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer/Control"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 473.0
-offset_top = -52.0
-offset_right = 663.0
-offset_bottom = 6.0
+anchors_preset = -1
+anchor_left = 0.749609
+anchor_top = -3.33333
+anchor_right = 1.04695
+anchor_bottom = -0.111111
+offset_left = -6.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
@@ -5657,6 +6172,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 language = "fa_IR"
+metadata/_edit_use_anchors_ = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 layout_direction = 2
@@ -5685,6 +6201,7 @@ offset_top = -1.686
 offset_right = 68.0
 offset_bottom = 43.752
 texture_normal = ExtResource("12_sbq56")
+texture_disabled = ExtResource("12_sbq56")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -5715,10 +6232,10 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 391.0
-offset_top = 619.0
-offset_right = 1118.0
-offset_bottom = 993.0
+offset_left = 384.0
+offset_top = 683.0
+offset_right = 1111.0
+offset_bottom = 1057.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_mxvhb")
@@ -5760,10 +6277,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 420.0
-offset_top = 107.0
-offset_right = 720.0
-offset_bottom = 230.0
+offset_left = 226.0
+offset_top = 102.0
+offset_right = 526.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_3nccg")
@@ -6010,7 +6527,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999904, 0.999904)
+scale = Vector2(0.999897, 0.999897)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -6434,6 +6951,65 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ci4vw")
 text = "نمایش جوابها : 200"
 metadata/id = 11
 
+[node name="Button14" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("16_ydhoy")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("20_ux6ej")
+theme_override_styles/hover = ExtResource("21_1h080")
+theme_override_styles/pressed = ExtResource("22_ddt0f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ci4vw")
+text = "یک حرف : 50"
+metadata/id = 12
+
+[node name="Button13" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("16_ydhoy")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("20_ux6ej")
+theme_override_styles/hover = ExtResource("21_1h080")
+theme_override_styles/pressed = ExtResource("22_ddt0f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5glho")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ci4vw")
+text = "برگشتن زمان : 50"
+metadata/id = 9
+
+[node name="Button15" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("16_ydhoy")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("20_ux6ej")
+theme_override_styles/hover = ExtResource("21_1h080")
+theme_override_styles/pressed = ExtResource("22_ddt0f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5glho")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ci4vw")
+text = "نمایش تصویر : 150"
+metadata/id = 13
+
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/Panel"]
 modulate = Color(0.00392157, 0.00392157, 0.00392157, 1)
 layout_mode = 1
@@ -6471,6 +7047,34 @@ libraries = {
 "": SubResource("AnimationLibrary_nq2lr")
 }
 
+[node name="biography" parent="." instance=ExtResource("30_1ys4o")]
+visible = false
+position = Vector2(4, 194)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="biography"]
+offset_left = 404.0
+offset_top = 17.0
+offset_right = 758.0
+offset_bottom = 392.0
+theme_override_colors/default_color = Color(0.172549, 0.0823529, 0.756863, 1)
+theme_override_colors/font_outline_color = Color(0.388235, 0.980392, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cjnfw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mmbek")
+bbcode_enabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="biography"]
+offset_left = 213.0
+offset_top = 1070.0
+offset_right = 536.0
+offset_bottom = 1191.0
+text = "خطا : 3/3"
+label_settings = SubResource("LabelSettings_eq4nd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="satan" parent="." instance=ExtResource("3_26ndm")]
 position = Vector2(-46, 516)
 
@@ -6496,6 +7100,25 @@ collision_mask = 8
 
 [node name="CollisionShape2D" parent="satan/Area2D" index="0"]
 visible = true
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+visible = false
+layout_direction = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.311198
+anchor_top = 0.45388
+anchor_right = 0.959635
+anchor_bottom = 0.609078
+offset_bottom = -6.10352e-05
+columns = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="box_word" parent="GridContainer2" instance=ExtResource("8_a5hv3")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
 
 [node name="options" type="Node2D" parent="."]
 position = Vector2(378, 1060)
@@ -6530,7 +7153,6 @@ vertical_alignment = 1
 
 [node name="PopupMenu" parent="." instance=ExtResource("29_r8k8v")]
 position = Vector2i(40, 80)
-visible = false
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="pressed" from="PersianButton2" to="." method="_on_PersianButton2_pressed"]
@@ -6551,6 +7173,9 @@ visible = false
 [connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Button10" to="." method="help" binds= [9, 50]]
 [connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Button11" to="." method="help" binds= [10, 100]]
 [connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Button12" to="." method="help" binds= [11, 200]]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Button14" to="." method="help" binds= [12, 50]]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Button13" to="." method="help" binds= [9, 50]]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Button15" to="." method="help" binds= [13, 150]]
 [connection signal="pressed" from="CanvasLayer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer3" to="." method="_on_animation_player_3_animation_finished"]
 [connection signal="area_entered" from="satan/body/polygons/spear2" to="." method="_on_spear_2_area_entered"]

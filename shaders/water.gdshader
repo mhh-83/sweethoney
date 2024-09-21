@@ -11,8 +11,8 @@ void fragment(){
 	vec2 uv = UV;
 	COLOR = color;
 	if(UV.y < 0.1){
-		COLOR.a = (fma(sin(uv.x * x) + 4.5, sin(uv.y * y), -0.1));
+		COLOR.a = ((sin(uv.x * x) + 4.5 * sin(uv.y * y)) -0.1);
 		COLOR.a = clamp(COLOR.a, 0.0, color.a);
 	}
-	
+
 }

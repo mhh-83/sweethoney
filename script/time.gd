@@ -28,7 +28,7 @@ func load_game(_name, defaulte=null, path=save_path):
 func day_timer(year : int, month : int, day : int, hour : int, minute : int, second : int):
 	open_time = {"year": year, "month": month, "day": day, "second" : second,  "minute" : minute,  "hour" : hour}
 	start_timer = true
-	
+
 func hour_timer(hour : int, minute : int, second : int):
 	open_time2 = {"hour":hour, "minute":minute, "second":second}
 	start_timer = true

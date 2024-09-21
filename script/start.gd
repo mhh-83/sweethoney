@@ -37,8 +37,6 @@ func load_game2(_name, defaulte=null):
 	confige.load("user://files.cfg")
 	return confige.get_value("user", _name, defaulte)
 func _ready():
-	
-
 	if FileAccess.file_exists(save_path):
 		level = load_game("level", 1)
 		teach = load_game("teach", true)
@@ -111,7 +109,7 @@ func _on_PersianButton_pressed():
 	if !guid:
 		save("last_time_gift", $gift/timer.current_time)
 		queue_free()
-		get_tree().change_scene_to_file("res://scenes/normal_menu.tscn")
+		Exit.change_scene("res://scenes/normal_menu.tscn")
 	else:
 		if reset_guid:
 			$AnimationPlayer.play("light_off")
@@ -254,8 +252,7 @@ func _on_realisticgoldgiftbox_body_pressed():
 func _on_hives_pressed():
 	if !guid:
 		save("last_time_gift", $gift/timer.current_time)
-		var m = preload("res://scenes/hive_scene.tscn").instantiate()
-		get_tree().get_root().add_child(m)
+		Exit.change_scene("res://scenes/hive_scene.tscn")
 	else:
 		if reset_guid:
 			$AnimationPlayer.play("light_off")
@@ -300,7 +297,7 @@ func _on_gift_button_pressed():
 			reset_guid = false
 			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 	else:
-		get_tree().change_scene_to_file("res://scenes/gifts.tscn")
+		Exit.change_scene("res://scenes/gifts.tscn")
 
 
 func _on_timer_begin_league_timeout():
@@ -321,14 +318,13 @@ func _on_shop_button_pressed():
 			reset_guid = false
 			$PanelQ/RichTextLabel.text = "[right]" + guid_text_list[page] + "\n[/right][i][u][b] بزن روی صفحه"
 	else:
-		get_tree().get_root().add_child(preload("res://scenes/shop.tscn").instantiate())
-			
+		Exit.change_scene("res://scenes/shop.tscn")
 
 
 func _on_league_button_pressed():
 	save("last_time_gift", $gift/timer.current_time)
 	queue_free()
-	get_tree().change_scene_to_file("res://scenes/league_menu.tscn")
+	Exit.change_scene("res://scenes/league_menu.tscn")
 
 
 func _on_button_pressed():

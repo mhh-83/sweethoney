@@ -6,6 +6,7 @@ var true_answer = false
 var answered = false
 var drag = true
 var level = 1
+var error = 3
 var unlock_level = 1
 var data = {}
 var words = []
@@ -285,6 +286,32 @@ func help(state, _score):
 				noise.color_ramp = preload("res://styles/match_option_f.tres")
 				option.get_node("Line2D").texture = noise
 				option._on_texture_button_pressed()
+		if state == 12:
+			var first_n = get_tree().get_nodes_in_group("first_name")
+			var last_n = get_tree().get_nodes_in_group("last_name")
+			var w
+			var array = []
+			var array2 = []
+			for child in first_n:
+				if child.text == "":
+					array.append(child)
+			for child in last_n:
+				if child.text == "":
+					array.append(child)
+			for child in array:
+				array2.append(child.get_meta("text"))
+			w = array2[randi_range(0, array2.size() - 1)]
+			for child in array:
+				if child.get_meta("text") == w:
+					child.text = w
+			for child in $GridContainer.get_children():
+				if child.text == w:
+					child.disabled = true
+		if state == 13:
+			$biography.show_pic = true
+			$biography.offset = 0
+			$PopupMenu/MarginContainer/VBoxContainer.get_child(2).disabled = true
+		
 	else:
 		$AnimationPlayer.play("score")
 	
@@ -304,7 +331,6 @@ func load_game2(_name, defaulte = null):
 	confige.load("user://files.cfg")
 	return confige.get_value("user", _name, defaulte)
 func _ready():
-	
 	$bee/AnimationPlayer.get_animation("true_answer").set_loop_mode(1)
 	var tex = load("res://sprite/user_img.png")
 	if load_game("img", "") != "":
@@ -340,7 +366,12 @@ func _ready():
 			$TextureRect2.texture = preload("res://sprite/vasl.png")
 			$AnimationPlayer3.play("state3")
 			$AnimationPlayer2.play("question")
-	
+		5:
+			error = data.error
+			$TextureRect2.texture = preload("res://sprite/Untitled56-4.png")
+			$AnimationPlayer3.play("state5")
+			$biography/Label.text = "خطا : " + str(data.error) + " / " + str(data.error - error)
+
 	speed = ($satan.global_position.x - ($bee.global_position.x - 125)) / data.time
 	$VBoxContainer/Control/Label2.text = "مرحلـه " + str(level + 1)
 	$TextureRect3/Line2D.position = -$TextureRect3.global_position
@@ -362,7 +393,7 @@ func _ready():
 	for x in range(quess.size()-1):
 		$Node2D/Panel/PersianLabel.text += str(x+1) + "_" + quess[x] + "؟" + "\n"
 	
-	if quess.size() == 1 and part >= 2:
+	if quess.size() == 1 and part >= 2 and part != 5:
 		$Node2D/Control/Label.show()
 		$AnimationPlayer2.play("hide")
 		$Node2D/Control/Label.text = data.ques
@@ -507,6 +538,47 @@ func add_answer(num, count):
 		
 		for option in get_tree().get_nodes_in_group("match_option"):
 			option.start()
+	elif data.state == 5:
+		
+		for child in $GridContainer.get_children():
+			child.pressed.connect(word_btn_pressed.bind(child))
+		var split_name = data.first_n.split()
+		var split_name2 = data.last_n.split()
+		$GridContainer2/box_word.add_to_group("first_name")
+		$GridContainer2/box_word.set_meta("text", split_name[0])
+		for x in range(split_name.size() - 1):
+			var box = $GridContainer2/box_word.duplicate()
+			box.add_to_group("first_name")
+			box.set_meta("text", split_name[x+1])
+			$GridContainer2.add_child(box)
+		$GridContainer2.add_child(Control.new())
+		for x in range(split_name2.size()):
+			var box = $GridContainer2/box_word.duplicate()
+			box.add_to_group("last_name")
+			box.set_meta("text", split_name2[x])
+			$GridContainer2.add_child(box)
+		var image = Image.new()
+		image.load_webp_from_buffer(JSON.parse_string(data.image))
+		$biography/TextureRect.texture = ImageTexture.create_from_image(image)
+		$biography/RichTextLabel.text = "[right]" + data.ques
+func word_btn_pressed(btn):
+	btn.disabled = true
+	var w = ""
+	if get_tree().has_group("first_name") and get_tree().has_group("last_name"):
+		var f = get_tree().get_nodes_in_group("first_name")
+		var l = get_tree().get_nodes_in_group("last_name")
+		for x in range(f.size()):
+			if f[x].get_meta("text") == btn.text:
+				f[x].text = btn.text
+				w = f[x].text
+		for x in range(l.size()):
+			if l[x].get_meta("text") == btn.text:
+				l[x].text = btn.text
+				w = l[x].text
+	if w == "":
+		error -= 1
+		$biography/Label.text = "خطا : " + str(data.error) + " / " + str(data.error - error)
+		btn.add_theme_stylebox_override("disabled", preload("res://styles/word_btn_f.tres"))
 func test_button(_num):
 	speed = 0
 	for option in get_tree().get_nodes_in_group("options"):
@@ -547,7 +619,7 @@ func end(_score):
 	save("state_levels" + str(part), state)
 	$AnimationPlayer4.play("end")
 	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://scenes/league_parts.tscn")
+	Exit.change_scene("res://scenes/league_parts.tscn")
 func change_words_pos():
 	var list = []
 	var words2 = data.words
@@ -595,6 +667,18 @@ func _process(delta):
 			if !option.checked:
 				_end_game = false
 		if !end_game and _end_game:
+			_on_area_2d_area_entered()
+	if get_tree().has_group("first_name"):
+		var end_game = true
+		var first_n = get_tree().get_nodes_in_group("first_name")
+		var last_n = get_tree().get_nodes_in_group("last_name")
+		for child in first_n:
+			if child.text == "":
+				end_game = false
+		for child in last_n:
+			if child.text == "":
+				end_game = false
+		if error <= 0 or end_game:
 			_on_area_2d_area_entered()
 			
 			
@@ -752,7 +836,7 @@ func _on_TextureButton_pressed():
 
 
 func _on_button_5_pressed():
-	get_tree().change_scene_to_file("res://scenes/start.tscn")
+	Exit.change_scene("res://scenes/start.tscn")
 
 
 func true_answer_animation():
@@ -805,6 +889,7 @@ func _on_gui_input(event):
 func _on_area_2d_area_entered(area=null):
 	speed = 0
 	var _score = 0
+	$PersianButton2.disabled = true
 	if !end_game:
 		end_game = true
 		if data.state == 0:
@@ -872,6 +957,23 @@ func _on_area_2d_area_entered(area=null):
 			var options2 = get_tree().get_nodes_in_group("right_col")
 			for x in range(options2.size()):
 				options2[x]._on_texture_button_pressed()
+		if data.state == 5:
+			_score = data.score
+			var first_n = get_tree().get_nodes_in_group("first_name")
+			var last_n = get_tree().get_nodes_in_group("last_name")
+			for child in first_n:
+				if child.text == "":
+					child.text = child.get_meta("text")
+					if _score > 0:
+						_score -= int(data.score / 5)
+					
+			for child in last_n:
+				if child.text == "":
+					child.text = child.get_meta("text")
+					if _score > 0:
+						_score -= int(data.score / 5)
+			$biography.show_pic = true
+			$biography.offset = 0
 		if _score <= 0 or data.state <= 1:
 			$satan/AnimationPlayer.play("shot")
 			await $satan/AnimationPlayer.animation_finished

@@ -132,10 +132,10 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ayy3a"]
 shader = ExtResource("12_i3fxr")
-shader_parameter/color = Color(1, 0.690196, 0, 0.831373)
-shader_parameter/speed = 0.2
-shader_parameter/x = 50.0
-shader_parameter/y = 13.0
+shader_parameter/color = Color(0.85098, 0.584314, 0, 0.694118)
+shader_parameter/speed = 0.195
+shader_parameter/x = 10.0
+shader_parameter/y = 20.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkimu"]
 radius = 83.0
@@ -285,7 +285,7 @@ libraries = {
 position = Vector2(26, -210)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(9, 583, 42, 642, 62, 654, 89, 663, 121, 669, 146, 677, 161, 693, 164, 725, 172, 753, 191, 771, 220, 775, 250, 753, 262, 727, 286, 716, 295, 722, 313, 750, 325, 828, 325, 922, 317, 993, 306, 1042, 314, 1082, 338, 1114, 377, 1115, 409, 1102, 427, 1051, 418, 990, 409, 951, 406, 826, 441, 764, 484, 742, 550, 727, 621, 690, 645, 649, 666, 618, 692, 594, 745, 555, 766, -57, 730, -61, 736, 505, 682, 487, 631, 539, 624, 562, 636, 621, 633, 634, 587, 681, 494, 666, 453, 716, 426, 717, 381, 708, 364, 695, 351, 628, 253, 601, 212, 650, 131, 636, 108, 552, 33, 544, 5, 457, -24, 449, -11, -22, -37, -102, -29, 537, 0, 569)
+polygon = PackedVector2Array(9, 583, 42, 642, 62, 654, 89, 663, 121, 669, 146, 677, 161, 693, 164, 725, 172, 753, 191, 771, 220, 775, 250, 753, 262, 727, 286, 716, 295, 722, 313, 750, 325, 828, 325, 922, 317, 993, 306, 1042, 314, 1082, 338, 1114, 377, 1115, 409, 1102, 427, 1051, 418, 990, 409, 951, 406, 826, 441, 764, 484, 742, 550, 727, 621, 690, 645, 649, 666, 618, 692, 594, 745, 555, 766, -57, 730, -61, 733, 210, 736, 505, 682, 487, 631, 539, 624, 562, 636, 621, 633, 634, 587, 681, 494, 666, 453, 716, 426, 717, 381, 708, 364, 695, 351, 628, 253, 601, 212, 650, 131, 636, 108, 552, 33, 544, 5, 457, -24, 449, -21, 213, 733, 210, 733, 190, -38, 179, -37, 542, 0, 569)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
@@ -303,6 +303,7 @@ visible = false
 rotation = -0.523598
 collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_rtwxd")
+gravity_scale = 0.0
 sleeping = true
 freeze = true
 
@@ -373,13 +374,13 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 271.0
-offset_top = 161.0
+offset_top = 149.0
 offset_right = -280.0
-offset_bottom = -228.0
+offset_bottom = -241.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(5, 1e-05)
-pivot_offset = Vector2(65, 20)
+pivot_offset = Vector2(65, 30)
 texture = ExtResource("11_wvaua")
 expand_mode = 1
 
@@ -416,15 +417,16 @@ expand_mode = 1
 [node name="TextureRect" type="TextureRect" parent="TextureRect2"]
 material = SubResource("ShaderMaterial_ayy3a")
 layout_mode = 0
-offset_left = -19.0
-offset_top = 420.0
-offset_right = 289.0
-offset_bottom = 550.0
+offset_left = -45.0
+offset_top = 429.0
+offset_right = 263.0
+offset_bottom = 559.0
 scale = Vector2(2.63995, 2.93439)
 texture = ExtResource("9_6n54h")
 expand_mode = 1
 
 [node name="Area2D" type="Area2D" parent="TextureRect2"]
+visible = false
 collision_layer = 32
 collision_mask = 16
 

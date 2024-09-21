@@ -5,6 +5,7 @@ var save_path = "user://data.cfg"
 var part = 4
 var max_score = 0
 var score = 0
+var speed = 700
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -28,12 +29,19 @@ func load_tiles():
 func _process(delta):
 	
 	if $TextureRect2/TextureRect.position.y < 180 and $TextureRect2/TextureRect.position.y > 110:
-		$TextureRect3/TextureRect2.scale.y = (1 - (($TextureRect2/TextureRect.position.y - 110) * 100 / 70) * 0.01) * 6
+		$TextureRect3/TextureRect2.scale.y = (1 - (($TextureRect2/TextureRect.position.y - 110) * 100 / 70) * 0.01) * 5
 	else:
 		if $TextureRect2/TextureRect.position.y >= 180:
 			$TextureRect3/TextureRect2.scale.y = 0
 		if $TextureRect2/TextureRect.position.y <= 110:
-			$TextureRect3/TextureRect2.scale.y = 6
+			$TextureRect3/TextureRect2.scale.y = 5
+func _physics_process(delta):
+	if get_tree().has_group("acceleration"):
+		for btn in get_tree().get_nodes_in_group("acceleration"):
+			var accelerometer_data = Input.get_accelerometer()
+			var acceleration = Vector2(accelerometer_data.x, -accelerometer_data.y)
+			var velocity = acceleration.normalized() * speed * delta
+			btn.apply_impulse(velocity)
 func save(_name, num, path):
 	var confige = ConfigFile.new()
 	confige.load(path)
@@ -140,6 +148,7 @@ func add_level_btn2():
 		btn.global_position = Vector2(100 + (x * 100) % 700, 0)
 		btn.get_node("Button").pressed.connect(_on_level_btn_pressed.bind(x))
 		if load_game("state_levels" + str(part), save_path, [1, 0])[x % len(levels)][0] == 0:
+			btn.gravity_scale = 1
 			btn.set_collision_layer_value(1, false)
 			btn.set_collision_mask_value(1, false)
 			btn.rotation = deg_to_rad(-30)
@@ -147,6 +156,8 @@ func add_level_btn2():
 			btn.get_node("Button").disabled = true
 			btn.get_node("Area2D").area_entered.connect(on_honey_entered.bind(btn, load_game("state_levels" + str(part), save_path, [1, 0])[x][1]))
 			btn.global_position = Vector2(randi_range(110, 600), 1000)
+		else:
+			btn.add_to_group("acceleration")
 		$levels.add_child(btn)
 		await get_tree().create_timer(0.2).timeout
 func on_honey_entered(Area, btn:RigidBody2D, _score):
@@ -192,7 +203,7 @@ func _on_level_btn_pressed(lv):
 	for child in get_tree().get_root().get_children():
 		if child != AddBee and child != Exit and child != GlobalTime and child != CheckInternet:
 			child.queue_free()
-	get_tree().change_scene_to_file("res://scenes/league.tscn")
+	Exit.change_scene("res://scenes/league.tscn")
 
 func _notification(what):
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST:

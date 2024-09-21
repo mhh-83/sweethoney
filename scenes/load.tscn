@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b06qgnchat7mf"]
+[gd_scene load_steps=28 format=3 uid="uid://b06qgnchat7mf"]
 
 [ext_resource type="Script" path="res://script/load.gd" id="1_kcn8o"]
 [ext_resource type="Texture2D" uid="uid://1x2ypskkegdb" path="res://sprite/s1.png" id="1_l670l"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d2b4fu8bqhqlj" path="res://sprite/jar-png-jar-of-honey-full.png" id="12_ned3h"]
 [ext_resource type="Shader" path="res://shaders/honey.gdshader" id="13_krqyh"]
 [ext_resource type="Texture2D" uid="uid://chfwj4pnbojfm" path="res://sprite/honey2.png" id="14_to3m0"]
+[ext_resource type="PackedScene" uid="uid://7s7lcjkvekne" path="res://scenes/login.tscn" id="15_xko4u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j7u2d"]
 font = ExtResource("4_u75i5")
@@ -269,18 +270,7 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmfcb"]
-bg_color = Color(0.0313726, 0.6, 0.0941176, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.301961, 0.901961, 0.894118, 1)
-border_blend = true
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t5vrc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jqlm"]
 bg_color = Color(0.0352941, 0.627451, 0.0980392, 1)
@@ -308,7 +298,18 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t5vrc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmfcb"]
+bg_color = Color(0.0313726, 0.6, 0.0941176, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.301961, 0.901961, 0.894118, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_i8ad1"]
 font = ExtResource("2_0ql7o")
@@ -404,10 +405,10 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_cmfcb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t5vrc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7jqlm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_c3y0j")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_t5vrc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cmfcb")
 text = "بروزرسانی"
 
 [node name="Label" type="Label" parent="Panel2"]
@@ -439,8 +440,8 @@ autostart = true
 [node name="Weak_internet" parent="." instance=ExtResource("10_k5qek")]
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(382, 1120)
-scale = Vector2(0.484646, 0.484646)
+position = Vector2(482, 1567)
+scale = Vector2(0.574173, 0.574173)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Node2D"]
 anchors_preset = -1
@@ -483,6 +484,10 @@ material = SubResource("ShaderMaterial_ea7nx")
 position = Vector2(371, 847)
 scale = Vector2(0.046, 1e-05)
 texture = ExtResource("14_to3m0")
+
+[node name="login" parent="." instance=ExtResource("15_xko4u")]
+visible = false
+layout_mode = 1
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="Panel2/Button" to="Panel2" method="_on_button_pressed"]

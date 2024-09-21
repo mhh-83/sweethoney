@@ -18,15 +18,14 @@ func _ready():
 	# Perform a POST request. The URL below returns JSON as of writing.
 	# Note: Don't make simultaneous requests using a single HTTPRequest node.
 	# The snippet below is provided for reference only.
+	var url 
 	var body = {
-	"full_name": "محمد حسین حق شناس",
-	"number": [09111525112],
-	"password": "12345678h",
-	"device_name": "android",
-	"password_confirmation": "12345678h",
-	
-	}
-	var error = http_request.request("http://localhost/api/register", [], HTTPClient.METHOD_POST, JSON.stringify(body))
+  "firstName": "mhh",
+  "lastName": "Fellow",
+  "email": "bob.fellow@gmail.com",
+  "dateOfBirth": "1996-08-24"
+}
+	var error = http_request.request("https://api.npoint.io/680855558693fe456753", [], HTTPClient.METHOD_POST, JSON.new().stringify(body))
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 
@@ -37,7 +36,7 @@ func _http_request_completed(result, response_code, headers, body):
 	var response = json.get_data()
 
 	# Will print the user agent string used by the HTTPRequest node (as recognized by httpbin.org).
-	print(body.get_string_from_utf8())
+	print(response)
 	
 
 func _on_http_request_request_completed2(result, response_code, headers, body):

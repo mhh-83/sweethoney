@@ -26,7 +26,7 @@ func _ready():
 	$TextureProgressBar2.value = score * 100 / 5000
 	$TextureProgressBar2/Label.text = str(score)
 	if get_tree().has_group("timer"):
-		timer = get_tree().get_nodes_in_group("timer")[0]
+		timer = GlobalTime
 		for t in get_tree().get_nodes_in_group("timer"):
 			if t.start_timer == false:
 				await get_tree().create_timer(0.1).timeout
@@ -44,9 +44,9 @@ func _on_button_pressed():
 	if !get_node_or_null("Node2D"):
 		if timer:
 			save("last_time_gift", timer.current_time)
-			for hive in get_tree().get_nodes_in_group("hive"):
+			for hive in get_tree().get_nodes_in_group("honey_hive"):
 				save("last_time_hive"+ str(hive.num), timer.current_time)
-		queue_free()
+		Exit.change_scene("res://scenes/start.tscn")
 
 func _process(delta):
 	
