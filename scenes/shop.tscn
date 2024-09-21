@@ -26,7 +26,7 @@ Label/styles/normal = null
 
 [sub_resource type="LabelSettings" id="LabelSettings_8huyl"]
 font = ExtResource("2_l2s0d")
-font_size = 70
+font_size = 110
 font_color = Color(1, 0, 0, 1)
 outline_size = 10
 outline_color = Color(1, 1, 0, 1)
@@ -109,21 +109,22 @@ theme = SubResource("Theme_an8m6")
 theme_override_constants/separation = -5
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(2.785, 270)
 layout_mode = 2
 texture = ExtResource("3_0m6pg")
 stretch_mode = 5
 
 [node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.639
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -95.0
-offset_top = -14.5
-offset_right = 97.0
-offset_bottom = 93.5
+anchor_bottom = 0.639
+offset_left = -94.0
+offset_top = -65.1582
+offset_right = 98.0
+offset_bottom = 107.842
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -142,9 +143,10 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer/Control"]
 layout_mode = 2
-offset_left = -127.0
-offset_right = 145.0
-offset_bottom = 275.0
+offset_left = -161.0
+offset_top = 2.3718
+offset_right = 181.0
+offset_bottom = 371.372
 texture_normal = ExtResource("5_h0n16")
 texture_pressed = ExtResource("6_dff0h")
 texture_hover = ExtResource("7_koujg")
@@ -158,21 +160,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = -49.5
-offset_right = 63.0
-offset_bottom = 100.5
+offset_left = -107.0
+offset_top = -74.5
+offset_right = 101.0
+offset_bottom = 142.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0.435294, 0.305882, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/line_separation = -15
 theme_override_constants/outline_size = 15
+theme_override_constants/line_separation = -15
 theme_override_fonts/normal_font = ExtResource("2_l2s0d")
 theme_override_fonts/bold_font = ExtResource("9_1dkwx")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 23
+theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/bold_font_size = 35
 bbcode_enabled = true
 text = "[center]بلیط ورودی به لیگ
 
@@ -181,10 +183,11 @@ text = "[center]بلیط ورودی به لیگ
 [node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/separation = 340
+theme_override_constants/separation = 485
 theme_override_styles/separator = SubResource("StyleBoxEmpty_8xe2s")
 
 [node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 270)
 layout_mode = 2
 texture = ExtResource("3_0m6pg")
 stretch_mode = 5
@@ -223,20 +226,18 @@ alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-theme_override_constants/separation = 220
+theme_override_constants/separation = 130
+alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer" groups=["hive_shop"]]
+custom_minimum_size = Vector2(262.025, 300)
 layout_mode = 2
 
 [node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control"]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -100.0
-offset_right = 100.0
-offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("10_5nmyh")
@@ -249,45 +250,41 @@ metadata/cost = 750
 
 [node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control/Button"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.175
-anchor_top = 0.23
-anchor_right = 0.835
-anchor_bottom = 0.93
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
-theme_override_constants/shadow_offset_x = -5
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/outline_size = 10
 theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = -5
 theme_override_constants/shadow_outline_size = 10
 theme_override_constants/line_separation = 13
-theme_override_constants/outline_size = 10
-theme_override_constants/text_highlight_v_padding = 0
 theme_override_fonts/normal_font = ExtResource("6_2ruil")
 theme_override_fonts/bold_font = ExtResource("9_1dkwx")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 55
 theme_override_font_sizes/bold_font_size = 37
 bbcode_enabled = true
-text = "[center]کندو 1
+text = "
+[center]کندو 1
 [b]750"
 metadata/cost = 750
 metadata/_edit_use_anchors_ = true
 
 [node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer" groups=["hive_shop"]]
+custom_minimum_size = Vector2(262.025, 300)
 layout_mode = 2
 
 [node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control3"]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -100.0
-offset_right = 100.0
-offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("10_5nmyh")
@@ -300,52 +297,45 @@ metadata/cost = 1000
 
 [node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer/Control3/Button"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = -54.0
-offset_right = 65.0
-offset_bottom = 86.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
-theme_override_constants/shadow_offset_x = -5
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/outline_size = 10
 theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = -5
 theme_override_constants/shadow_outline_size = 10
 theme_override_constants/line_separation = 13
-theme_override_constants/outline_size = 10
-theme_override_constants/text_highlight_v_padding = 0
 theme_override_fonts/normal_font = ExtResource("6_2ruil")
 theme_override_fonts/bold_font = ExtResource("9_1dkwx")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 55
 theme_override_font_sizes/bold_font_size = 37
 bbcode_enabled = true
-text = "[center]کندو2
+text = "
+[center]کندو2
 [b]1000"
 metadata/cost = 750
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-theme_override_constants/separation = 220
+theme_override_constants/separation = 130
+alignment = 1
 
 [node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2" groups=["hive_shop"]]
+custom_minimum_size = Vector2(262.025, 300)
 layout_mode = 2
 
 [node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control4"]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -100.0
-offset_right = 100.0
-offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("10_5nmyh")
@@ -359,50 +349,42 @@ metadata/cost = 1500
 [node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control4/Button"]
 clip_contents = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -54.0
-offset_right = 64.0
-offset_bottom = 89.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
-theme_override_constants/shadow_offset_x = -5
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/outline_size = 10
 theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = -5
 theme_override_constants/shadow_outline_size = 10
 theme_override_constants/line_separation = 13
-theme_override_constants/outline_size = 10
-theme_override_constants/text_highlight_v_padding = 0
 theme_override_fonts/normal_font = ExtResource("6_2ruil")
 theme_override_fonts/bold_font = ExtResource("9_1dkwx")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 55
 theme_override_font_sizes/bold_font_size = 37
 bbcode_enabled = true
-text = "[center]کندو 3
+text = "
+[center]کندو 3
 [b]1500"
 fit_content = true
 scroll_active = false
 metadata/cost = 1500
 
 [node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2" groups=["hive_shop"]]
+custom_minimum_size = Vector2(262.025, 300)
 layout_mode = 2
 
 [node name="Button" type="TextureButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control2"]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -100.0
-offset_right = 100.0
-offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("10_5nmyh")
@@ -416,33 +398,28 @@ metadata/cost = 2500
 [node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/Control2/Button"]
 clip_contents = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = -54.0
-offset_right = 64.0
-offset_bottom = 88.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0.337255, 0.207843, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.847059, 0.819608, 0, 1)
-theme_override_constants/shadow_offset_x = -5
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/outline_size = 10
 theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = -5
 theme_override_constants/shadow_outline_size = 10
 theme_override_constants/line_separation = 13
-theme_override_constants/outline_size = 10
-theme_override_constants/text_highlight_v_padding = 0
 theme_override_fonts/normal_font = ExtResource("6_2ruil")
 theme_override_fonts/bold_font = ExtResource("9_1dkwx")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 55
 theme_override_font_sizes/bold_font_size = 37
 bbcode_enabled = true
-text = "[center]کندو 4
+text = "
+[center]کندو 4
 [b]2500"
 metadata/cost = 2500
 
@@ -490,7 +467,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
-position = Vector2(641, 240)
+position = Vector2(856, 422)
 amount = 25
 lifetime = 5.95
 texture = SubResource("AtlasTexture_eby1s")
@@ -507,7 +484,7 @@ scale_amount_curve = SubResource("Curve_4ns5j")
 color_ramp = SubResource("Gradient_ixywq")
 
 [node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
-position = Vector2(90, 227)
+position = Vector2(134, 360)
 amount = 25
 lifetime = 5.95
 texture = SubResource("AtlasTexture_eby1s")

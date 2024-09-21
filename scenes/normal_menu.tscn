@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://djnv8ue4qcy8o"]
+[gd_scene load_steps=69 format=3 uid="uid://djnv8ue4qcy8o"]
 
 [ext_resource type="FontFile" uid="uid://bpsnumqo55k02" path="res://fonts/Mj_Unique Bold_0.ttf" id="1_sgl03"]
 [ext_resource type="Script" path="res://script/normal_menu.gd" id="1_t0enb"]
@@ -82,6 +82,8 @@ width = 500
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jb6ga"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upmq0"]
 bg_color = Color(0.752941, 0.227451, 0, 1)
 border_width_left = 10
@@ -93,8 +95,6 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jb6ga"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u56a"]
 bg_color = Color(0.752941, 0.227451, 0, 1)
@@ -110,7 +110,7 @@ corner_radius_bottom_left = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_x62s0"]
 font = ExtResource("4_dvmwn")
-font_size = 30
+font_size = 45
 font_color = Color(1, 0.776471, 0.74902, 1)
 outline_size = 5
 outline_color = Color(0, 0.258824, 0.231373, 1)
@@ -125,7 +125,7 @@ shader_parameter/color2 = Color(0.752941, 0.227451, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ntyr0"]
 font = ExtResource("11_sq4bp")
-font_size = 27
+font_size = 47
 font_color = Color(0.137255, 0.407843, 0.384314, 1)
 
 [sub_resource type="Animation" id="Animation_byyux"]
@@ -318,6 +318,7 @@ tracks/5/keys = {
 [sub_resource type="Animation" id="Animation_fvgln"]
 resource_name = "start"
 length = 2.0
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -337,10 +338,10 @@ tracks/1/path = NodePath("Button:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.7, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(783, 806), Vector2(783, 806), Vector2(88, 808)]
+"values": [Vector2(988, 1187), Vector2(98, 1187)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -349,10 +350,10 @@ tracks/2/path = NodePath("levels:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.3, 1.7),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(1.25, 1.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-576, 671), Vector2(-576, 671), Vector2(93, 671)]
+"values": [Vector2(-909, 932), Vector2(89, 932)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -361,10 +362,10 @@ tracks/3/path = NodePath("continue:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1, 1.3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(1, 1.25),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(783, 536), Vector2(783, 536), Vector2(98, 536)]
+"values": [Vector2(997, 693), Vector2(84, 693)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4uag8"]
@@ -373,12 +374,6 @@ _data = {
 "change_scene": SubResource("Animation_w1sgt"),
 "start": SubResource("Animation_fvgln")
 }
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bfcc"]
-size = Vector2(820, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5o23"]
-size = Vector2(37, 1372)
 
 [sub_resource type="Curve" id="Curve_iiba4"]
 min_value = -1024.0
@@ -403,15 +398,13 @@ point_count = 2
 curve = SubResource("Curve_a4wg0")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_viu73"]
+particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(768, 1, 1)
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
 angle_min = -203.0
 angle_max = 2.7
 angle_curve = SubResource("CurveTexture_iqall")
+gravity = Vector3(0, 98, 0)
 scale_min = 0.11
 scale_max = 0.36
 scale_curve = SubResource("CurveTexture_rxk8n")
@@ -435,15 +428,13 @@ point_count = 2
 curve = SubResource("Curve_d3ccd")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_djdw3"]
+particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(768, 1, 1)
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
 angle_min = -203.0
 angle_max = 2.7
 angle_curve = SubResource("CurveTexture_swhy1")
+gravity = Vector3(0, 98, 0)
 scale_min = 0.07
 scale_max = 0.2
 scale_curve = SubResource("CurveTexture_gvsqq")
@@ -3447,7 +3438,7 @@ nodes/Animation/position = Vector2(-120, 180)
 nodes/OneShot/node = SubResource("AnimationNodeOneShot_leohq")
 nodes/OneShot/position = Vector2(380, -40)
 nodes/output/position = Vector2(800, 100)
-node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2"]
+node_connections = [&"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2", &"output", 0, &"OneShot"]
 
 [node name="start" type="Control" groups=["start"]]
 layout_mode = 3
@@ -3459,6 +3450,7 @@ grow_vertical = 2
 theme = SubResource("Theme_leury")
 script = ExtResource("1_t0enb")
 metadata/_edit_horizontal_guides_ = [149.0]
+metadata/_edit_vertical_guides_ = [-1553.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_repeat = 2
@@ -3505,8 +3497,8 @@ mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_xhceu")
 
 [node name="PointLight2D" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
-position = Vector2(465, 107)
-scale = Vector2(0.588, 1.28125)
+position = Vector2(606, -143)
+scale = Vector2(0.776, 1.90625)
 range_item_cull_mask = 2
 texture = SubResource("GradientTexture2D_5a5uo")
 
@@ -3516,26 +3508,26 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -709.0
-offset_top = 222.0
-offset_right = -454.0
-offset_bottom = 310.0
+offset_left = -693.0
+offset_top = -5.0
+offset_right = -347.0
+offset_bottom = 132.0
 grow_horizontal = 0
 mouse_filter = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(0.0431373, 0.501961, 0.392157, 1)
-theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_colors/clear_button_color_pressed = Color(0.933333, 0, 0, 1)
+theme_override_colors/clear_button_color = Color(0.992157, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.52549, 0.52549, 0.52549, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.533333)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_colors/selection_color = Color(0.52549, 0.52549, 0.52549, 1)
-theme_override_colors/clear_button_color = Color(0.992157, 0, 0, 1)
-theme_override_colors/clear_button_color_pressed = Color(0.933333, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0.0431373, 0.501961, 0.392157, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("11_sq4bp")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_upmq0")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jb6ga")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_upmq0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_upmq0")
 placeholder_text = "نام خود را وارد کنید"
 alignment = 1
 caret_blink = true
@@ -3543,21 +3535,22 @@ caret_force_displayed = true
 metadata/_edit_group_ = true
 
 [node name="PointLight2D2" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel/Label"]
-position = Vector2(126.5, 43.5)
-scale = Vector2(0.526, 0.984375)
+position = Vector2(172, 72.5)
+scale = Vector2(0.744, 1.42187)
 range_item_cull_mask = 2
 texture = SubResource("GradientTexture2D_5a5uo")
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4/Control/Panel" groups=["score"]]
 light_mask = 2
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -378.0
-offset_top = 51.0
-offset_right = -56.0
-offset_bottom = 169.0
+anchor_bottom = 0.02
+offset_left = -264.0
+offset_top = -214.0
+offset_right = 129.0
+offset_bottom = -74.0
 grow_horizontal = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_8u56a")
 text = "امتیاز : 150000"
@@ -3575,10 +3568,10 @@ anchors_preset = -1
 anchor_left = -0.04
 anchor_right = 0.325
 anchor_bottom = 0.797
-offset_left = 0.200003
-offset_top = 3.0
-offset_right = -1.52588e-05
-offset_bottom = -0.100021
+offset_left = 6.2
+offset_top = -330.0
+offset_right = 115.0
+offset_bottom = -223.1
 texture = ExtResource("9_11leg")
 expand_mode = 1
 metadata/_edit_group_ = true
@@ -3622,17 +3615,17 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PointLight2D3" type="PointLight2D" parent="VBoxContainer/HBoxContainer4/Control/Panel/TextureRect"]
-position = Vector2(121, 119.5)
-scale = Vector2(0.552, 3.51563)
+position = Vector2(176, 175)
+scale = Vector2(0.732, 4.92188)
 range_item_cull_mask = 2
 texture = SubResource("GradientTexture2D_5a5uo")
 
 [node name="TextureRect2" type="TextureProgressBar" parent="VBoxContainer/HBoxContainer4/Control/Panel"]
 layout_mode = 0
-offset_left = 558.0
-offset_top = 36.0
-offset_right = 675.0
-offset_bottom = 171.0
+offset_left = 753.0
+offset_top = -246.0
+offset_right = 912.0
+offset_bottom = -61.0
 step = 0.01
 value = 25.09
 fill_mode = 3
@@ -3643,34 +3636,38 @@ tint_progress = Color(1, 0.882353, 0.117647, 1)
 
 [node name="continue" type="Button" parent="."]
 layout_mode = 2
-offset_left = 783.0
-offset_top = 536.0
-offset_right = 1320.0
-offset_bottom = 720.0
+offset_left = 84.0
+offset_top = 693.0
+offset_right = 952.0
+offset_bottom = 945.0
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
 text = "         ادامه            "
 
 [node name="levels" type="Button" parent="."]
 layout_mode = 2
-offset_left = -576.0
-offset_top = 671.0
-offset_right = -38.0
-offset_bottom = 855.0
+offset_left = 89.0
+offset_top = 932.0
+offset_right = 960.0
+offset_bottom = 1184.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/font_size = 100
 text = "        مراحل          "
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
-offset_left = 783.0
-offset_top = 806.0
-offset_right = 1327.0
-offset_bottom = 990.0
+offset_left = 98.0
+offset_top = 1187.0
+offset_right = 987.0
+offset_bottom = 1439.0
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
 text = "    منو شروع       "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(72, 1262)
+position = Vector2(98, 1872)
+scale = Vector2(1.30556, 1.40361)
 texture = ExtResource("8_njgn1")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -3681,8 +3678,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 364.0
 offset_top = 663.0
-offset_right = 404.0
-offset_bottom = 703.0
+offset_right = -596.0
+offset_bottom = -1297.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 6.28319
@@ -3692,29 +3689,10 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
-autoplay = "start"
 libraries = {
 "": SubResource("AnimationLibrary_4uag8")
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-disable_mode = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(382, 1374)
-shape = SubResource("RectangleShape2D_5bfcc")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-20.5, 698)
-shape = SubResource("RectangleShape2D_f5o23")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(783, 698)
-shape = SubResource("RectangleShape2D_f5o23")
+autoplay = "start"
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(384, 0)
@@ -3753,7 +3731,8 @@ blend_mode = 1
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="bee" type="Node2D" parent="."]
-position = Vector2(52, 1128)
+position = Vector2(84, 1642)
+scale = Vector2(1.5, 1.5)
 
 [node name="ColorRect" type="ColorRect" parent="bee"]
 visible = false
@@ -3985,7 +3964,7 @@ bone_angle = -167.784
 [node name="Bone2D6" type="Bone2D" parent="bee/Skeleton2D/body/head"]
 position = Vector2(47, -50)
 rotation = -3.13583
-scale = Vector2(0.999912, 0.999912)
+scale = Vector2(0.999911, 0.999911)
 rest = Transform2D(-0.999984, -0.00576747, 0.00576747, -0.999984, 48, -71)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -4060,15 +4039,15 @@ length = 16.0
 bone_angle = -77.7974
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="bee"]
-autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_l5ucv")
 }
+autoplay = "Idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="bee"]
 tree_root = SubResource("AnimationNodeBlendTree_muwp3")
-anim_player = NodePath("../AnimationPlayer")
 advance_expression_base_node = NodePath("../AnimationPlayer")
+anim_player = NodePath("../AnimationPlayer")
 parameters/OneShot/active = false
 parameters/OneShot/internal_active = false
 parameters/OneShot/request = 0
