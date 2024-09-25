@@ -85,6 +85,8 @@ absorbent = true
 shader = ExtResource("15_oktnc")
 shader_parameter/frame = 0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7sufw"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pbwdo"]
 texture = ExtResource("8_7bjxh")
 
@@ -95,8 +97,6 @@ modulate_color = Color(0.843137, 0.843137, 0.843137, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kpoaj"]
 texture = ExtResource("8_7bjxh")
 modulate_color = Color(0.686275, 0.686275, 0.686275, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7sufw"]
 
 [sub_resource type="Curve" id="Curve_etdme"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.536842), 0.0, 0.0, 0, 0]
@@ -252,6 +252,7 @@ grow_vertical = 2
 texture = ExtResource("2_s3mm6")
 expand_mode = 1
 stretch_mode = 6
+metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
@@ -260,18 +261,13 @@ format = 2
 layer_0/name = "background"
 layer_0/tile_data = PackedInt32Array(65535, 2, 0, 131071, 2, 0, 196607, 2, 0, 262143, 2, 0, 327679, 2, 0, 393215, 2, 0, 458751, 2, 0, 524287, 2, 0, 589823, 2, 0, 655359, 2, 0, 720895, 2, 0, 786431, 2, 0, 851967, 4, 0, 0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 262144, 2, 0, 327680, 2, 0, 393216, 2, 0, 458752, 2, 0, 524288, 2, 0, 589824, 2, 0, 655360, 2, 0, 720896, 2, 0, 786432, 2, 0, 1, 4, 0, 65537, 2, 0, 131073, 2, 0, 196609, 2, 0, 262145, 4, 0, 327681, 2, 0, 393217, 2, 0, 458753, 2, 0, 524289, 2, 0, 589825, 4, 0, 655361, 2, 0, 720897, 2, 0, 786433, 2, 0, 2, 2, 0, 65538, 2, 0, 131074, 4, 0, 196610, 2, 0, 262146, 2, 0, 327682, 2, 0, 393218, 2, 0, 458754, 2, 0, 524290, 4, 0, 589826, 2, 0, 655362, 2, 0, 720898, 4, 0, 786434, 2, 0, 3, 4, 0, 65539, 2, 0, 131075, 2, 0, 196611, 2, 0, 262147, 2, 0, 327683, 2, 0, 393219, 4, 0, 458755, 4, 0, 524291, 2, 0, 589827, 2, 0, 655363, 4, 0, 720899, 2, 0, 786435, 2, 0, 4, 2, 0, 65540, 2, 0, 131076, 2, 0, 196612, 2, 0, 262148, 2, 0, 327684, 2, 0, 393220, 2, 0, 458756, 2, 0, 524292, 2, 0, 589828, 2, 0, 655364, 2, 0, 720900, 2, 0, 786436, 2, 0, 5, 2, 0, 65541, 4, 0, 131077, 2, 0, 196613, 2, 0, 262149, 4, 0, 327685, 4, 0, 393221, 2, 0, 458757, 2, 0, 524293, 4, 0, 589829, 2, 0, 655365, 2, 0, 720901, 2, 0, 786437, 2, 0, 6, 2, 0, 65542, 2, 0, 131078, 2, 0, 196614, 2, 0, 262150, 2, 0, 327686, 2, 0, 393222, 2, 0, 458758, 2, 0, 524294, 2, 0, 589830, 4, 0, 655366, 2, 0, 720902, 2, 0, 786438, 2, 0, 7, 4, 0, 65543, 2, 0, 131079, 2, 0, 196615, 4, 0, 262151, 2, 0, 327687, 4, 0, 393223, 2, 0, 458759, 2, 0, 524295, 2, 0, 589831, 2, 0, 655367, 2, 0, 720903, 2, 0, 786439, 2, 0, 8, 2, 0, 65544, 2, 0, 131080, 2, 0, 196616, 2, 0, 262152, 2, 0, 327688, 2, 0, 393224, 4, 0, 458760, 2, 0, 524296, 2, 0, 589832, 4, 0, 655368, 2, 0, 720904, 4, 0, 786440, 2, 0, 9, 2, 0, 65545, 4, 0, 131081, 2, 0, 196617, 2, 0, 262153, 4, 0, 327689, 2, 0, 393225, 2, 0, 458761, 2, 0, 524297, 2, 0, 589833, 2, 0, 655369, 2, 0, 720905, 2, 0, 786441, 2, 0, 10, 2, 0, 65546, 2, 0, 131082, 2, 0, 196618, 2, 0, 262154, 2, 0, 327690, 2, 0, 393226, 2, 0, 458762, 2, 0, 524298, 2, 0, 589834, 2, 0, 655370, 2, 0, 720906, 2, 0, 786442, 2, 0, 917503, 2, 0, 851968, 2, 0, 851969, 2, 0, 851970, 2, 0, 851971, 2, 0, 851972, 2, 0, 851973, 2, 0, 851974, 2, 0, 851975, 2, 0, 851976, 2, 0, 851977, 2, 0, 851978, 2, 0, -65536, 2, 0, -65535, 2, 0, -65534, 2, 0, -65533, 2, 0, -65532, 2, 0, -65531, 2, 0, -65530, 2, 0, -65529, 2, 0, -65528, 2, 0, -65527, 2, 0, -65526, 2, 0, -1, 2, 0, -131072, 2, 0, -131070, 2, 0)
 layer_1/name = "foreground"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array()
 
 [node name="Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 689.0
-offset_right = 770.0
-offset_bottom = 75.0
+offset_left = 914.0
+offset_top = 2.0
+offset_right = 995.0
+offset_bottom = 77.0
 texture_normal = ExtResource("6_g3u1k")
 ignore_texture_size = true
 stretch_mode = 5
@@ -285,17 +281,25 @@ libraries = {
 position = Vector2(26, -210)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(9, 583, 42, 642, 62, 654, 89, 663, 121, 669, 146, 677, 161, 693, 164, 725, 172, 753, 191, 771, 220, 775, 250, 753, 262, 727, 286, 716, 295, 722, 313, 750, 325, 828, 325, 922, 317, 993, 306, 1042, 314, 1082, 338, 1114, 377, 1115, 409, 1102, 427, 1051, 418, 990, 409, 951, 406, 826, 441, 764, 484, 742, 550, 727, 621, 690, 645, 649, 666, 618, 692, 594, 745, 555, 766, -57, 730, -61, 733, 210, 736, 505, 682, 487, 631, 539, 624, 562, 636, 621, 633, 634, 587, 681, 494, 666, 453, 716, 426, 717, 381, 708, 364, 695, 351, 628, 253, 601, 212, 650, 131, 636, 108, 552, 33, 544, 5, 457, -24, 449, -21, 213, 733, 210, 733, 190, -38, 179, -37, 542, 0, 569)
+position = Vector2(-13, 137)
+scale = Vector2(1.3324, 1.13255)
+polygon = PackedVector2Array(5.25368, 590.704, 29.2705, 634.852, 62, 654, 89, 663, 121, 669, 146, 677, 150.856, 689.596, 152.357, 726.681, 162.864, 758.468, 186.881, 792.02, 225.908, 790.254, 250, 753, 262, 727, 286, 716, 295, 722, 313, 750, 325, 828, 327.229, 915.635, 327.229, 993.336, 322.726, 1039.25, 314, 1082, 305.464, 1134.61, 312.969, 1192, 324.977, 1223.79, 351.996, 1246.75, 406.034, 1235.27, 427.049, 1203.48, 433.053, 1148.74, 430.801, 1097.53, 427, 1051, 418, 990, 415.791, 953.603, 419.543, 836.169, 452.567, 774.361, 487.091, 749.638, 556.139, 733.745, 589.162, 728.447, 629.69, 703.724, 664.215, 671.937, 679.225, 634.852, 697.238, 596.002, 746.022, 551.854, 766, -57, 730, -61, 737.016, 166.881, 742.269, 428.238, 721.255, 427.355, 688.231, 461.791, 661.213, 498.876, 664.965, 551.854, 636, 621, 633, 634, 581.657, 673.703, 525.368, 646.331, 506.604, 673.703, 479.586, 707.256, 453, 716, 426, 717, 381, 708, 368.508, 687.83, 359.501, 621.608, 254.428, 574.811, 203.392, 638.384, 134.344, 629.555, 111.828, 616.31, 93.8156, 549.205, 89.3125, 515.652, 69.0483, 510.354, 40.5284, 498.876, 6.0042, 495.344, -7.50525, 463.557, -24, 449, -0.750525, 60.9246, 728.009, 68.8713, 731.011, 27.3719, -16.5116, 45.9142, -37, 542, -4.50315, 573.045)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-polygon = PackedVector2Array(-21, 1374, 765, 1364, 767, 520, 753, 535, 738, 1264, 399, 1338, 26, 1285, 9, 647, -21, 645)
+position = Vector2(28.4248, 632)
+scale = Vector2(1.26428, 1)
+polygon = PackedVector2Array(-21, 1374, 765, 1364, 767, 520, 753, 535, 738, 1264, 399, 1338, 265.808, 1319.07, 26, 1285, 9, 647, -21, 645)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(98, 285)
 collision_layer = 2
+metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+position = Vector2(-25, 119)
+scale = Vector2(1.05818, 1.1638)
 polygon = PackedVector2Array(259, 1327, 181, 1270, 138, 1226, 91, 1149, 78, 1066, 78, 911, 94, 908, 91, 1029, 92, 1066, 105, 1143, 127, 1189, 156, 1228, 201, 1270, 261, 1318, 337, 1330, 434, 1329, 505, 1313, 564, 1277, 598, 1244, 644, 1180, 671, 1086, 673, 908, 686, 905, 683, 1080, 674, 1139, 640, 1214, 573, 1286, 512, 1320, 466, 1334, 376, 1348)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
@@ -317,21 +321,21 @@ offset_top = -60.0
 offset_right = 40.0
 offset_bottom = 40.0
 pivot_offset = Vector2(60, 60)
-theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.905882, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.905882, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0.905882, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.905882, 0, 0, 1)
 theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("7_6iu7c")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxTexture_pbwdo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7sufw")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_pbwdo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_udjk2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_kpoaj")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_pbwdo")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_7sufw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pbwdo")
 text = "5"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="RigidBody2D/Button"]
@@ -360,12 +364,13 @@ polygon = PackedVector2Array(-61.7917, -22.9737, -25.5334, -59.775, 24.0359, -49
 [node name="TextureRect3" type="TextureRect" parent="."]
 clip_children = 2
 layout_mode = 0
-offset_left = 45.0
-offset_top = 937.0
-offset_right = 726.0
-offset_bottom = 1366.0
+offset_left = -23.0
+offset_top = 1326.0
+offset_right = 1041.0
+offset_bottom = 1996.0
 texture = ExtResource("10_scq2f")
 expand_mode = 1
+metadata/_edit_group_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="TextureRect3"]
 material = SubResource("ShaderMaterial_oxv3p")
@@ -374,9 +379,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 271.0
-offset_top = 149.0
-offset_right = -280.0
-offset_bottom = -241.0
+offset_top = 248.0
+offset_right = -585.0
+offset_bottom = -422.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(5, 1e-05)
@@ -407,20 +412,20 @@ color_ramp = SubResource("Gradient_0lrmm")
 [node name="TextureRect2" type="TextureRect" parent="."]
 clip_children = 2
 layout_mode = 0
-offset_left = 45.0
-offset_top = 937.0
-offset_right = 726.0
-offset_bottom = 1366.0
+offset_left = -16.0
+offset_top = 1318.0
+offset_right = 1045.0
+offset_bottom = 1987.0
 texture = ExtResource("9_6n54h")
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect2"]
 material = SubResource("ShaderMaterial_ayy3a")
 layout_mode = 0
-offset_left = -45.0
-offset_top = 429.0
-offset_right = 263.0
-offset_bottom = 559.0
+offset_left = 60.0
+offset_top = 648.0
+offset_right = 418.0
+offset_bottom = 835.0
 scale = Vector2(2.63995, 2.93439)
 texture = ExtResource("9_6n54h")
 expand_mode = 1
@@ -438,10 +443,10 @@ shape = SubResource("CapsuleShape2D_jkimu")
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.388021
-anchor_top = 0.859444
-anchor_right = 0.622396
-anchor_bottom = 0.909956
+anchor_left = 0.383
+anchor_top = 0.8475
+anchor_right = 0.647
+anchor_bottom = 0.903
 grow_horizontal = 2
 grow_vertical = 2
 label_settings = SubResource("LabelSettings_fhptp")
